@@ -1,6 +1,9 @@
 name: story creator
 version: 1.0.0
-description: test description
+description: test descr
 author: bewalthew
-input_variables: {}
-task_description: test description
+input_variables:
+  subject:
+    type: string
+    description: test var
+task_description: test descr
