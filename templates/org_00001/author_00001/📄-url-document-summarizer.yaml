@@ -1,0 +1,25 @@
+name: 📄 URL Document Summarizer
+version: 1.0.0
+description: 🚀 Summarize documents from a given URL
+author: 🤖 SummarizerAI
+input_variables:
+  file_url:
+    type: string
+    description: 🔗 The URL of the document to summarize
+  max_words:
+    type: number
+    description: 📏 Maximum number of words for the summary
+output_variables:
+  summary:
+    type: string
+    description: 📝 The generated summary of the document
+categories:
+  - 📊 Information Processing
+  - 🤖 AI-Assisted Analysis
+model: gpt-4
+parameters:
+  max_tokens: 500
+  temperature: 0.5
+  top_p: 0.9
+prompt_type: 🧠 text_summarization
+task_description: 🎯 Generate concise summaries of documents from provided URLs
