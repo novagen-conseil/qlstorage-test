@@ -1,9 +1,9 @@
 name: story creator
 version: 1.0.0
-description: test descr
+description: creates a story
 author: bewalthew
 input_variables:
-  subject:
+  theme:
     type: string
-    description: test var
-task_description: test descr
+    description: theme of story
+content: write a story about {{theme}}
