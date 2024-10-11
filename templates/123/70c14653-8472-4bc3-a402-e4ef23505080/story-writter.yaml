@@ -1,0 +1,12 @@
+name: story writter
+version: 1.0.0
+description: writes a story about a chosen theme
+author: bewalthew
+input_variables:
+  theme:
+    type: string
+    description: theme of story
+  words:
+    type: number
+    description: max amount of wors for story
+content: write story about {{theme}} in less than {{words}} words
