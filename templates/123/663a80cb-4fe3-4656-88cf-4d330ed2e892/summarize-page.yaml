@@ -1,0 +1,9 @@
+name: summarize page
+version: 1.0.0
+description: summarizes a url page
+author: bewalthew
+input_variables:
+  page_url:
+    type: string
+    description: 'url of page '
+content: summarize the following page {{page_url}}
