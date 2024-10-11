@@ -1,9 +1,0 @@
-name: equation solver
-version: 1.0.0
-description: solves math problems
-author: bewalthew
-input_variables:
-  equation:
-    type: string
-    description: the math equation
-task_description: solves math problems

@@ -1,9 +1,0 @@
-name: spelling correction
-version: 1.0.0
-description: corrects spelling of given text
-author: bewalthew
-input_variables:
-  text:
-    type: string
-    description: text to correct
-task_description: corrects spelling of given text

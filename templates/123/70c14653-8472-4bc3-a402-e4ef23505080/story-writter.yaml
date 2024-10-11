@@ -1,9 +1,0 @@
-name: story writter
-version: 1.0.0
-description: creates a story about said subject
-author: bewalthew
-input_variables:
-  subject:
-    type: string
-    description: subject of the story
-task_description: creates a story about said subject
