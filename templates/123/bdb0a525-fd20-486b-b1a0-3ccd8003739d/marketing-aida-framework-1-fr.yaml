@@ -1,0 +1,34 @@
+name: Marketing-Aida Framework-1-FR
+version: 1.0.0
+description: Marketing - Framework AIDA (Attention, Interest, Desire, Action)
+author: Olivier Lefievre
+input_variables:
+  product:
+    type: string
+    description: Produit ciblé
+  target_audience:
+    type: string
+    description: Audience ciblée
+content: >-
+  As an expert marketer, your task is to create a compelling advertisement using
+  the AIDA (Attention, Interest, Desire, Action) framework for {{product}}
+  targeting {{target_audience}}.
+
+
+  Follow these steps:
+
+  1. Attention: Craft a headline or opening statement that immediately grabs the
+  attention of {{target_audience}}.
+
+  2. Interest: Provide intriguing information about {{product}} that maintains
+  the audience's interest.
+
+  3. Desire: Create a strong desire for {{product}} by highlighting its unique
+  benefits and how it solves a problem for {{target_audience}}.
+
+  4. Action: End with a clear and persuasive call-to-action that encourages
+  {{target_audience}} to take the next step.
+
+
+  Your advertisement should be concise, engaging, and tailored specifically to
+  appeal to {{target_audience}}. Aim for approximately 150-200 words.
