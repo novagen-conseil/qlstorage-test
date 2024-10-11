@@ -1,0 +1,9 @@
+name: spell checker
+version: 1.0.0
+description: checks spelling
+author: bede
+input_variables:
+  word:
+    type: string
+    description: word that needs to be checked
+content: check the spelling of {{word}}
