@@ -1,0 +1,12 @@
+name: story creator
+version: 1.0.0
+description: writes a story
+author: bewalthew
+input_variables:
+  theme:
+    type: string
+    description: theme of the story
+  words:
+    type: number
+    description: max chars
+content: write a story about {{theme}} in less then {{words}} words
