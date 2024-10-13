@@ -1,0 +1,39 @@
+name: Marketing-Framework Cialdini-v1.0-basic version
+version: 1.0.0
+description: Framework CIALDINI - Principles of persuasion
+author: Olivier Lefievre
+input_variables:
+  product:
+    type: string
+    description: The product you work on
+  target_audience:
+    type: string
+    description: the target audience for the campaign
+content: >+
+  As an experienced copywriter, your task is to create a marketing message using
+  Cialdini’s Principles of Persuasion (Reciprocity, Commitment & Consistency,
+  Social Proof, Liking, Authority, Scarcity) for {{product}} targeting
+  {{target_audience}}.
+
+
+  Address each principle of Cialdini’s persuasion techniques:
+
+  1. Reciprocity: Offer something valuable upfront to {{target_audience}}.
+
+  2. Commitment & Consistency: Start with a small action to build momentum
+  toward larger commitments.
+
+  3. Social Proof: Highlight testimonials or examples of how others like
+  {{target_audience}} are benefiting from {{product}}.
+
+  4. Liking: Create a friendly, approachable tone that {{target_audience}} will
+  connect with.
+
+  5. Authority: Demonstrate expertise through endorsements or certifications.
+
+  6. Scarcity: Emphasize the limited availability or exclusivity of {{product}}.
+
+
+  Your content should use these principles to create a persuasive, compelling
+  message that encourages {{target_audience}} to take action.
+
