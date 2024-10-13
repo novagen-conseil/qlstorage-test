@@ -1,0 +1,31 @@
+name: Marketing-Framework FOGG-v1.0-basic
+version: 1.0.0
+description: Generate a marketing prompt using the Fogg Behavior Model framework
+author: Olivier Lefievre
+input_variables:
+  product:
+    type: string
+    description: The product or service to promote
+  target_audience:
+    type: string
+    description: The target audience for the promotion
+content: >
+  As an experienced copywriter, your task is to create a marketing message using
+  the Fogg Behavior Model (Motivation, Ability, Prompt) for {{product}}
+  targeting {{target_audience}}.
+
+
+  Address each element of the Fogg Behavior Model:
+
+  1. Motivation: Identify what motivates {{target_audience}} to engage with
+  {{product}}.
+
+  2. Ability: Simplify the process or behavior, making it as easy as possible
+  for {{target_audience}} to take action.
+
+  3. Prompt: Provide a clear, direct call-to-action for {{target_audience}} to
+  engage with {{product}}.
+
+
+  Your content should effectively combine motivation, ease of use, and a strong
+  prompt to encourage the desired behavior from {{target_audience}}.
