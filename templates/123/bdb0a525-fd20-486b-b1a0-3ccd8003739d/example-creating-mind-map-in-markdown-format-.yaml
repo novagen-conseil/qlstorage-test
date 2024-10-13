@@ -1,0 +1,36 @@
+name: 'Example creating mind map in markdown format '
+version: 1.0.0
+description: 'Example creating mind map in markdown format '
+author: Olivier Lefievre
+input_variables: {}
+content: >
+  Create a comprehensive mind map in markdown format exploring the
+  interconnections between artificial intelligence, ethics, and society. Follow
+  these guidelines:
+
+
+  1. Structure:
+   - Start with the central topic "AI, Ethics, and Society"
+   - Develop at least 3 levels of depth for each main branch
+   - Aim for 3-5 main branches stemming from the central topic
+
+  2. Content:
+   - Include key concepts, challenges, and implications
+   - Consider technological, philosophical, and societal aspects
+   - Incorporate both current issues and potential future developments
+
+  3. Format:
+   - Use markdown headers (# for main topics, ## for subtopics, ### for details)
+   - Utilize bullet points (-) for additional information under each header
+   - Keep each point concise, ideally 1-2 lines
+
+  4. Balance:
+   - Ensure roughly equal depth and breadth across different branches
+   - Strive for a mix of technical, ethical, and societal considerations
+
+  5. Connections:
+   - Highlight any cross-branch relationships or interdependencies
+   - Use asterisks (*) to denote important connections between different sections
+
+  6. Examples:
+   - Include specific examples or case studies where relevant
