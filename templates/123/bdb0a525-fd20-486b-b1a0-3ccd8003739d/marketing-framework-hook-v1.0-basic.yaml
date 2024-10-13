@@ -1,0 +1,38 @@
+name: Marketing-Framework HOOK-v1.0-basic
+version: 1.0.0
+description: >-
+  Generate product strategy using the Hook Model (Trigger, Action, Variable
+  Reward, Investment)
+author: Olivier Lefievre
+input_variables:
+  product:
+    type: string
+    description: The product or service to design
+  target_audience:
+    type: string
+    description: The target audience for the product
+content: >
+  As a product strategist, your task is to design a habit-forming product
+  strategy using the Hook Model (Trigger, Action, Variable Reward, Investment)
+  for {{product}} targeting {{target_audience}}.
+
+
+  Address each element of the Hook Model:
+
+  1. Trigger: Identify both external and internal triggers that would prompt
+  {{target_audience}} to use {{product}}.
+
+  2. Action: Describe the simplest action {{target_audience}} can take in
+  anticipation of a reward.
+
+  3. Variable Reward: Explain the variable reward system that {{product}} will
+  use to create a craving in {{target_audience}}.
+
+  4. Investment: Detail how {{target_audience}} will invest in {{product}},
+  increasing the likelihood of them returning.
+
+
+  Your strategy should demonstrate a deep understanding of {{target_audience}}'s
+  behaviors and motivations, and how {{product}} can create a habit loop. Aim
+  for approximately 400-450 words, with clear sections for each element of the
+  Hook Model.
