@@ -1,0 +1,6 @@
+name: story writer test
+version: '1'
+description: story writer
+author: bewalthew
+input_variables: {}
+content: write a story about {{theme}}
