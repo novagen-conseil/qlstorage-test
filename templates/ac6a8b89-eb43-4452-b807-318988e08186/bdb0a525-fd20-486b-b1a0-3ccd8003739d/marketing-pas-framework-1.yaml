@@ -1,0 +1,39 @@
+name: Marketing-PAS Framework-1
+version: 1.0.0
+description: Problem, Agitate, Solution
+author: Olivier Lefievre
+input_variables:
+  product:
+    type: string
+    description: ''
+  target_audience:
+    type: string
+    description: ''
+  language:
+    type: string
+    description: ''
+content: >+
+  As a skilled copywriter, your task is to create a persuasive sales message
+  using the PAS (Problem, Agitate, Solution) framework for {{product}} targeting
+  {{target_audience}}.
+
+
+  Follow these steps:
+
+  1. Problem: Clearly identify and state a relevant problem that
+  {{target_audience}} faces.
+
+  2. Agitate: Intensify the problem by discussing its negative impacts and the
+  pain points it causes for {{target_audience}}.
+
+  3. Solution: Present {{product}} as the ideal solution to the problem,
+  highlighting how it addresses the pain points and improves the situation for
+  {{target_audience}}.
+
+
+  Your copy should be emotionally engaging, relatable to {{target_audience}},
+  and demonstrate a clear understanding of their needs and challenges. Aim for
+  approximately 200-250 words.
+
+  output must be in {{language}}
+
