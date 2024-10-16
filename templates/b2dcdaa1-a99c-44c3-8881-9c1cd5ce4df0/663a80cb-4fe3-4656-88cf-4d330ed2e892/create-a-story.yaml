@@ -1,9 +1,6 @@
 name: create a story
-version: 1.0.0
+version: '1'
 description: creates a story
 author: bewalthew
-input_variables:
-  theme:
-    type: string
-    description: a story theme
+input_variables: {}
 content: write a story about {{theme}}
