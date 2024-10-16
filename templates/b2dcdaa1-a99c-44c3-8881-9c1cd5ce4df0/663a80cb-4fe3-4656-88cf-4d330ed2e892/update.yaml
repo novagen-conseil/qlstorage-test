@@ -1,0 +1,10 @@
+name: update
+version: 1.0.0
+description: test
+author: bewalthew
+input_variables: {}
+output_variables:
+  summary:
+    type: ''
+    description: ''
+content: update test
