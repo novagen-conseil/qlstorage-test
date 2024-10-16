@@ -1,6 +1,6 @@
-name: test v2
-version: '1'
-description: test
+name: test
+version: 1.0.0
+description: testing
 author: bewalthew
 input_variables: {}
-content: test test
+content: testing
