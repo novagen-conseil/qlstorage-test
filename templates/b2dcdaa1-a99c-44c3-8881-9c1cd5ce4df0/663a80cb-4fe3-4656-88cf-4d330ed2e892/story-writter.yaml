@@ -1,9 +1,6 @@
 name: story writter
 version: 1.0.0
-description: writes a story about a given prompt
+description: story writter
 author: bewalthew
-input_variables:
-  theme:
-    type: string
-    description: theme of story
-content: write a story about {{theme}}
+input_variables: {}
+content: test
