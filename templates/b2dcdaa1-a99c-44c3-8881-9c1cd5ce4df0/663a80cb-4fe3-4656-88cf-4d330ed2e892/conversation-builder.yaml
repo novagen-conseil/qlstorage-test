@@ -13,6 +13,7 @@ output_variables:
   summary:
     type: string
     description: summary
-content: >-
-  invent a conversation between a {{character1}} and {{character2}} and keep it
-  under 40 words
+content: |-
+  invent a conversation between a {{character1}} and {{character2}}
+
+  <summary> content of summary <summary>
