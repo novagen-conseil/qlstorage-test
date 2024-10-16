@@ -1,1 +1,6 @@
-content: test test
+name: test
+version: '1'
+description: test
+author: bewalthew
+input_variables: {}
+content: test
