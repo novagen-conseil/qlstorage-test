@@ -5,14 +5,12 @@ author: bewalthew
 input_variables:
   character1:
     type: string
-    description: char1
+    description: char
   character2:
     type: string
-    description: 'char2 '
+    description: char
 output_variables:
   output:
-    type: string
-    description: story
-content: >-
-  invent a conversation between a {{character1}} and {{character2}} in less the
-  40 words
+    type: ''
+    description: ''
+content: invent a conversation between a {{character1}} and {{character2}}
