@@ -1,0 +1,9 @@
+name: improve prompt v1
+version: 1.0.0
+description: bgfxcd
+author: YOUCEF
+input_variables:
+  prompt:
+    type: string
+    description: frefre
+content: improve this prompt {{prompt}}
