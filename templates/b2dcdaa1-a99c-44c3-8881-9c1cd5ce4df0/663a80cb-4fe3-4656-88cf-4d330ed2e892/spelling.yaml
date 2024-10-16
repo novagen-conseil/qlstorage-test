@@ -7,7 +7,7 @@ input_variables:
     type: string
     description: test
 output_variables:
-  '':
+  summary:
     type: ''
     description: ''
-content: updated content test 2 {{test}}
+content: updated content test 2 {{test}} time
