@@ -12,5 +12,5 @@ input_variables:
 output_variables:
   summary:
     type: string
-    description: 'summary '
+    description: summary
 content: invent a conversation between a {{character1}} and {{character2}}
