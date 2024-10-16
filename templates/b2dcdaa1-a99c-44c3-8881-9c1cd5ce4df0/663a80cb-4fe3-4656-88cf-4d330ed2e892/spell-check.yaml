@@ -1,0 +1,9 @@
+name: spell check
+version: 1.0.0
+description: corrects the spelling for given sentence
+author: bewalthew
+input_variables:
+  sentence:
+    type: string
+    description: sentence that you want corrected
+content: 'correct the spelling of this sentence :{{sentence}} '
