@@ -3,8 +3,4 @@ version: '1'
 description: spell check
 author: bewalthew
 input_variables: {}
-output_variables:
-  summary:
-    type: ''
-    description: ''
-content: updated content test
+content: updated content test 2
