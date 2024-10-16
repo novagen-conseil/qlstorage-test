@@ -1,9 +1,6 @@
 name: improve prompt v1
-version: 1.0.0
+version: '1'
 description: bgfxcd
 author: YOUCEF
-input_variables:
-  prompt:
-    type: string
-    description: frefre
-content: improve this prompt {{prompt}}
+input_variables: {}
+content: improve this prompt {{prompt}} using your logic
