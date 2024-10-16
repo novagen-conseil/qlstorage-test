@@ -2,12 +2,5 @@ name: spelling
 version: '1'
 description: spell check
 author: bewalthew
-input_variables:
-  sentence:
-    type: ''
-    description: ''
-output_variables:
-  summary:
-    type: ''
-    description: ''
-content: 'correct spelling for this sentence : {{sentence}} test'
+input_variables: {}
+content: 'correct spelling for this sentence : {{sentence}} testing'
