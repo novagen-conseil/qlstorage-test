@@ -1,13 +1,13 @@
 name: spelling
-version: 1.0.0
+version: '1'
 description: spell check
 author: bewalthew
 input_variables:
   sentence:
-    type: string
-    description: setence
+    type: ''
+    description: ''
 output_variables:
   summary:
     type: ''
     description: ''
-content: 'correct spelling for this sentence : {{sentence}}'
+content: 'correct spelling for this sentence : {{sentence}} test'
