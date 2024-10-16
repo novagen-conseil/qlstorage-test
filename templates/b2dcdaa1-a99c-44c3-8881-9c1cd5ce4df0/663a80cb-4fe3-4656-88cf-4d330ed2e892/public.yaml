@@ -1,0 +1,6 @@
+name: public
+version: 1.0.0
+description: public
+author: bewalthew
+input_variables: {}
+content: 'this is a public prompt '
