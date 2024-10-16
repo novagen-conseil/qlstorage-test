@@ -1,0 +1,16 @@
+name: conversation builder
+version: 1.0.0
+description: makes a conversation between 2 characters
+author: bewalthew
+input_variables:
+  character1:
+    type: string
+    description: first character
+  character2:
+    type: string
+    description: second character
+output_variables:
+  output:
+    type: string
+    description: the conversation
+content: invent a conversation between a {{character1}} and {{character2}}
