@@ -4,16 +4,13 @@ description: makes a conversation between 2 characters
 author: bewalthew
 input_variables:
   character1:
-    type: char
-    description: string
+    type: ''
+    description: ''
   character2:
-    type: char
-    description: string
+    type: ''
+    description: ''
 output_variables:
   summary:
-    type: string
-    description: summary
-content: |2-
-    invent a conversation between a {{character1}} and {{character2}}
-
-    <summary> content of summary <summary>
+    type: ''
+    description: ''
+content: invent a conversation between a {{character1}} and {{character2}} test
