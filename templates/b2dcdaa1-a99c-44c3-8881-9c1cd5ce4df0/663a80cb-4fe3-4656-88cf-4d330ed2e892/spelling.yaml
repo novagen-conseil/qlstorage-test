@@ -2,5 +2,12 @@ name: spelling
 version: '1'
 description: spell check
 author: bewalthew
-input_variables: {}
-content: updated content test 2
+input_variables:
+  test:
+    type: string
+    description: test
+output_variables:
+  '':
+    type: ''
+    description: ''
+content: updated content test 2 {{test}}
