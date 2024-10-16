@@ -2,7 +2,17 @@ name: conversation builder
 version: '1'
 description: makes a conversation between 2 characters
 author: bewalthew
-input_variables: {}
+input_variables:
+  character1:
+    type: string
+    description: char1
+  character2:
+    type: string
+    description: 'char2 '
+output_variables:
+  output:
+    type: string
+    description: story
 content: >-
   invent a conversation between a {{character1}} and {{character2}} in less the
   40 words
