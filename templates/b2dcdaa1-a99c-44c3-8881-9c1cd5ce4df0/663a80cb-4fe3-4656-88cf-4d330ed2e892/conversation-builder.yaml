@@ -10,7 +10,7 @@ input_variables:
     type: string
     description: char
 output_variables:
-  output:
-    type: ''
-    description: ''
+  summary:
+    type: string
+    description: 'summary '
 content: invent a conversation between a {{character1}} and {{character2}}
