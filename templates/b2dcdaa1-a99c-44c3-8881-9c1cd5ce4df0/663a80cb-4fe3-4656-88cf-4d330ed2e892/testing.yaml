@@ -1,9 +1,9 @@
 name: testing
-version: 1.0.0
+version: '1'
 description: test
 author: bewalthew
 input_variables:
   test:
-    type: string
-    description: test
-content: test prompt {{test}}
+    type: ''
+    description: ''
+content: test prompt {{test}} again
