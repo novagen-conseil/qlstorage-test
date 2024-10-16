@@ -3,4 +3,4 @@ version: '1'
 description: spell check
 author: bewalthew
 input_variables: {}
-content: updated content test 2 {{test}} try again
+content: updated content test 2 {{test}} try again test
