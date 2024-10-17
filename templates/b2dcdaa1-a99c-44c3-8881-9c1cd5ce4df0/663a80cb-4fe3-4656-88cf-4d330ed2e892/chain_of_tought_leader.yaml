@@ -12,7 +12,7 @@ input_variables:
 output_variables:
   output:
     type: string
-    description: 'output '
+    description: test
 content: >
   >
 
