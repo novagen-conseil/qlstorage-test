@@ -9,6 +9,10 @@ input_variables:
   Language:
     type: string
     description: test
+output_variables:
+  insight:
+    type: string
+    description: insight on the topic
 content: >
   ## Chain of Thought Leaders Prompting - Exploring the Top Insights on
   {{Topic}}
