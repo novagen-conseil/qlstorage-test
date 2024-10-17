@@ -5,12 +5,10 @@ author: bewalthew
 input_variables:
   content:
     type: string
-    description: test
-output_variables:
-  output:
-    type: string
-    description: test
+    description: ''
 content: |-
   spell check this content {{content}}
 
   and present the output within <output> 
+
+  <output> </output>
