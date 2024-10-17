@@ -11,8 +11,9 @@ output_variables:
     type: string
     description: ''
 content: |-
-  >
   spell check this content {{content}}
 
-
-  <output> output here </output>
+  <output>
+  <output>
+   output here
+  </output>
