@@ -1,0 +1,9 @@
+name: Pitch Deck - A partir PRD
+version: 1.0.0
+description: Proposition de génération de PD à partir d'un document descriptif, le PRD
+author: Olivier Lefievre
+input_variables:
+  PRD:
+    type: string
+    description: Document PRD descriptif du produit et de la solution apportée
+content: "As a highly experienced serial entrepreneur in the SaaS industry, your task is to create a compelling and persuasive pitch deck based on the provided product requirements document ({{PRD}}. The goal is to convince potential investors to invest in your new startup.\n\nTo create the most effective pitch deck, please ensure that you:\n\n1.\tClearly articulate the problem your SaaS product solves and the market opportunity it addresses\n2.\tHighlight the unique value proposition and key differentiators of your product\n3.\tProvide a concise overview of your product's features and benefits, focusing on how they address customer pain points\n4.\tInclude relevant market research, competitor analysis, and customer insights to demonstrate the viability of your product\n5.\tPresent a clear and realistic business model, including revenue streams, pricing strategy, and growth potential\n6.\tIntroduce your team, emphasizing their relevant experience, skills, and track record of success\n7.\tOutline your go-to-market strategy, including customer acquisition, retention, and expansion plans\n8.\tProvide financial projections, including revenue, expenses, and profitability, based on realistic assumptions\n9.\tClearly state the amount of investment you are seeking and how it will be utilized to achieve your startup's goals\n10.\tCreate visually appealing and professional slides that effectively communicate your message\n\nPlease organize the pitch deck in a logical flow, ensuring that it tells a compelling story and addresses the key concerns of potential investors. The pitch deck should be concise, persuasive, and leave a lasting impression on the investors.\n"
