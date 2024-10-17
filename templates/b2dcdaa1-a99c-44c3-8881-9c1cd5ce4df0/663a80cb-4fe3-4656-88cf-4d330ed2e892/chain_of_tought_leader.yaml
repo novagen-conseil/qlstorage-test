@@ -4,15 +4,15 @@ description: Explore the top insights on a specific topic by thought leaders
 author: bewalthew
 input_variables:
   Topic:
-    type: ''
-    description: ''
+    type: string
+    description: ed
   Language:
-    type: ''
-    description: ''
+    type: string
+    description: ed
 output_variables:
   insight:
     type: string
-    description: insight
+    description: test
 content: >-
   ## Chain of Thought Leaders Prompting - Exploring the Top Insights on
   {{Topic}}
