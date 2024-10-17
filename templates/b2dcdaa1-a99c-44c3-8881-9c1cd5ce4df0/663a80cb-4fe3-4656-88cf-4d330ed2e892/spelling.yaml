@@ -6,6 +6,10 @@ input_variables:
   content:
     type: string
     description: ''
+output_variables:
+  output:
+    type: string
+    description: ''
 content: |-
   spell check this content {{content}}
 
