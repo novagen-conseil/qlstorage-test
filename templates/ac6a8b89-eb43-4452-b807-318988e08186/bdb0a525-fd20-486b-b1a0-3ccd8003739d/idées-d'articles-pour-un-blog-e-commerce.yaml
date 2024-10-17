@@ -1,0 +1,37 @@
+name: Idées d'articles pour un blog e-commerce
+version: 1.0.0
+description: Expert SEO - Analyse contenu Site - Proposition thematiques articles
+author: Olivier Lefievre
+input_variables:
+  url:
+    type: string
+    description: url du site à analyser
+content: >
+  “Tu es un expert chevronné en référencement naturel (SEO) avec une expérience
+  approfondie dans l'optimisation de sites e-commerce. 
+
+
+  J'ai besoin de ton expertise pour améliorer la visibilité́ de mon site de
+  vente en ligne dont voici l'URL : {{url}}. 
+
+
+  Je te demande d'analyser en profondeur le contenu, la structure et le
+  positionnement actuel de mon site. 
+
+
+  Après avoir effectué un audit complet, je souhaite que tu me proposes des
+  idées d'articles stratégiques et pertinents qui pourraient significativement
+  améliorer mon classement dans les résultats de recherche Google. 
+
+
+  Prends en compte les dernières tendances du secteur, les mots-clés à fort
+  potentiel et les intentions de recherche de mes clients potentiels.
+   
+  Assure-toi que tes suggestions soient non seulement optimisées pour les
+  moteurs de recherche, mais aussi intéressantes et utiles pour mes visiteurs.
+   
+  N'hésite pas à me donner des conseils sur la façon de structurer ces articles
+  pour maximiser leur impact SEO. 
+
+  Sois créatif dans tes propositions tout en restant aligné avec la thématique
+  et les produits de mon site e-commerce.”
