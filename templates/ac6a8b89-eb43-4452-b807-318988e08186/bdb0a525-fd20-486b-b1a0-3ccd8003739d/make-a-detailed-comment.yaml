@@ -2,7 +2,19 @@ name: Make a detailed comment
 version: '1'
 description: Build a structured information on a subject
 author: Olivier Lefievre
-input_variables: {}
+input_variables:
+  role:
+    type: string
+    description: ''
+  subject:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
+  lang:
+    type: string
+    description: ''
 content: >+
   As an {{role}}, I am tasked with providing an insightful commentary on
   {{subject}}. 
