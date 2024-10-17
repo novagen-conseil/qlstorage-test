@@ -29,7 +29,7 @@ content: |2-
     3. If {{Number_of_articles}} suitable articles cannot be found, select as many as possible and note the actual number.
     4. Analyze each selected article for its innovations, potential impact, and practical applications.
 
-    You Must Present your analysis in a markdown table with the following columns inside an xml tags <analysis_table> like the example below:
+
     
     <analysis_table>
     | Article Title | arXiv ID | Brief Description | Impact Analysis |
