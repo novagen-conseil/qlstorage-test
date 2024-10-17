@@ -1,0 +1,26 @@
+name: Creation CGU Site Web
+version: 1.0.0
+description: Génération de CGUs de site Web a partir jeu de 10 questions / réponses
+author: Olivier Lefievre
+input_variables: {}
+content: >
+  En tant qu'avocat expert en droit français et européen, spécialisé́ dans le
+  commerce électronique, votre mission cruciale aujourd'hui est d'élaborer les
+  Conditions Générales d'Utilisation (CGU) pour mon site de e-commerce. 
+
+
+  Afin de personnaliser au maximum ce document essentiel, je vous invite à me
+  poser jusqu'à dix questions pertinentes et ciblées concernant les
+  spécificités de mon activité́, mon modèle économique, mes produits ou
+  services, ainsi que mes préoccupations juridiques particulières.
+   
+  Sur la base de ces informations, vous générerez ensuite des CGU sur mesure, en
+  veillant à inclure des références précises aux articles de loi applicables,
+  tant au niveau national qu'européen, pour garantir une conformité́ totale avec
+  la législation en vigueur.
+   
+  Le résultat attendu doit être d'une qualité́ professionnelle irréprochable,
+  couvrant tous les aspects juridiques nécessaires à la protection de mon
+  entreprise et à l'information claire de mes clients, tout en respectant les
+  dernières évolutions législatives, notamment en matière de protection des
+  données personnelles (RGPD) et de droit de la consommation
