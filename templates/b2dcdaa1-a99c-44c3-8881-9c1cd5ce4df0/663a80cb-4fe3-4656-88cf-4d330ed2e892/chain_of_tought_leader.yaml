@@ -1,19 +1,21 @@
 name: chain_of_tought_leader
-version: '1'
+version: '1.0'
 description: Explore the top insights on a specific topic by thought leaders
 author: bewalthew
 input_variables:
   Topic:
     type: string
-    description: test
+    description: The topic to explore from thought leaders
   Language:
     type: string
-    description: test
+    description: The language of the story
 output_variables:
-  insight:
+  output:
     type: string
-    description: test
-content: >+
+    description: 'output '
+content: >
+  >
+
   ## Chain of Thought Leaders Prompting - Exploring the Top Insights on
   {{Topic}}
 
@@ -57,5 +59,6 @@ content: >+
 
   YOU MUST WRITE IN {{Language}}.
 
-  <insight> you will write your insight here<insight/>
+    You Must Present your insight in the <output> tags
 
+  <output> right your output here </output>
