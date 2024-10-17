@@ -1,20 +1,20 @@
-name: Make a detailed comment
+name: Make a detailed comment1
 version: '1'
 description: Build a structured information on a subject
 author: Olivier Lefievre
 input_variables:
   role:
     type: string
-    description: ''
+    description: The role
   subject:
     type: string
-    description: ''
+    description: The subject to study
   max_length:
-    type: number
-    description: ''
+    type: '1000'
+    description: Max words
   lang:
     type: string
-    description: ''
+    description: output Language
 content: >+
   As an {{role}}, I am tasked with providing an insightful commentary on
   {{subject}}. 
