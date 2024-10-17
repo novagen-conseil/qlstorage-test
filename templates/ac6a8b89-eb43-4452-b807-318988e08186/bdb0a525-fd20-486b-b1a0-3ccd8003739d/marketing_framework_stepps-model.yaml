@@ -1,0 +1,40 @@
+name: Marketing_framework_STEPPS Model
+version: 1.0.0
+description: Generate a marketing prompt using the STEPPS model framework
+author: Olivier Lefievre
+input_variables:
+  product:
+    type: string
+    description: Produit étudié
+  target_audience:
+    type: string
+    description: Audience ciblée
+content: >
+  As an experienced copywriter, your task is to create a marketing message using
+  the STEPPS framework (Social Currency, Triggers, Emotion, Public, Practical
+  Value, Stories) for {{product}} targeting {{target_audience}}.
+
+
+  Address each element of STEPPS:
+
+  1. Social Currency: How can {{target_audience}} feel special or important for
+  using {{product}}?
+
+  2. Triggers: What daily routine or event can {{product}} be associated with
+  for {{target_audience}}?
+
+  3. Emotion: How can {{product}} tap into strong emotions that resonate with
+  {{target_audience}}?
+
+  4. Public: How can {{target_audience}} visibly show others they are using
+  {{product}}?
+
+  5. Practical Value: What useful, actionable value does {{product}} offer to
+  {{target_audience}}?
+
+  6. Stories: Share a compelling story about how {{product}} made an impact for
+  someone similar to {{target_audience}}.
+
+
+  Your content should be designed to create buzz and encourage word-of-mouth
+  sharing about {{product}} among {{target_audience}}.
