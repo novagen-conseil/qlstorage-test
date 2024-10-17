@@ -1,11 +1,11 @@
 name: Magic Meta prompt
-version: 1.0.0
+version: '1'
 description: Prompt magique pour optimiser de manière pointue vos prompts
 author: Olivier Lefievre
 input_variables:
   prompt:
     type: string
-    description: The prompt in input
+    description: The prompt to optimize
   field:
     type: string
     description: Your domain of excellence
