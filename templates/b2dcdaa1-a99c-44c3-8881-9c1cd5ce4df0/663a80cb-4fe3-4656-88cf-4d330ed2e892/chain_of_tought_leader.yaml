@@ -5,15 +5,15 @@ author: bewalthew
 input_variables:
   Topic:
     type: string
-    description: ed
+    description: test
   Language:
     type: string
-    description: ed
+    description: test
 output_variables:
   insight:
     type: string
     description: test
-content: >-
+content: >+
   ## Chain of Thought Leaders Prompting - Exploring the Top Insights on
   {{Topic}}
 
@@ -57,6 +57,5 @@ content: >-
 
   YOU MUST WRITE IN {{Language}}.
 
-
-
   <insight> you will write your insight here<insight/>
+
