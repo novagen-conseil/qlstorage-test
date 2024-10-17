@@ -2,5 +2,15 @@ name: spelling
 version: '1'
 description: spell check
 author: bewalthew
-input_variables: {}
-content: updated content test 2 {{test}} try again test
+input_variables:
+  content:
+    type: string
+    description: test
+output_variables:
+  output:
+    type: string
+    description: test
+content: |-
+  spell check this content {{content}}
+
+  and present the output within <output> 
