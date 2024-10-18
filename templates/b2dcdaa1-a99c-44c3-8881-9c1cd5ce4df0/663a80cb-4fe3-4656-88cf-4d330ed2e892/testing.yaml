@@ -1,9 +1,0 @@
-name: testing
-version: '1'
-description: test
-author: bewalthew
-input_variables:
-  test:
-    type: ''
-    description: ''
-content: test prompt {{test}} again test test
