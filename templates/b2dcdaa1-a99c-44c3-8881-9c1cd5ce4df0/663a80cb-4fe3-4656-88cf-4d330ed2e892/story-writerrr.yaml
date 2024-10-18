@@ -1,6 +1,6 @@
 name: story writerrr
-version: '1'
-description: story writer
+version: 1.0.0
+description: test
 author: bewalthew
-input_variables: {}
-content: write a story about {{theme}}
+content: test
+model: gpt-4
