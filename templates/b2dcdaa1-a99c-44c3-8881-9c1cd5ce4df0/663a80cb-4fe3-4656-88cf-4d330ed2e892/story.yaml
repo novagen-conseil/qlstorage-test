@@ -1,5 +1,5 @@
 name: story
-version: 1.0.0
+version: '1'
 description: story writer
 author: bewalthew
 input_variables:
@@ -7,7 +7,7 @@ input_variables:
     type: string
     description: ''
   word_count:
-    type: number
+    type: string
     description: ''
 output_variables:
   story:
@@ -16,7 +16,6 @@ output_variables:
 content: |-
   write a story about {{theme}} in less then {{word_count}} words
 
-  you will write the story within the <story> tags
   <story> 
-   write the story here
+   write the story withing these tags
   </story>
