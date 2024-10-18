@@ -1,5 +1,5 @@
 name: story writter
-version: 1.0.0
+version: '1'
 description: writes a story
 author: bewalthew
 input_variables:
@@ -14,6 +14,6 @@ content: |-
   write a story about {{theme}}
 
   <story>
-  <story>
-  write the story here
-  <story/>
+     <story>
+      write the story here
+     <story/>
