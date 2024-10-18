@@ -124,7 +124,7 @@ input_variables:
       Saber, nor Bear is on a walk. One of the dogs named after a spice is
       getting its ears scratched. A dog not named for a spice is playing catch.
       Bear is getting some exercise. Can you determine what each dog is doing?
-model: gpt-4
+model: anthropic.claude-3-5-sonnet-20240620-v1:0
 parameters:
   max_tokens: 12000
   temperature: 0.2
