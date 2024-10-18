@@ -1,0 +1,22 @@
+name: story
+version: 1.0.0
+description: story writer
+author: bewalthew
+input_variables:
+  theme:
+    type: string
+    description: ''
+  word_count:
+    type: number
+    description: ''
+output_variables:
+  story:
+    type: string
+    description: ''
+content: |-
+  write a story about {{theme}} in less then {{word_count}} words
+
+  you will write the story within the <story> tags
+  <story> 
+   write the story here
+  </story>
