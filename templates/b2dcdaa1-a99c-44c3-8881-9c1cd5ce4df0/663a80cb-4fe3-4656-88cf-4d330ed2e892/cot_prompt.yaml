@@ -125,7 +125,7 @@ content: >
   reasoning process for potential improvements.
 
   ### END
-model: gpt-3.5-turbo
+model: text-davinci-003
 parameters:
   max_tokens: 12000
   temperature: 0.2
