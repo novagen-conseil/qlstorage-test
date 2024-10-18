@@ -1,6 +1,0 @@
-name: personal
-version: 1.0.0
-description: personal
-author: bewalthew
-input_variables: {}
-content: 'this is a personal prompt '
