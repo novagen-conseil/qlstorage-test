@@ -3,7 +3,4 @@ version: 1.0.0
 description: test
 author: bewalthew
 content: test
-input_variables: {}
-output_variables: {}
 model: gpt-4o
-parameters: {}
