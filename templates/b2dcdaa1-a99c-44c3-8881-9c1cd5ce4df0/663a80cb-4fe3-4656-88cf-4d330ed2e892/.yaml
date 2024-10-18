@@ -1,0 +1,12 @@
+name: ''
+version: 1.0.0
+description: ''
+author: bewalthew
+input_variables: {}
+content: test advanced
+model: gpt-4
+parameters:
+  temperature: 0.6
+  max_tokens: 0
+  top_p: 0.51
+  maxTokens: 200
