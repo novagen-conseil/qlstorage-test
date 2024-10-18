@@ -1,0 +1,8 @@
+name: test
+version: 1.0.0
+description: test
+author: bewalthew
+input_variables: {}
+content: test
+model: gpt-4o
+parameters: {}
