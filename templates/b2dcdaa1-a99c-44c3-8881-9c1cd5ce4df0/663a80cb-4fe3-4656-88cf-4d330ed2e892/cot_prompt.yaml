@@ -2,6 +2,19 @@ name: cot_prompt
 version: '1.1'
 description: Solve complex problems using Chain of Thought (CoT) reasoning
 author: bewalthew
+input_variables:
+  problem_to_solve:
+    type: string
+    description: The problem to solve
+    place_holder: >
+      Each of five neighborhood dogs (Saber, Ginger, Nutmeg, Pepper, and Bear)
+      is enjoying one of the following activities:  getting its ears scratched,
+      playing catch, taking a nap, burying a chew toy, and going for a walk.
+      Pepper is either playing catch or burying a chew toy. Neither Ginger,
+      Saber, nor Bear is on a walk. One of the dogs named after a spice is
+      getting its ears scratched. A dog not named for a spice is playing catch.
+      Bear is getting some exercise. Can you determine what each dog is doing?
+output_variables: {}
 content: >
   ## Problem to Solve
 
@@ -112,20 +125,7 @@ content: >
   reasoning process for potential improvements.
 
   ### END
-input_variables:
-  problem_to_solve:
-    type: string
-    description: The problem to solve
-    place_holder: >
-      Each of five neighborhood dogs (Saber, Ginger, Nutmeg, Pepper, and Bear)
-      is enjoying one of the following activities:  getting its ears scratched,
-      playing catch, taking a nap, burying a chew toy, and going for a walk.
-      Pepper is either playing catch or burying a chew toy. Neither Ginger,
-      Saber, nor Bear is on a walk. One of the dogs named after a spice is
-      getting its ears scratched. A dog not named for a spice is playing catch.
-      Bear is getting some exercise. Can you determine what each dog is doing?
-output_variables: {}
-model: gpt-4
+model: gpt-3.5-turbo
 parameters:
   max_tokens: 12000
   temperature: 0.2
