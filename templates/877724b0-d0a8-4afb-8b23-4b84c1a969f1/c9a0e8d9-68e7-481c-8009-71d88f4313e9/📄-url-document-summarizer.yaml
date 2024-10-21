@@ -23,19 +23,16 @@ content: |
 
   END.
 input_variables:
-  file_url:
+  'include: file_url':
     type: string
-    description: 🔗 The URL of the document to summarize
-    place_holder: ''
+    description: ''
   max_words:
     type: number
     description: 📏 Maximum number of words for the summary
-    place_holder: ''
 output_variables:
   summary:
     type: string
     description: 📝 The generated summary of the document
-    place_holder: ''
 model: gpt-4o-mini
 parameters:
   max_tokens: 500
