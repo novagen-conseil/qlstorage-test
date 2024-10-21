@@ -1,0 +1,41 @@
+name: 'Marketing - Framework 4 Cs '
+version: '1'
+description: |-
+  Generate a Customer Centric Approach using 4Cs Marketing framework
+  Customer / Cost / Convenience / Communication
+author: YOUCEF
+input_variables:
+  product:
+    type: string
+    description: The product or service to promote
+  target_audience:
+    type: string
+    description: The target audience for the promotion
+  language:
+    type: string
+    description: Output Language
+content: >
+  As a marketing strategist, your task is to develop a customer-centric
+  marketing approach using the 4 Cs framework (Customer, Cost, Convenience,
+  Communication) for {{product}} targeting {{target_audience}}.
+
+  Address each of the 4 Cs: 
+
+  1. Customer: Analyze the needs, wants, and preferences of {{target_audience}}
+  in relation to {{product}}. 
+
+  2. Cost: Consider the total cost to the customer, including price, time, and
+  effort required to acquire and use {{product}}. 
+
+  3. Convenience: Explain how {{product}} can be made easily accessible and
+  convenient for {{target_audience}} to purchase and use. 
+
+  4. Communication: Outline a strategy for effective two-way communication with
+  {{target_audience}} about {{product}}.
+
+  Your analysis should demonstrate a deep understanding of {{target_audience}}
+  and how {{product}} can meet their needs effectively. Aim for approximately
+  300-350 words, with clear sections for each of the 4 Cs. 
+
+  output must be in {{language}}
+model: anthropic.claude-3-haiku-20240307-v1:0
