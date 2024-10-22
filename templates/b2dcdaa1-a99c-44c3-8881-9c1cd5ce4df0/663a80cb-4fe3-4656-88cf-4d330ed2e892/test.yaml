@@ -2,8 +2,8 @@ name: test
 version: 1.0.0
 description: why
 author: bewalthew
-content: why {{why}}
+content: test {{working}}
 input_variables:
-  why:
+  working:
     type: string
-    description: why
+    description: working
