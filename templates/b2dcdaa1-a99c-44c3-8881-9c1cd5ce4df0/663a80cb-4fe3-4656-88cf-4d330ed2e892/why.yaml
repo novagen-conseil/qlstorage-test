@@ -1,9 +1,0 @@
-name: why
-version: 1.0.0
-description: test
-author: bewalthew
-content: why {{test}}
-input_variables:
-  test:
-    type: string
-    description: ''
