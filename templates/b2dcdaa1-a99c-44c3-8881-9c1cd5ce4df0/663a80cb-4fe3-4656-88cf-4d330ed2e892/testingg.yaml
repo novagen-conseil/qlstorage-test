@@ -1,0 +1,9 @@
+name: testingg
+version: 1.0.0
+description: test
+author: bewalthew
+content: test {{test}}
+input_variables:
+  test:
+    type: string
+    description: test
