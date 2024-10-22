@@ -5,5 +5,5 @@ author: bewalthew
 input_variables:
   test:
     type: string
-    description: ''
+    description: test
 content: test {{test}}
