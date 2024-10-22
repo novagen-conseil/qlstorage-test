@@ -1,9 +1,0 @@
-name: bool
-version: '1'
-description: bool
-author: bewalthew
-input_variables:
-  test:
-    type: string
-    description: ''
-content: new {{test}}
