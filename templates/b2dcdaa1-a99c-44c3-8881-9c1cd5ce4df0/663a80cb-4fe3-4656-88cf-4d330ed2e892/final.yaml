@@ -1,0 +1,9 @@
+name: final
+version: 1.0.0
+description: test
+author: bewalthew
+content: test {{final}}
+input_variables:
+  final:
+    type: string
+    description: final
