@@ -1,9 +1,0 @@
-name: hm
-version: 1.0.0
-description: hmhm
-author: bewalthew
-content: test {{test}}
-input_variables:
-  test:
-    type: string
-    description: ''
