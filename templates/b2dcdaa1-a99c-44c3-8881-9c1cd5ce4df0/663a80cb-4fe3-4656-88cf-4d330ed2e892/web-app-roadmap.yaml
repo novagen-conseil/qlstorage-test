@@ -1,7 +1,17 @@
 name: web app roadmap
-version: 1.0.0
+version: '1'
 description: creates a roadmap for a webapplication idea
 author: bewalthew
+input_variables:
+  idea:
+    type: string
+    description: ''
+  skill_level:
+    type: string
+    description: ''
+  hours_week:
+    type: number
+    description: ''
 content: >
   As a technical advisor for independent developers, analyze this web
   application idea and create a detailed, solo-friendly development roadmap.
@@ -194,13 +204,3 @@ content: >
 
 
   {{hours_week}} : hours a week available
-input_variables:
-  idea:
-    type: string
-    description: ''
-  skill_level:
-    type: string
-    description: ''
-  hours_week:
-    type: boolean
-    description: ''
