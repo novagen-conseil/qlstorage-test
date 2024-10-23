@@ -1,9 +1,19 @@
-name: Marketing_Framework_4Cs
-version: '1.0'
+name: Marketing_Framework_4Cs_vt1.0
+version: '1'
 description: |-
   Generate 4 Cs Marketing framework
   Customer, Cost, Convenience, Communication
 author: Olivier Lefievre
+input_variables:
+  product:
+    type: string
+    description: The product or service to promote
+  target_audience:
+    type: string
+    description: The target audience for the promotion
+  language:
+    type: string
+    description: ''
 content: >
   As a marketing strategist, your task is to develop a customer-centric
   marketing approach using the 4 Cs framework (Customer, Cost, Convenience,
@@ -29,14 +39,4 @@ content: >
   and how {{product}} can meet their needs effectively. Aim for approximately
   300-350 words, with clear sections for each of the 4 Cs. output must be in
   {{language}}
-input_variables:
-  product:
-    type: string
-    description: The product or service to promote
-  target_audience:
-    type: string
-    description: The target audience for the promotion
-  language:
-    type: string
-    description: ''
 model: gpt-4o-mini
