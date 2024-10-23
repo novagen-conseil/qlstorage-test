@@ -1,4 +1,4 @@
-name: code_analysis
+name: code_analysis_Test
 version: '2'
 description: Analyze and compare the code
 author: Olivier Lefievre
