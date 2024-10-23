@@ -1,7 +1,21 @@
 name: code_analysis
-version: '2.0'
+version: '2'
 description: Analyze and compare the code
 author: Olivier Lefievre
+input_variables:
+  'include: file_url':
+    type: string
+    description: ''
+output_variables:
+  result:
+    type: string
+    description: Ananlysis of the code
+  strategy:
+    type: string
+    description: Strategies to improve the code
+  code:
+    type: string
+    description: The improved code
 content: >
   ## As expert sofware engineer you have mission to analyze and improve the code
   provided in xml tag <code_to_improve> below.
@@ -79,18 +93,4 @@ content: >
 
   Describe in details what's has been improved in the code and how it will
   impact the performance or readability of the code. </result>
-input_variables:
-  'include: file_url':
-    type: string
-    description: ''
-output_variables:
-  result:
-    type: string
-    description: Ananlysis of the code
-  strategy:
-    type: string
-    description: Strategies to improve the code
-  code:
-    type: string
-    description: The improved code
 model: gpt-4o-mini
