@@ -1,7 +1,17 @@
-name: stepps_for_social_media
-version: '1.0'
+name: Marketing_Framework stepps_for_social_media
+version: '1'
 description: Generate viral social media content using STEPPS framework
 author: Olivier Lefievre
+input_variables:
+  platform:
+    type: string
+    description: The social media platform for the content
+  product:
+    type: string
+    description: The product or service to promote
+  target_audience:
+    type: string
+    description: The target audience for the campaign
 content: >
   ## Who are you?
 
@@ -60,13 +70,3 @@ content: >
 
   Combine all elements into a cohesive {{platform}} post, incorporating all
   slogans where appropriate.
-input_variables:
-  platform:
-    type: string
-    description: The social media platform for the content
-  product:
-    type: string
-    description: The product or service to promote
-  target_audience:
-    type: string
-    description: The target audience for the campaign
