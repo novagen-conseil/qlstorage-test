@@ -2,12 +2,6 @@ name: story
 version: '1'
 description: story writer
 author: bewalthew
-content: |-
-  write a story about {{theme}} in less then {{word_count}} words
-
-  <story> 
-   write the story withing these tags
-  </story>
 input_variables:
   theme:
     type: string
@@ -19,3 +13,14 @@ output_variables:
   story:
     type: string
     description: ''
+content: >-
+  write a story about {{theme}} in less then {{word_count}} words
+
+
+  first write your reflection and what kind of story you might inspire yourself
+  on and then after then write the story
+
+
+  <story> 
+   write the story withing these tags
+  </story>
