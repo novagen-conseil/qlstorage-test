@@ -1,7 +1,17 @@
 name: pas_for_social_media
-version: '1.0'
+version: '1'
 description: Generate PAS-based social media content
 author: Olivier Lefievre
+input_variables:
+  platform:
+    type: string
+    description: The social media platform for the content
+  product:
+    type: string
+    description: The product or service to promote
+  problem:
+    type: string
+    description: The problem your product solves
 content: >
   ## Who are you?
 
@@ -43,13 +53,3 @@ content: >
 
   Combine all elements into a cohesive {{platform}} post, incorporating all
   slogans where appropriate.
-input_variables:
-  platform:
-    type: string
-    description: The social media platform for the content
-  product:
-    type: string
-    description: The product or service to promote
-  problem:
-    type: string
-    description: The problem your product solves
