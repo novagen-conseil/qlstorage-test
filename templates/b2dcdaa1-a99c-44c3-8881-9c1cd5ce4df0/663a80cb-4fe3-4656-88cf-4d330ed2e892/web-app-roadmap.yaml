@@ -1,0 +1,206 @@
+name: web app roadmap
+version: 1.0.0
+description: creates a roadmap for a webapplication idea
+author: bewalthew
+content: >
+  As a technical advisor for independent developers, analyze this web
+  application idea and create a detailed, solo-friendly development roadmap.
+  Consider that all development will be handled by a single person. Structure
+  your response as follows:
+
+
+  ## Project Feasibility Assessment
+
+  - Evaluate complexity for solo development
+
+  - Identify which parts could be replaced with existing solutions
+
+  - List features that should be prioritized vs postponed
+
+  - Recommend low-code/no-code alternatives where applicable
+
+
+  ## Technical Strategy
+
+  **Architecture Simplification**
+
+  - Suggest minimal viable tech stack
+
+  - List recommended third-party services to reduce workload
+
+  - Identify areas where managed services are cost-effective
+
+  - Detail which features to build vs buy
+
+
+  **Development Environment**
+
+  - Local setup requirements
+
+  - Recommended development tools
+
+  - Version control strategy
+
+  - Testing approach for single developer
+
+
+  ## Solo Development Phases
+
+
+  **Phase 1: Foundation (Timeline)**
+
+  - Initial setup and boilerplate
+
+  - Basic functionality implementation
+
+  - Essential security measures
+
+  - Core user flows
+
+
+  **Phase 2: MVP Features (Timeline)**
+
+  - Critical feature development
+
+  - Basic error handling
+
+  - Simple analytics
+
+  - Manual testing procedures
+
+
+  **Phase 3: Polish & Launch (Timeline)**
+
+  - UI/UX refinement
+
+  - Performance optimization
+
+  - Security hardening
+
+  - Deployment preparation
+
+
+  ## Resource Management
+
+  **Time Allocation**
+
+  - Development hours per week
+
+  - Testing and debugging time
+
+  - Learning curve allowance
+
+  - Maintenance expectations
+
+
+  **Skills Assessment**
+
+  - Required technical skills
+
+  - Learning requirements
+
+  - Recommended tutorials/courses
+
+  - Documentation needs
+
+
+  ## Budget Breakdown
+
+  **One-time Costs**
+
+  - Development tools
+
+  - Learning resources
+
+  - Domain registration
+
+  - Initial setup fees
+
+
+  **Monthly Operating Costs**
+
+  - Hosting services
+
+  - Third-party APIs
+
+  - Monitoring tools
+
+  - Backup solutions
+
+
+  ## Critical Challenges
+
+  **Technical Complexity**
+
+  - Most difficult features to implement
+
+  - Areas requiring extensive learning
+
+  - Performance bottlenecks
+
+  - Security considerations
+
+
+  **Time Management Risks**
+
+  - Complex features estimation
+
+  - Potential roadblocks
+
+  - Debugging time allocation
+
+  - Maintenance requirements
+
+
+  ## Development Schedule
+
+  - Weekly development goals
+
+  - Testing milestones
+
+  - Launch preparation
+
+  - Post-launch tasks
+
+
+  ## Solo Developer Tips
+
+  **Productivity Optimization**
+
+  - Recommended development workflow
+
+  - Time management strategies
+
+  - Testing shortcuts
+
+  - Deployment automation
+
+
+  **Support Systems**
+
+  - Online communities for help
+
+  - Documentation resources
+
+  - Debugging tools
+
+  - Code review alternatives
+
+
+  {{idea}} : the idea of app 
+
+
+  {{skill_level}} : the developpers skill level
+
+
+  {{hours_week}} : hours a week available
+input_variables:
+  idea:
+    type: string
+    description: ''
+  skill_level:
+    type: string
+    description: ''
+  hours_week:
+    type: boolean
+    description: ''
