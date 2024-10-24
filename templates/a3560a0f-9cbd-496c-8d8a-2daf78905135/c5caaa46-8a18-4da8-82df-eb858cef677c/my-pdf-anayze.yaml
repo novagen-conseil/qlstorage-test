@@ -1,0 +1,16 @@
+name: my pdf anayze
+version: 1.0.0
+description: summarizes and extract author
+author: hubert
+content: >-
+  Please analyze the PDF document available at {{url}}. In your summary, ensure
+  that your writing is clear and concise. Focus on the following elements:
+      
+      1. **Main Subject:** Clearly identify the central theme of the document.
+      2. **Author Information:** Provide background details about the author(s), including affiliations and expertise relevant to the document.
+      3. **Completeness Assessment:** Evaluate if the document:
+         - Omits significant concepts or pieces of information.
+         - Adequately supports its argument with evidence.
+         - Draws well-substantiated conclusions based on the presented information.
+      
+      Structure your response using bullet points or headings for clarity, and maintain an informative yet approachable tone.
