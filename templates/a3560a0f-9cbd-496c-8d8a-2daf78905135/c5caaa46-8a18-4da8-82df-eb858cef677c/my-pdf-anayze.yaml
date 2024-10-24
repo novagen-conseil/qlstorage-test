@@ -1,7 +1,11 @@
 name: my pdf anayze
-version: 1.0.0
+version: '1'
 description: summarizes and extract author
 author: hubert
+input_variables:
+  url:
+    type: string
+    description: ''
 content: >-
   Please analyze the PDF document available at {{url}}. In your summary, ensure
   that your writing is clear and concise. Focus on the following elements:
@@ -14,3 +18,4 @@ content: >-
          - Draws well-substantiated conclusions based on the presented information.
       
       Structure your response using bullet points or headings for clarity, and maintain an informative yet approachable tone.
+model: gpt-4o-mini
