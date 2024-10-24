@@ -1,0 +1,39 @@
+name: imagine story
+version: 1.0.0
+description: imagines a story
+author: bewalthew
+content: >-
+  Please assist me in crafting a detailed outline for a short story about
+  {{theme}} by following the structure below. Your outline should include:
+      <item> 
+          <name>Genre:</name> 
+          <description>Select and briefly justify one or more genres that suit the narrative (e.g., fantasy, romance, science fiction).</description>
+      </item>
+      <item>
+          <name>Setting:</name> 
+          <description>Describe the world with at least three sensory details, making strong connections to the mood you wish to convey.</description>
+      </item>
+      <item>
+          <name>Main Characters:</name> 
+          <description>Identify two to three main characters, summarizing their key traits, motivations, and emotional arcs. Consider alternative traits or motivations that could lead to different character developments.</description>
+      </item>
+      <item>
+          <name>Conflict:</name> 
+          <description>Define the central challenge or conflict the characters face. What are its sources, and how might it evolve through the story? Explore at least two potential conflicts or challenges.</description>
+      </item>
+      <item>
+          <name>Resolution:</name> 
+          <description>Explain how the central conflict might be resolved and what significant changes occur within the characters or setting as a result.</description>
+      </item>
+      <item>
+          <name>Theme/Moral:</name> 
+          <description>Suggest a central theme or moral that weaves together the story's elements.</description>
+      </item>
+      <item>
+          <name>Opening Paragraph:</name> 
+          <description>Provide an engaging opening paragraph that hooks the reader and sets the tone and atmosphere. Feel free to adjust the length of the story based on the complexity of the outlined elements, aiming for a concise narrative that effectively incorporates all outlined ideas.</description>
+      </item>
+input_variables:
+  theme:
+    type: string
+    description: ''
