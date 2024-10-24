@@ -1,0 +1,18 @@
+name: recipe generator
+version: 1.0.0
+description: generates a receipe for a main ingredient
+author: bewalthew
+content: >
+  Create a detailed recipe using {{ingredient}} as the main ingredient. Please
+  include the following elements:
+      1. **Recipe Name:** Give an imaginative name to your dish.
+      2. **Cuisine Style:** Specify the cuisine (e.g., Italian, Mexican, vegetarian).
+      3. **Ingredients List:** List all required ingredients with quantities.
+      4. **Preparation Steps:** Outline step-by-step instructions for preparing the dish, including cooking times and techniques.
+      5. **Serving Suggestions:** Provide ideas on how to serve the dish, including any recommended pairings or garnishes.
+      6. **Nutritional Information (optional):** If relevant, include basic nutritional information or modifications for special diets.
+      7. **Alternative Uses:** Suggest one or two alternative uses for this ingredient in other recipes or meal preparations.
+input_variables:
+  ingredient:
+    type: string
+    description: ''
