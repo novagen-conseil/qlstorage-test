@@ -1,7 +1,14 @@
 name: Marketing_Framework_AIDA_vt1.0
-version: '1.0'
+version: '1'
 description: Generate AIDA marketing framework
 author: Olivier Lefievre
+input_variables:
+  product:
+    type: string
+    description: The product or service to promote
+  target_audience:
+    type: string
+    description: The target audience for the promotion
 content: >
   As an expert marketer, your task is to create a compelling advertisement using
   the AIDA (Attention, Interest, Desire, Action) framework for {{product}}
@@ -17,11 +24,4 @@ content: >
 
   Your advertisement should be concise, engaging, and tailored specifically to
   appeal to {{target_audience}}. Aim for approximately 150-200 words.
-input_variables:
-  product:
-    type: string
-    description: The product or service to promote
-  target_audience:
-    type: string
-    description: The target audience for the promotion
 model: gpt-4o-mini
