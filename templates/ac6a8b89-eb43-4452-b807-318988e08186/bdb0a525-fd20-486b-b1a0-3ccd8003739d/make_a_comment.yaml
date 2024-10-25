@@ -1,7 +1,24 @@
 name: make_a_comment
-version: '1.0'
+version: '1'
 description: Create a comment on a subject
 author: Olivier Lefievre
+input_variables:
+  role:
+    type: string
+    description: Your role
+  subject:
+    type: string
+    description: The subject to comment
+  max_length:
+    type: number
+    description: The maximum length of the comment in words
+  lang:
+    type: string
+    description: The language of the comment
+output_variables:
+  comment:
+    type: string
+    description: The comment
 content: >
   As an {{role}}, I am tasked with providing an insightfulcommentary on
   {{subject}}. 
@@ -62,21 +79,4 @@ content: >
   Throughout this process, I will continuously reflect on the originality and
   potential impact of my ideas, striving to provide a truly insightful and
   thought-provoking commentary on {{subject}}.
-input_variables:
-  role:
-    type: string
-    description: Your role
-  subject:
-    type: string
-    description: The subject to comment
-  max_length:
-    type: number
-    description: The maximum length of the comment in words
-  lang:
-    type: string
-    description: The language of the comment
-output_variables:
-  comment:
-    type: string
-    description: The comment
 model: gpt-4o-mini
