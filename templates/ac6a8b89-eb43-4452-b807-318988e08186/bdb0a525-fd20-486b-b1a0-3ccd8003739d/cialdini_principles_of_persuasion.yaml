@@ -1,9 +1,16 @@
 name: cialdini_principles_of_persuasion
-version: '1.0'
+version: '1'
 description: >-
   Generate a marketing prompt using Cialdini's Principles of Persuasion
   framework
 author: Olivier Lefievre
+input_variables:
+  product:
+    type: string
+    description: The product or service to promote
+  target_audience:
+    type: string
+    description: The target audience for the promotion
 content: >
   As an experienced copywriter, your task is to create a marketing message using
   Cialdini’s Principles of Persuasion (Reciprocity, Commitment & Consistency,
@@ -21,11 +28,4 @@ content: >
 
   Your content should use these principles to create a persuasive, compelling
   message that encourages {{target_audience}} to take action.
-input_variables:
-  product:
-    type: string
-    description: The product or service to promote
-  target_audience:
-    type: string
-    description: The target audience for the promotion
 model: gpt-4o-mini
