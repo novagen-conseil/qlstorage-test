@@ -1,51 +1,7 @@
-name: select_seminal_articles
+name: select_seminal_articles_upda
 version: '1.1'
 description: Analyze recent seminal articles on artificial intelligence from arXiv
 author: youcef
-content: >
-  ## Task:
-
-  Analyze the most recent and impactful artificial intelligence articles from
-  the arXiv search results provided below. Select {{Number_of_articles}}
-  articles that demonstrate clear breakthroughs or significant advancements in
-  AI methodologies or applications.
-
-  ## Source data: <arxiv_results> {{include:
-  https://arxiv.org/search/cs?query=artificial+intelligence&searchtype=all&abstracts=show&order=-announced_date_first&size=25}}
-  </arxiv_results>
-
-  ## Instructions: 1. Select {{Number_of_articles}} articles from the arXiv
-  search results in the <arxiv_results> tag above. 2. Choose only articles that
-  represent major advancements or novel approaches in AI. 3. If
-  {{Number_of_articles}} suitable articles cannot be found, select as many as
-  possible and note the actual number. 4. Analyze each selected article for its
-  innovations, potential impact, and practical applications.
-
-  ## Output format: You Must Present your analysis in a markdown table with the
-  following columns inside an xml tags <analysis_table> like the example below:
-
-  <analysis_table> | Article Title | arXiv ID | Brief Description | Impact
-  Analysis |
-
-  - Article Title: The full title of the research paper - arXiv ID: The
-  article's unique identifier and link - Brief Description: A concise summary
-  (50-75 words) of the core innovations and findings - Impact Analysis: A
-  critical evaluation (75-100 words) of the article's significance, including:
-    * Potential to disrupt current technologies
-    * Influence on future research directions
-    * Practical value for AI system design and implementation
-    * Relevance to scalable architectures and SaaS businesses
-  </analysis_table>
-
-  ## Additional guidelines: - Focus on articles with clear practical
-  applications or potential for industry impact - Highlight aspects relevant to
-  data engineering and AI system scalability - Consider the article's potential
-  to inspire thought leadership in AI
-
-  ## Language: Provide all output content in {{Language}}.
-
-  Note: If unable to find {{Number_of_articles}} suitable articles, explain why
-  and provide analysis for those available.
 input_variables:
   Number_of_articles:
     type: number
@@ -60,3 +16,51 @@ output_variables:
     type: string
     description: A markdown table with the analysis of selected articles
     place_holder: ''
+content: >-
+  Analyze the most recent and impactful artificial intelligence research
+  articles from the arXiv search results provided in the <arxiv_results>
+  section. Select {{Number_of_articles}} articles that showcase significant
+  advancements in AI methodologies or applications. Ensure that your selection
+  criteria focus on breakthroughs that can disrupt current technologies or
+  inspire future research directions.
+
+
+  Instructions: 
+
+  1. Select {{Number_of_articles}} articles from the <arxiv_results> section
+  above.
+     - Prioritize articles with practical applications or relevance to scalable AI architectures.
+     - If fewer than {{Number_of_articles}} suitable articles are found, provide analysis for as many as possible and state the actual number available.
+    
+  2. Analyze each selected article highlighting:
+     - Innovations and findings (50-75 words)
+     - Impact analysis detailing their significance (75-100 words) including:
+       - Disruption potential
+       - Future research influence
+       - Practical implications for AI system design
+       - Relevance to scalable architectures and SaaS applications
+
+  Output Format: Present your analysis in a markdown table enclosed in
+  <analysis_table> tags, structured as follows:
+
+  <analysis_table>
+
+  | Article Title | arXiv ID | Brief Description | Impact Analysis |
+
+  | --- | --- | --- | --- |
+
+  <analysis_table>
+
+
+  Additional Guidelines:
+
+  - Enhance insights relevant to data engineering and AI scalability.
+
+  - Emphasize the potential for influencing thought leadership in AI.
+
+
+  Language: Present all output content in {{Language}}.
+
+
+  Note: If unable to find {{Number_of_articles}} suitable articles, clarify the
+  situation and provide analysis for those available.
