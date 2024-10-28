@@ -1,17 +1,7 @@
 name: recipe1
-version: 1.0.0
+version: '1'
 description: simple prompt for a recipe
 author: Olivier Lefievre
-content: >-
-  Next week, I'll be hosting a lively family dinner for four, and I need your
-  culinary expertise to help me create two unique recipes! 
-
-  Please incorporate the ingredient **{{food}}** and two different vegetables,
-  **{{vegetable_1}}** and **{{vegetable_2}}**. 
-
-  I’d love for you to suggest the type of cuisine (like Italian, Thai, or
-  Mediterranean) and share preparation and cooking times, along with any dietary
-  considerations (e.g., vegetarian, keto). I'm eager for your delicious ideas!
 input_variables:
   food:
     type: ''
@@ -22,3 +12,13 @@ input_variables:
   vegetable_2:
     type: ''
     description: ''
+content: >-
+  Next week, I'll be hosting a lively family dinner for four, and I need your
+  culinary expertise to help me create two unique recipes! 
+
+  Please incorporate the ingredient **{{food}}** and two different vegetables,
+  **{{vegetable_1}}** and **{{vegetable_2}}**. 
+
+  I’d love for you to suggest the type of cuisine (like Italian, Thai, or
+  Mediterranean) and share preparation and cooking times, along with any dietary
+  considerations (e.g., vegetarian, keto). I'm eager for your delicious ideas!
