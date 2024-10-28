@@ -1,0 +1,6 @@
+name: create_story 1
+version: '1.0'
+description: Create a nice story
+author: bewalthew
+content: |
+  'Write a small story about Paris. Less than 200 words.
