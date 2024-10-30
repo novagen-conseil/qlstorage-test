@@ -19,4 +19,4 @@ content: >-
       - Suggestions for complementary flavors or cuisines to enhance the dish.
 
   Write this receipe in {{language}}
-model: anthropic.claude-3-haiku-20240307-v1:0
+model: gpt-4o-mini
