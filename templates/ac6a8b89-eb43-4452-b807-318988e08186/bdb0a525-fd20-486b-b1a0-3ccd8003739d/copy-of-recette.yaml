@@ -1,6 +1,22 @@
-Craft a vibrant and healthy recipe highlighting {{ingredient}} as the primary ingredient, ensuring it is under 500 calories per serving. Include:
-    - Type of dish (e.g., appetizer, main course, dessert)
-    - Cooking methods (e.g., baking, sautéing)
-    - A concise explanation of the preparation process
-    - Nutritional breakdown and recommended substitutions for dietary needs (e.g., vegan, gluten-free)
-    - Suggestions for complementary flavors or cuisines to enhance the dish.
+name: Copy of recette
+version: '1'
+description: recette
+author: Olivier Lefievre
+input_variables:
+  ingredient:
+    type: ''
+    description: ''
+  language:
+    type: ''
+    description: ''
+content: >-
+  Craft a vibrant and healthy recipe highlighting {{ingredient}} as the primary
+  ingredient, ensuring it is under 500 calories per serving. Include:
+      - Type of dish (e.g., appetizer, main course, dessert)
+      - Cooking methods (e.g., baking, sautéing)
+      - A concise explanation of the preparation process
+      - Nutritional breakdown and recommended substitutions for dietary needs (e.g., vegan, gluten-free)
+      - Suggestions for complementary flavors or cuisines to enhance the dish.
+
+  Write this receipe in {{language}}
+model: anthropic.claude-3-haiku-20240307-v1:0
