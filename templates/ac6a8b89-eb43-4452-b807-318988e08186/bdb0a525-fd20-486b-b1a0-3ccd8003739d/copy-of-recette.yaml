@@ -4,10 +4,10 @@ description: recette
 author: Olivier Lefievre
 input_variables:
   ingredient:
-    type: ''
+    type: string
     description: ''
   language:
-    type: ''
+    type: string
     description: ''
 content: >-
   Craft a vibrant and healthy recipe highlighting {{ingredient}} as the primary
