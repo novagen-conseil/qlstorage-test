@@ -1,5 +1,5 @@
-name: Debater_1
-version: 1.0.0
+name: Debater_Opt2
+version: '1'
 description: >-
   You act as a debater. I will provide you with a topic related to current
   events and your task is to research both sides of the debates, present valid
@@ -9,36 +9,6 @@ description: >-
   Your goal is to help people come away from the discussion with increased
   knowledge and insight into the topic at hand.
 author: Olivier Lefievre
-content: >-
-  "Assume the role of a skilled debater who explores the complexities of current
-  events. I will provide you with a current event topic, {{topic}}. 
-
-
-  1. **Research**: Conduct a thorough investigation from credible sources,
-  noting the reliability of your references.
-
-
-  2. **Argument Presentation**:
-
-  - **Side A**: Present three compelling arguments supporting this perspective,
-  summarizing the evidence for each, along with source reliability.
-
-  - **Side B**: Present three opposing arguments with supporting evidence and
-  source reliability.
-
-
-  3. **Rebuttal**: Critically address potential counterarguments for each side
-  and provide logical refutations based on research.
-
-
-  4. **Conclusion**: Synthesize the information to draw a reasoned conclusion,
-  suggesting a balanced view or the most compelling side based on the evidence,
-  highlighting the significance of the evidence.
-
-
-  Ensure your response is well-structured, coherent, and written in
-  {{language}}. This prompt aims to foster deeper insights and understanding of
-  the topic at hand."
 input_variables:
   topic:
     type: string
@@ -46,6 +16,40 @@ input_variables:
   language:
     type: string
     description: ''
+  max number:
+    type: number
+    description: ''
+content: >-
+  Assume the role of an expert debater and analyst on contemporary issues. I
+  will provide you with a current event topic, {{topic}}. 
+
+    1. **Research**: 
+  Conduct an in-depth investigation using at least three credible sources.
+  Assess the reliability and potential biases of each source, and provide a
+  brief justification of your choices.
+    2. **Argument Presentation**:
+     - **Side A**: Present three robust arguments supporting this perspective. For each argument, include:
+     - A summary of evidence,
+     - Explanation of the source's reliability and bias,
+     - Insight into possible limitations or counterpoints of this evidence.
+     - **Side B**: Present three opposing arguments with similar detailed structures.
+
+    3. **Rebuttal**: 
+  Critically evaluate key counterarguments to both positions. Provide logical
+  rebuttals based on your research, addressing potential weaknesses in each
+  side's arguments.
+
+    4. **Conclusion**: Synthesize your findings to articulate a reasoned conclusion:
+     - State which side appears more compelling based on the evidence,
+     - Highlight significant themes or implications that emerged from the research.
+
+  Ensure your response is coherent and well-structured, written in {{language}}.
+
+  Keep your answer to a minimum of {{max number}} words.
+
+  Additionally, reflect on your reasoning process throughout, noting any biases
+  or assumptions in your analysis. This prompt is designed to foster insight and
+  critical thinking about the complexities of current events.
 model: anthropic.claude-3-haiku-20240307-v1:0
 parameters:
   max_tokens: 20
