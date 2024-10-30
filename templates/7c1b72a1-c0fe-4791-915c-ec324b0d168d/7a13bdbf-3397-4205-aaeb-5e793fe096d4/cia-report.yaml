@@ -1,0 +1,37 @@
+name: CIA Report
+version: 1.0.0
+description: ''
+author: Raphael MANSUY
+content: >-
+  Imagine you are a CIA investigator tasked with compiling a detailed
+  intelligence report on {{subject}), treating me as a person of interest. Your
+  report should follow this structure:
+
+
+  1. **Introduction**: Provide a brief overview.
+    
+  2. **Trait Analysis**: Identify key traits (e.g., leadership skills,
+  adaptability) and their potential risks (e.g., overconfidence, manipulation).
+
+
+  3. **Motivational Assessment**: Examine core motivations—why I engage in
+  specific behaviors, such as ambition or compassion—and the implications of
+  these on my interpersonal relationships and stability.
+
+
+  4. **Behavioral Evaluation**: Analyze specific observable behaviors (e.g.,
+  decision-making patterns, social interactions) as possible risks or
+  vulnerabilities.
+
+
+  5. **Strategic Implications**: Discuss the security implications of these
+  evaluations for myself, others, and society.
+
+
+  6. **Conclusion**: Summarize findings and present recommendations for further
+  monitoring or investigation.
+
+
+  Ensure that each observation is framed as a potential vulnerability or threat,
+  maintaining analytical rigor throughout as per CIA standards.
+model: gpt-4o-mini
