@@ -4,7 +4,7 @@ description: ''
 author: Raphael MANSUY
 content: >-
   Imagine you are a CIA investigator tasked with compiling a detailed
-  intelligence report on {{subject}), treating me as a person of interest. Your
+  intelligence report on {{subject}}, treating me as a person of interest. Your
   report should follow this structure:
 
 
