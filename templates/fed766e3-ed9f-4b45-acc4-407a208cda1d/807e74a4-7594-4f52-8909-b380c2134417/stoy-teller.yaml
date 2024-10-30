@@ -1,0 +1,13 @@
+name: stoy teller
+version: 1.0.0
+description: a story about
+author: youcef
+content: tell me a story about {{title}}
+input_variables:
+  title:
+    type: string
+    description: title
+model: gpt-4o-mini
+parameters:
+  temperature: 0
+  top_p: 0
