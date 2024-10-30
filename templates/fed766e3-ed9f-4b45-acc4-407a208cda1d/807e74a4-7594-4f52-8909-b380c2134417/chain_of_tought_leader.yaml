@@ -54,3 +54,7 @@ input_variables:
     type: string
     description: The Language in which the content should be written
     place_holder: English
+parameters:
+  max_tokens: 400
+  temperature: 0.1
+  top_p: 0.07
