@@ -1,0 +1,17 @@
+name: recette
+version: 1.0.0
+description: recette
+author: Olivier Lefievre
+content: >-
+  Craft a vibrant and healthy recipe highlighting {{ingredient}} as the primary
+  ingredient, ensuring it is under 500 calories per serving. Include:
+      - Type of dish (e.g., appetizer, main course, dessert)
+      - Cooking methods (e.g., baking, sautéing)
+      - A concise explanation of the preparation process
+      - Nutritional breakdown and recommended substitutions for dietary needs (e.g., vegan, gluten-free)
+      - Suggestions for complementary flavors or cuisines to enhance the dish.
+input_variables:
+  ingredient:
+    type: string
+    description: ''
+model: gpt-4o-mini
