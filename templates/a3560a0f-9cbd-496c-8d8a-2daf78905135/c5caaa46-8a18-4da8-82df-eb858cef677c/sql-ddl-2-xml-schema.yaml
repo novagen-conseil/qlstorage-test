@@ -4,58 +4,5 @@ description: >-
   creates a XML definition starting from a SQL description of a table. extremely
   useful for  Text2SQL project.
 author: hubert
-input_variables:
-  sql_content:
-    type: string
-    description: sql content
-content: >-
-  I need to generate an XML representation of a SQL table structure based on its
-  description. The following SQL content describes various fields, including
-  comments that help assess their importance and business relevance.
-
-
-  ```SQL
-
-  {{sql_content}}
-
-  ```
-
-
-  For each field, please create an XML block with the following structure,
-  ensuring that you consider comments about each field carefully:
-
-
-  ```xml
-
-  <field>
-     <name>[field name]</name>
-     <sql_type>[field type : e.g., varchar, boolean, number]</sql_type>
-     <business_description>[deduce a comprehensive business description from the field name and comments]</business_description>
-     <synonyms>[list relevant synonyms that represent how users might search for this information]</synonyms>
-     <text2sql_useful>[state if this field is relevant for business Intelligence queries based on comments]</text2sql_useful>
-  </field>
-
-  ```
-
-
-  **Instructions for filling out the XML:**
-
-  1. Use the **field name** as specified in the SQL definition.
-
-  2. Identify the **SQL type** directly from the definitions.
-
-  3. Provide a **business description** that explains the significance of the
-  field within a business context, reflecting any comments associated with it.
-
-  4. Include **synonyms** only if they are relevant and will assist users in
-  searching for data related to this field.
-
-  5. For **text2sql_useful**, determine if the field will be used in business
-  intelligence queries based on its descriptive comments—respond with 'yes' or
-  'no'.
-
-
-  Be diligent in using the comments to derive your answers. If a particular
-  field lacks sufficient commentary to complete the XML block, please indicate
-  "Insufficient information" in the relevant section.
+content: "I need to generate an XML representation of a SQL table structure based on its description. The following SQL content describes various fields, including comments that help assess their importance and business relevance.\n\n```SQL\nCREATE TABLE activite (\n\t\"Numero du centre\" int4 NULL, -- useful; identifiant du centre\n\t\"IPP Patient\" float8 NULL, -- useful; numéro unique de patient\n\t\"Numero de secu\" varchar NULL, -- useless\n\t\"Matricule Sante\" float8 NULL,  -- useless\n\t\"Nom utilise\" varchar NULL, -- useless \n\t\"Prenom\" varchar NULL, -- useless\n\t\"Nom de naissance\" varchar NULL, -- useless\n\t\"DDN\" date NULL, -- useless\n\t\"AGE\" float8 NULL, -- useful ; age\n\t\"Code Postal\" float8 NULL, -- useful ; postal code, peut être tronqué pour déduire le départment\n\t\"Motif\" varchar NULL, -- useful; \n\t\"Referent\" varchar NULL, -- useful; Médecin, intervenant en charge du patient\n\t\"DEntree\" date NULL, -- useful ; date d'entrée du patient\n\t\"Mois\" varchar NULL, -- useful; mois déduit de la date d'entrée\n\t\"Jour\" varchar NULL,  -- useful; jour  déduit de la date d'entrée\n\t\"Ferie\" float8 NULL,  -- useful; indicateur si le jour est férié\n\t\"Heure Entree\" varchar NULL,  -- useful; heure déduite de la date d'entrée\n\t\"DSortie\" date NULL,  -- useful; date de sortie\n\t\"Heure Sortie\" varchar NULL,  -- useful; heure  déduite de la date de sortie\n\t\"Medecin encaisseur\" varchar NULL, -- \n\t\"CA medecin\" float8 NULL,\n\t\"CCAM\" varchar NULL,\n\t\"Acte(s)\" varchar NULL,\n\t\"IDE encaisseur\" varchar NULL,\n\t\"CA IDE\" float8 NULL,\n\t\"APS\" varchar NULL,\n\t\"Liste des actes IDE\" varchar NULL,\n\t\"Statut reglement\" varchar NULL,\n\t\"Reglement patient\" varchar NULL,\n\t\"Reglement patient solde\" varchar NULL,\n\t\"FSE\" varchar NULL\n);\n\n```\n\nFor each field, please create an XML block with the following structure, ensuring that you consider comments about each field carefully:\n\n```xml\n<field>\n   <name>[field name]</name>\n   <sql_type>[field type : e.g., varchar, boolean, number]</sql_type>\n   <business_description>[deduce a comprehensive business description from the field name and comments]</business_description>\n   <synonyms>[list relevant synonyms that represent how users might search for this information]</synonyms>\n   <text2sql_useful>[state if this field is relevant for business Intelligence queries based on comments]</text2sql_useful>\n</field>\n```\n\n**Instructions for filling out the XML:**\n1. Use the **field name** as specified in the SQL definition.\n2. Identify the **SQL type** directly from the definitions.\n3. Provide a **business description** that explains the significance of the field within a business context, reflecting any comments associated with it.\n4. Include **synonyms** only if they are relevant and will assist users in searching for data related to this field.\n5. For **text2sql_useful**, determine if the field will be used in business intelligence queries based on its descriptive comments—respond with 'yes' or 'no'.\n\nBe diligent in using the comments to derive your answers. If a particular field lacks sufficient commentary to complete the XML block, please indicate \"Insufficient information\" in the relevant section."
 model: gpt-4o-mini
