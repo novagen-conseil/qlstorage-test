@@ -1,0 +1,50 @@
+name: Desc-Code COBOL
+version: 1.0.0
+description: Generation d'une documentation claire et explicative d'un programme COBOL
+author: Olivier Lefievre
+content: >-
+  À partir du code COBOL suivant, veuillez générer une documentation exhaustive
+  et bien structurée. La documentation doit couvrir les thèmes suivants, en
+  utilisant un langage clair, précis et accessible :
+
+
+  1. **Description Générale**
+     - Résumé succinct du programme
+     - Objectif principal et utilisation prévue
+     - Contexte d'utilisation potentiel
+
+  2. **Structure du Programme**
+     - Décomposition des sections (DATA DIVISION, WORKING-STORAGE SECTION, PROCEDURE DIVISION, etc.)
+     - Explication détaillée de la fonction de chaque section
+
+  3. **Détails des Variables**
+     - Liste claire des variables déclarées avec leur type de données et une description concise de chacune
+
+  4. **Logique du Programme**
+     - Compte rendu des principales fonctions et procédures
+     - Description du flux de contrôle, y compris les boucles et les conditions
+     - Cas d'utilisation illustratifs pour aider à comprendre le fonctionnement
+
+  5. **Gestion des Erreurs**
+     - Explication des mécanismes et des stratégies de gestion des erreurs dans ce programme
+
+  6. **Notes de Mise en Œuvre**
+     - Détails sur les dépendances, bibliothèques externes, ou systèmes requis
+     - Recommandations et meilleures pratiques pour le déploiement
+
+  7. **Conclusion**
+     - Récapitulatif des éléments clés abordés dans la documentation
+
+  Note : Assurez-vous d'incorporer des exemples d'utilisation lorsque cela est
+  pertinent pour illustrer les concepts. Organisez votre documentation afin
+  qu'il soit facile de naviguer entre les sections.
+
+
+  Voici le code COBOL à documenter :
+
+  {{Code Cobol}}
+input_variables:
+  Code Cobol:
+    type: string
+    description: Code COBOL analysé
+model: gpt-4o-mini
