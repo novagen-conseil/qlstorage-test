@@ -1,0 +1,57 @@
+name: SQL DDL 2 XML Schema
+version: 1.0.0
+description: >-
+  creates a XML definition starting from a SQL description of a table. extremely
+  useful for  Text2SQL project.
+author: hubert
+content: >-
+  I need to generate an XML representation of a SQL table structure based on its
+  description. The following SQL content describes various fields, including
+  comments that help assess their importance and business relevance.
+
+
+  ```SQL
+
+  {{sql_content}}
+
+  ```
+
+
+  For each field, please create an XML block with the following structure,
+  ensuring that you consider comments about each field carefully:
+
+
+  ```xml
+
+  <field>
+     <name>[field name]</name>
+     <sql_type>[field type : e.g., varchar, boolean, number]</sql_type>
+     <business_description>[deduce a comprehensive business description from the field name and comments]</business_description>
+     <synonyms>[list relevant synonyms that represent how users might search for this information]</synonyms>
+     <text2sql_useful>[state if this field is relevant for business Intelligence queries based on comments]</text2sql_useful>
+  </field>
+
+  ```
+
+
+  **Instructions for filling out the XML:**
+
+  1. Use the **field name** as specified in the SQL definition.
+
+  2. Identify the **SQL type** directly from the definitions.
+
+  3. Provide a **business description** that explains the significance of the
+  field within a business context, reflecting any comments associated with it.
+
+  4. Include **synonyms** only if they are relevant and will assist users in
+  searching for data related to this field.
+
+  5. For **text2sql_useful**, determine if the field will be used in business
+  intelligence queries based on its descriptive comments—respond with 'yes' or
+  'no'.
+
+
+  Be diligent in using the comments to derive your answers. If a particular
+  field lacks sufficient commentary to complete the XML block, please indicate
+  "Insufficient information" in the relevant section.
+model: gpt-4o-mini
