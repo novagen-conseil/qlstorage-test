@@ -1,0 +1,10 @@
+name: test story teller
+version: 1.0.0
+description: gvhbjlk,
+author: youcef
+content: tell me a story {{title}}
+input_variables:
+  title:
+    type: string
+    description: fghj
+model: gpt-4o-mini
