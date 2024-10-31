@@ -1,0 +1,27 @@
+name: text2sql_test
+version: 1.0.0
+description: Génère texte sql en fonction d'une question
+author: Emontarsolo
+content: >-
+  Ecris une requête SQL en PostgreSQL qui résout la question de l'utilisateur.
+  La requête doit prendre en compte le schéma de la base de données suivant:
+  {{db_schema}}. 
+
+
+  1. Analyse attentivement la question ainsi que le schéma de la base de données
+  pour déterminer les tables et les relations pertinentes.
+
+  2. Crée une requête SQL qui pourrait inclure des fonctions comme des JOINs,
+  des WHERE, ou des GROUP BY si nécessaire, tout en répondant précisément à la
+  question.
+
+
+  Retourne uniquement la requête SQL, sans explications ni commentaires
+  additionnels.
+
+
+  {{question}}
+model: anthropic.claude-3-5-sonnet-20240620-v1:0
+parameters:
+  max_tokens: 5000
+  temperature: 0.2
