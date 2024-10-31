@@ -1,9 +1,13 @@
 name: SQL DDL 2 XML Schema
-version: 1.0.0
+version: '1'
 description: >-
   creates a XML definition starting from a SQL description of a table. extremely
   useful for  Text2SQL project.
 author: hubert
+input_variables:
+  sql_content:
+    type: string
+    description: sql content
 content: >-
   I need to generate an XML representation of a SQL table structure based on its
   description. The following SQL content describes various fields, including
