@@ -1,0 +1,61 @@
+Je dois générer une représentation XML d'une structure de table SQL en fonction de sa description. Le contenu SQL suivant décrit divers champs, y compris des commentaires qui aident à évaluer leur importance et leur pertinence commerciale.
+
+```SQL
+CREATE TABLE activite (
+	"Numero du centre" int4 NULL, -- utile; identifiant du centre
+	"IPP Patient" float8 NULL, -- utile; numéro unique de patient
+	"Numero de secu" varchar NULL, -- inutile
+	"Matricule Sante" float8 NULL,  -- inutile
+	"Nom utilise" varchar NULL, -- inutile 
+	"Prenom" varchar NULL, -- inutile
+	"Nom de naissance" varchar NULL, -- inutile
+	"DDN" date NULL, -- inutile
+	"AGE" float8 NULL, -- utile ; age
+	"Code Postal" float8 NULL, -- utile ; postal code, peut être tronqué pour déduire le départment
+	"Motif" varchar NULL, -- utile; 
+	"Referent" varchar NULL, -- utile; Médecin, intervenant en charge du patient
+	"DEntree" date NULL, -- utile ; date d'entrée du patient
+	"Mois" varchar NULL, -- utile; mois déduit de la date d'entrée
+	"Jour" varchar NULL,  -- utile; jour  déduit de la date d'entrée
+	"Ferie" float8 NULL,  -- utile; indicateur si le jour est férié
+	"Heure Entree" varchar NULL,  -- utile; heure déduite de la date d'entrée
+	"DSortie" date NULL,  -- utile; date de sortie
+	"Heure Sortie" varchar NULL,  -- utile; heure  déduite de la date de sortie
+	"Medecin encaisseur" varchar NULL, -- 
+	"CA medecin" float8 NULL,
+	"CCAM" varchar NULL,
+	"Acte(s)" varchar NULL,
+	"IDE encaisseur" varchar NULL,
+	"CA IDE" float8 NULL,
+	"APS" varchar NULL,
+	"Liste des actes IDE" varchar NULL,
+	"Statut reglement" varchar NULL,
+	"Reglement patient" varchar NULL,
+	"Reglement patient solde" varchar NULL,
+	"FSE" varchar NULL
+);
+
+```
+
+Pour chaque champ, veuillez créer un bloc XML avec la structure suivante, en veillant à prendre en compte attentivement les commentaires sur chaque champ :
+
+```xml
+<field>
+   <name>[nom du champ]</name>
+   <sql_type>[type du champ : e.g., varchar, boolean, number]</sql_type>
+   <business_description>[déduire une description complète de l'entreprise à partir du nom du champ et des commentaires]</business_description>
+   <synonyms>[répertorier les synonymes pertinents qui représentent la manière dont les utilisateurs pourraient rechercher ces informations]</synonyms>
+   <text2sql_utile>[indiquez si ce champ est pertinent pour les requêtes de Business Intelligence basées sur les commentaires]</text2sql_utile>
+</field>
+```
+
+**Instructions pour remplir le XML :**
+1. Utilisez le **nom de champ** tel que spécifié dans la définition SQL.
+2. Identifiez le **type SQL** directement à partir des définitions.
+3. Fournissez une **description commerciale** qui explique l'importance du champ dans un contexte commercial, en reflétant tous les commentaires qui lui sont associés.
+4. N'incluez les **synonymes** que s'ils sont pertinents et aideront les utilisateurs à rechercher des données liées à ce champ.
+5. Pour **text2sql_utile**, déterminez si le champ sera utilisé dans des requêtes de veille stratégique en fonction de ses commentaires descriptifs : répondez par « oui » ou « non ».
+
+Soyez diligent dans l'utilisation des commentaires pour obtenir vos réponses. Si un champ particulier ne dispose pas de commentaires suffisants pour compléter le bloc XML, veuillez indiquer « Informations insuffisantes » dans la section correspondante.
+
+TRES IMPORTANT : Le contenu doit être rédigé en français, excepté le nom des balises XML.
