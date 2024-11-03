@@ -1,0 +1,21 @@
+name: Outil d'analyse de fichier poyur une plaidoirie
+version: 1.0.0
+description: bdfcfgbdbfg
+author: youcef
+content: >-
+  Please conduct a detailed analysis of the PDF document titled {{pdf}}. Your
+  task is to summarize the main themes, key arguments, and significant findings,
+  ensuring to interpret them critically rather than solely listing them. For
+  example, you can frame your analysis by discussing how the findings relate to
+  existing literature or their potential impact on future research. Structure
+  your summary into an introduction, body, and conclusion, with each section
+  clearly delineated. Include citations for all references made within the PDF,
+  following the APA style. Aim for a length of 300-500 words, and maintain a
+  formal academic tone throughout. After summarizing, please reflect on the
+  implications of the findings and their relevance in the context of the broader
+  field of study.
+input_variables:
+  pdf:
+    type: string
+    description: rthyj
+model: gpt-4o-mini
