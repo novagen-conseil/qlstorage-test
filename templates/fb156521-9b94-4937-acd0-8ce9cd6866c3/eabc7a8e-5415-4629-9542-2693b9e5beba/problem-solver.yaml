@@ -1,0 +1,15 @@
+name: problem solver
+version: 1.0.0
+description: helps you solve a given problem
+author: bewalthew
+content: >-
+  Please provide a detailed solution to the following problem: {{problem}}.
+  Begin by outlining the problem clearly. Next, list potential approaches to
+  solving it step-by-step, incorporating my constraints or preferences (if any)
+  such as time limits, budgets, or specific methodologies. Include any
+  assumptions you are making and relevant examples where applicable.
+input_variables:
+  problem:
+    type: string
+    description: ''
+model: gpt-4o-mini
