@@ -1,0 +1,17 @@
+name: investment finder
+version: 1.0.0
+description: finds investments
+author: bewalthew
+content: >-
+  Considering your investment goals, risk tolerance, and preferred investment
+  horizon (short-term, medium-term, long-term), please analyze the sector of
+  {{sector}} to identify the top three investment opportunities. For each
+  opportunity, provide:
+      1. A brief description of the investment.
+      2. Justification for why it represents a strong investment opportunity (consider factors such as market trends, potential returns, and any associated risks).
+      3. An outline of the investment timeframe that aligns best with the opportunity and your investment strategy.
+input_variables:
+  sector:
+    type: string
+    description: ''
+model: gpt-4o-mini
