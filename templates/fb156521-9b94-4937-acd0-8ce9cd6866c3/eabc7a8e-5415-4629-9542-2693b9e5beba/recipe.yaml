@@ -1,0 +1,18 @@
+name: recipe
+version: 1.0.0
+description: creates a recipe given a main ingredient
+author: bewalthew
+content: >-
+  Create a detailed recipe featuring {{ingredient}} as the main ingredient.
+  Please specify the type of dish (appetizer, main course, dessert) and outline
+  the preparation and cooking time. Additionally, include:
+      - A list of necessary ingredients with measurements.
+      - Step-by-step instructions for preparation and cooking.
+      - Suggestions for possible substitutions or complements that enhance the dish.
+      - Any dietary considerations (e.g., vegetarian, gluten-free).
+      - A brief description of the dish's cultural background or personal anecdotes on how this dish can be adapted or enjoyed.
+input_variables:
+  ingredient:
+    type: string
+    description: ''
+model: gpt-4o-mini
