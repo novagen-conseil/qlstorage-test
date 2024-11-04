@@ -1,0 +1,10 @@
+name: test
+version: 1.0.0
+description: test
+author: bewalthew
+content: test {{var}}
+input_variables:
+  var:
+    type: string
+    description: ''
+model: gpt-4o-mini
