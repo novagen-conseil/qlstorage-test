@@ -1,0 +1,35 @@
+name: system prompt creator
+version: 1.0.0
+description: creates a system prompt
+author: bede
+content: >-
+  Design an optimized system prompt for the task of {{task}}. Your response
+  should include:
+
+  1. <TaskContext>Provide a concise explanation of {{task}}, including its
+  purpose and key objectives.</TaskContext>
+
+  2. <StructuredPromptFormat>Create a clear and organized structure for the
+  prompt that specifies how AI should respond.</StructuredPromptFormat>
+
+  3. <GuidelineHighlights>
+     <Considerations>Identify and elaborate on critical considerations (e.g., tone, depth, format).</Considerations>
+     <Constraints>List any constraints (e.g., character limits, required information).</Constraints>
+  </GuidelineHighlights>
+
+  4. <SampleSystemPromptTemplate>Develop a customizable template that can be
+  easily adapted for different situations related to
+  {{task}}.</SampleSystemPromptTemplate>
+
+  5. <ExamplesOfIdealOutputs>Provide diverse examples of outputs that
+  demonstrate the desired response quality, relevance, and
+  format.</ExamplesOfIdealOutputs>
+
+  6. <CreativeSuggestions>Feel free to include any innovative or alternative
+  approaches related to {{task}} to inspire richer
+  responses.</CreativeSuggestions>
+input_variables:
+  task:
+    type: string
+    description: ''
+model: gpt-4o-mini
