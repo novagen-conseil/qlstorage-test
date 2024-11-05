@@ -1,0 +1,41 @@
+name: Pestle Framework-test
+version: 1.0.0
+description: >-
+  Un outil de gestion stratégique utilisé pour analyser les facteurs
+  macro-environnementaux qui ont un impact sur une organisation. PESTLE englobe
+  les facteurs politiques, économiques, sociaux, technologiques, juridiques et
+  environnementaux. En examinant ces éléments, les entreprises peuvent mieux
+  appréhender le contexte dans lequel elles opèrent, ce qui leur permet de
+  prendre des décisions stratégiques plus éclairées.
+author: Olivier Lefievre
+content: >-
+  "Act as a consultant from a prestigious firm like Accenture, Boston Consulting
+  Group, or McKinsey. Provide a detailed description of the {{Field}} Industry
+  within {{Geographical area}}, including insights on emerging trends and future
+  outlook. Additionally, conduct a PESTLE analysis focusing on the Political,
+  Economic, Social, Technological, Legal, and Environmental factors influencing
+  this industry. Please ensure the following parameters are met:
+
+  - Language: {{Language}}
+
+  - Maximum word limit: {{max_length}} words
+
+  - Structure your response with an introduction to the industry, followed by
+  the PESTLE analysis, and conclude with insights on trends and future
+  projections."
+input_variables:
+  Field:
+    type: string
+    description: ''
+  Geographical area:
+    type: string
+    description: ''
+  Language:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
+model: gpt-4o-mini
+parameters:
+  temperature: 0.1
