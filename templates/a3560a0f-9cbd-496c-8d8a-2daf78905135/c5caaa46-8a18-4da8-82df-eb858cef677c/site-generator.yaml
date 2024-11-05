@@ -1,0 +1,33 @@
+name: site generator
+version: 1.0.0
+description: test
+author: hubert
+content: >-
+  Je souhaite développer un site internet statique pour mon entreprise, avec les
+  spécifications suivantes : 
+
+
+  1. Structure commune à toutes les pages, permettant une navigation fluide.
+
+  2. Contenu initialement en Markdown, que je veux convertir en HTML et CSS à
+  l'aide d'un programme dédié.
+
+  3. Un formulaire de contact intégré provenant d'une solution externe, facile à
+  utiliser et à mettre en œuvre.
+
+
+  Pour m'aider, pourriez-vous :
+
+  - Proposer des exemples ou des technologies recommandées pour la création de
+  ce site, en tenant compte de mon niveau en développement (indiquez vos
+  langages/frameworks préférés si applicable) ?
+
+  - Décrire une méthodologie étape par étape pour passer de la conception à la
+  mise en ligne ?
+
+  - Suggérer des pratiques pour la gestion et la mise à jour du contenu après le
+  lancement ?
+
+
+  Merci de me fournir des réponses détaillées et des suggestions créatives.
+model: anthropic.claude-3-5-sonnet-20240620-v1:0
