@@ -1,0 +1,36 @@
+name: Action Extractor
+version: 1.0.0
+description: extract action from specification
+author: hubert
+content: >-
+  Analyze the text provided below to identify the elements enclosed between the
+  symbols dièse (#) and outline the associated actions. For each identified
+  element, create a structured task table including the following columns: 
+      1. Type (denoting the category of the element)
+      2. Title (the name of the element)
+      3. Associated Actions (specific tasks related to each element)
+      4. Complexity (rate the complexity on a scale of 1 to 5, where 1 is very simple and 5 is extremely complex). 
+
+      Please ensure that:
+      - Your table follows a clear format.
+      - Elements are clearly defined with their associated details.
+      - You justify your complexity rating for each item.
+      
+      Reference the structure below for your table format:
+      
+      | Type | Title | Associated Actions | Complexity |
+      |------|-------|--------------------|------------|
+      |      |       |                    |            |
+      
+      When assessing complexity, consider factors such as the number of steps involved, the level of skill required, and the anticipated time commitment for each associated action. 
+
+      Within your analysis, encourage reflection on the following:
+      - What criteria did you use for determining the associated actions?
+      - How did you arrive at the complexity ratings?
+
+  {{specification}}
+input_variables:
+  specification:
+    type: string
+    description: ''
+model: gpt-4o-mini
