@@ -1,0 +1,10 @@
+name: Story
+version: 1.0.0
+description: Short Story
+author: testmax
+content: Create a short story about Donald Trump
+input_variables: {}
+model: gpt-4o-mini
+parameters:
+  temperature: 0.2
+  top_p: 0.07
