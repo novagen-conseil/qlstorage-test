@@ -4,21 +4,32 @@ description: |-
   Generate AIDA marketing framework
   Attention, Interest, Desire, Action
 author: Olivier Lefievre
-content: >
-  As an expert marketer, your task is to create a compelling advertisement using
-  the AIDA (Attention, Interest, Desire, Action) framework for {{product}}
-  targeting {{target_audience}}.
+content: >-
+  As a skilled marketing consultant, your mission is to create a captivating
+  advertisement for {{product}} aimed at {{target_audience}}. Use the AIDA
+  (Attention, Interest, Desire, Action) framework while adhering to the tone
+  appropriate for {{target_audience}} and {{product’s}} characteristics. Follow
+  these instructions:
 
-  Follow these steps: 1. Attention: Craft a headline or opening statement that
-  immediately grabs the attention of {{target_audience}}. 2. Interest: Provide
-  intriguing information about {{product}} that maintains the audience's
-  interest. 3. Desire: Create a strong desire for {{product}} by highlighting
-  its unique benefits and how it solves a problem for {{target_audience}}. 4.
-  Action: End with a clear and persuasive call-to-action that encourages
-  {{target_audience}} to take the next step.
 
-  Your advertisement should be concise, engaging, and tailored specifically to
-  appeal to {{target_audience}}. Aim for approximately 150-200 words.
+  1. **Attention**: Start with a catchy and thought-provoking headline that
+  resonates with {{target_audience}}'s interests, emotions, or preferences.
+     
+  2. **Interest**: Present 2-3 intriguing facts or statistics about {{product}}
+  that align with the values and needs of {{target_audience}}. 
+
+
+  3. **Desire**: Describe 2-3 unique benefits of {{product}} that address
+  specific challenges or pain points faced by {{target_audience}}, illustrating
+  how it enhances their life or solves a problem. 
+
+
+  4. **Action**: End with a strong, action-oriented call-to-action that makes
+  taking the next step feel urgent and rewarding.
+
+
+  Ensure your advertisement is approximately 150-200 words, tailored
+  specifically to effectively target {{target_audience}}.
 input_variables:
   product:
     type: string
@@ -26,4 +37,9 @@ input_variables:
   target_audience:
     type: string
     description: The target audience for the promotion
+  product’s:
+    type: ''
+    description: ''
 model: anthropic.claude-3-haiku-20240307-v1:0
+parameters:
+  temperature: 0.1
