@@ -1,0 +1,6 @@
+name: Simple Story
+version: 1.0.0
+description: Descmuh
+author: Olivier Lefievre
+content: Write a story with 2 characters
+model: gpt-4o-mini
