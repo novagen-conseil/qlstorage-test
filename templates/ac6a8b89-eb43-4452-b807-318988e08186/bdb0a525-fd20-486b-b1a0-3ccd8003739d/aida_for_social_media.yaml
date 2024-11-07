@@ -2,16 +2,6 @@ name: aida_for_social_media
 version: '1'
 description: Generate AIDA-based social media content
 author: Olivier Lefievre
-input_variables:
-  platform:
-    type: string
-    description: The social media platform for the content
-  product:
-    type: string
-    description: The product or service to promote
-  target_audience:
-    type: string
-    description: The target audience for the campaign
 content: >
   ## Who are you?
 
@@ -59,4 +49,17 @@ content: >
 
   Combine all elements into a cohesive {{platform}} post, incorporating all
   slogans where appropriate.
+input_variables:
+  platform:
+    type: string
+    description: The social media platform for the content
+    place_holder: ''
+  product:
+    type: string
+    description: The product or service to promote
+    place_holder: ''
+  target_audience:
+    type: string
+    description: The target audience for the campaign
+    place_holder: ''
 model: gpt-4o-mini
