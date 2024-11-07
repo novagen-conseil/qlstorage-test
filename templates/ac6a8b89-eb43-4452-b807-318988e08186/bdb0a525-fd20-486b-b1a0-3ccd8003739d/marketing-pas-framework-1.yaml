@@ -1,7 +1,37 @@
 name: Marketing-PAS Framework-1
 version: 1.0.0
-description: Problem, Agitate, Solution
+description: Experiment PAS - Problem, Agitate, Solution - Framework
 author: Olivier Lefievre
+content: >-
+  Create a persuasive sales message using the PAS (Problem, Agitate, Solution)
+  framework for **{{product}}**, targeting **{{target_audience}}**. 
+
+  Use the headings below and consider these examples of emotional engagement and
+  pain point articulation:
+
+
+  **1. Problem**  
+
+  Describe a critical challenge **{{target_audience}}** faces related to
+  **{{product}}** (e.g., "Many busy professionals struggle to find time…").
+
+
+  **2. Agitate**  
+
+  Explore the negative effects deeply—how does this challenge make them feel?
+  What consequences reinforce this pain? (e.g., "This can lead to feelings of
+  overwhelm…").
+
+
+  **3. Solution**  
+
+
+  Present **{{product}}** as the ideal remedy (e.g., "With our innovative
+  solution, you will…”). Highlight tangible benefits and transformations.
+
+  Aim for a persuasive tone that resonates emotionally with
+  **{{target_audience}}**. Keep it between {{max words}} words, and output must
+  be in **{{language}}**.
 input_variables:
   product:
     type: string
@@ -9,31 +39,12 @@ input_variables:
   target_audience:
     type: string
     description: ''
+  max words:
+    type: number
+    description: ''
   language:
     type: string
     description: ''
-content: >+
-  As a skilled copywriter, your task is to create a persuasive sales message
-  using the PAS (Problem, Agitate, Solution) framework for {{product}} targeting
-  {{target_audience}}.
-
-
-  Follow these steps:
-
-  1. Problem: Clearly identify and state a relevant problem that
-  {{target_audience}} faces.
-
-  2. Agitate: Intensify the problem by discussing its negative impacts and the
-  pain points it causes for {{target_audience}}.
-
-  3. Solution: Present {{product}} as the ideal solution to the problem,
-  highlighting how it addresses the pain points and improves the situation for
-  {{target_audience}}.
-
-
-  Your copy should be emotionally engaging, relatable to {{target_audience}},
-  and demonstrate a clear understanding of their needs and challenges. Aim for
-  approximately 200-250 words.
-
-  output must be in {{language}}
-
+model: anthropic.claude-3-haiku-20240307-v1:0
+parameters:
+  temperature: 0.1
