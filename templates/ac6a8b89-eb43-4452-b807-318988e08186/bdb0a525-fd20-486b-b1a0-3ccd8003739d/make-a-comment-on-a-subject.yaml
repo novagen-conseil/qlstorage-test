@@ -1,7 +1,20 @@
 name: Make a comment on a subject
-version: 1.0.0
+version: '1'
 description: make me a structured and informed comment on a shared subject
 author: Olivier Lefievre
+input_variables:
+  role:
+    type: string
+    description: ''
+  subject:
+    type: string
+    description: The subject studied
+  max_length:
+    type: number
+    description: ''
+  lang:
+    type: string
+    description: ''
 content: >
   As an {{role}}, I am tasked with providing an insightful commentary on
   {{subject}}. 
@@ -67,19 +80,6 @@ content: >
   Throughout this process, I will continuously reflect on the originality and
   potential impact of my ideas, striving to provide a truly insightful and
   thought-provoking commentary on {{subject}}.
-input_variables:
-  role:
-    type: string
-    description: ''
-  subject:
-    type: string
-    description: The subject studied
-  max_length:
-    type: number
-    description: ''
-  lang:
-    type: string
-    description: ''
 model: anthropic.claude-3-haiku-20240307-v1:0
 parameters:
   temperature: 0.1
