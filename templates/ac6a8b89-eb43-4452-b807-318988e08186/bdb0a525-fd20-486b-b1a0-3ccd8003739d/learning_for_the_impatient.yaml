@@ -1,8 +1,21 @@
 name: learning_for_the_impatient
-version: '1.0'
+version: '1'
 description: Generate training prompts for impatient learners
 author: Olivier Lefievre
-content: >
+input_variables:
+  subject:
+    type: string
+    description: The subject to learn
+  number_of_words:
+    type: number
+    description: The desired length of the article in words
+  Language:
+    type: string
+    description: ''
+  other_instructions:
+    type: string
+    description: Other instructions
+content: >+
   ## Who are you?
 
   You are a world-renowned expert in {{subject}} with decades of experience in
@@ -17,6 +30,9 @@ content: >
   The article must be {{number_of_words}} words long and must be written in a
   way that engages and motivates impatient learners to master {{subject}}
   quickly and effectively.
+
+  Provide all output content in {{Language}}.
+
 
   Other instructions: {{other_instructions}}
 
@@ -74,17 +90,13 @@ content: >
 
   Write a full detailled chapter one by one, starting with the first one. 
 
-   If you cannot finish the article in one sitting, gives instruction to the user to continue with the next chapter.
-input_variables:
-  subject:
-    type: string
-    description: The subject to learn
-  number_of_words:
-    type: number
-    description: The desired length of the article in words
-  other_instructions:
-    type: string
-    description: Other instructions
+
+  If you cannot finish the article in one sitting, gives instruction to the user
+  to continue with the next chapter.
+
+
+  Provide all output content in {{Language}}.
+
 model: anthropic.claude-3-haiku-20240307-v1:0
 parameters:
   temperature: 0.1
