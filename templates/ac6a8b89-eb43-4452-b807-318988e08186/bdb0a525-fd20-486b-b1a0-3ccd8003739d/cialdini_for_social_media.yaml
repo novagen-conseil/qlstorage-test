@@ -46,12 +46,9 @@ input_variables:
   platform:
     type: string
     description: The social media platform for the content
-    place_holder: ''
   principle:
     type: string
     description: The Cialdini principle to focus on
-    place_holder: ''
   product:
     type: string
     description: The product or service to promote
-    place_holder: ''
