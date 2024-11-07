@@ -1,0 +1,6 @@
+name: work now
+version: 1.0.0
+description: please
+author: bewalthew
+content: work
+model: gpt-4o-mini
