@@ -2,16 +2,6 @@ name: Prompt_Chain of Thought Leaders1
 version: 1.0.0
 description: Prompt_Chain of Thought Leaders. Books research and synthesize ideas
 author: Olivier Lefievre
-input_variables:
-  Topic:
-    type: string
-    description: The Topic to find books about
-  Language:
-    type: string
-    description: Output language
-  max_length:
-    type: '1000'
-    description: Nombre max de mots en output
 content: >+
   Prompt_Chain of Thought Leaders
 
@@ -81,3 +71,16 @@ content: >+
   The output content will not exceed {{max_length}} words.
 
 
+input_variables:
+  Topic:
+    type: string
+    description: The Topic to find books about
+  Language:
+    type: string
+    description: Output language
+  max_length:
+    type: number
+    description: Nombre max de mots en output
+model: anthropic.claude-3-haiku-20240307-v1:0
+parameters:
+  temperature: 0.1
