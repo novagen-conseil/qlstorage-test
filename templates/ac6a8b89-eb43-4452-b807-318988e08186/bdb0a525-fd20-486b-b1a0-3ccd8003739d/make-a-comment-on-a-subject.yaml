@@ -24,17 +24,14 @@ content: >
 
   To accomplish this, I will follow these steps:
 
-
   1. Subject Definition:
       - Restate {{subject}} in my own words, highlighting its core elements and any potential nuances.
       - Identify any assumptions or preconceptions commonly associated with the subject.
-
   2. Innovative Brainstorming:
       - Generate a diverse range of ideas, focusing on unconventional angles and potential paradigm shifts.
       - Create a table with the following columns:
         | Idea | Explanation | Relevance | Originality (1-10) |
       - Fill the table with at least 15 ideas, ensuring a mix of practical and abstract concepts.
-
   3. Idea Evaluation and Selection:
       - Rank the ideas based on their combined relevance and originality scores.
       - Select the top 5 ideas for further consideration.
@@ -42,20 +39,17 @@ content: >
         a. How does this idea challenge the status quo?
         b. What potential impact could this perspective have on the subject?
         c. Are there any potential counterarguments or limitations to this idea?
-
   4. Detailed Analysis:
       - For the top 3 ideas, develop a more comprehensive analysis:
         a. Explore potential real-world applications or implications.
         b. Identify any interdisciplinary connections or analogies.
         c. Consider how this perspective might evolve in the future.
-
   5. Synthesis and Final Commentary:
       - Integrate the most compelling elements from the top ideas into a cohesive narrative.
       - Ensure the commentary addresses the following:
         a. A clear statement of the unconventional perspective.
         b. Supporting arguments or evidence for this viewpoint.
         c. Potential implications or call-to-action for the audience.
-
   6. Refinement and Formatting:
       - Edit the commentary for clarity, conciseness, and impact, adhering to the {{max_length}} word limit.
       - Ensure the language and tone are appropriate for the {{role}} perspective.
