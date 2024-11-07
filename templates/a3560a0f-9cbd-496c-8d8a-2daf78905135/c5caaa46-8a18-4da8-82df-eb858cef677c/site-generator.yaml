@@ -1,5 +1,5 @@
 name: site generator
-version: 1.0.0
+version: '1'
 description: test
 author: hubert
 content: >-
@@ -30,4 +30,4 @@ content: >-
 
 
   Merci de me fournir des réponses détaillées et des suggestions créatives.
-model: anthropic.claude-3-5-sonnet-20240620-v1:0
+model: gpt-4o-mini
