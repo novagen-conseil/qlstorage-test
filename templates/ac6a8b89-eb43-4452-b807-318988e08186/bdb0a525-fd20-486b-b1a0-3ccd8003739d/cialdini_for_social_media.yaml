@@ -52,3 +52,5 @@ input_variables:
   product:
     type: string
     description: The product or service to promote
+parameters:
+  temperature: 0.1
