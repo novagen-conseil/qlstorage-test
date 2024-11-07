@@ -9,20 +9,28 @@ description: >-
   prendre des décisions stratégiques plus éclairées.
 author: Olivier Lefievre
 content: >-
-  "Act as a consultant from a prestigious firm like Accenture, Boston Consulting
-  Group, or McKinsey. Provide a detailed description of the {{Field}} Industry
-  within {{Geographical area}}, including insights on emerging trends and future
-  outlook. Additionally, conduct a PESTLE analysis focusing on the Political,
-  Economic, Social, Technological, Legal, and Environmental factors influencing
-  this industry. Please ensure the following parameters are met:
-
-  - Language: {{Language}}
-
-  - Maximum word limit: {{max_length}} words
-
-  - Structure your response with an introduction to the industry, followed by
-  the PESTLE analysis, and conclude with insights on trends and future
-  projections."
+  Assume the role of a senior consultant from a renowned firm (such as
+  Accenture, McKinsey, or the Boston Consulting Group) specializing in the
+  {{Field}} industry (for example, technology, healthcare, or finance) in the
+  {{Geographical area}}. Your task is to deliver a comprehensive report that
+  includes:
+      
+      1. **Industry Overview:** Offer a succinct introduction that summarizes the current state and significance of the industry in the specified geography.
+      
+      2. **PESTLE Analysis:** Conduct an in-depth PESTLE analysis by providing detailed insights on each of the following factors:
+         - **Political:** Describe relevant regulations, government stability, and political influences.
+         - **Economic:** Assess the economic landscape including market trends and financial forecasts.
+         - **Social:** Analyze demographic trends, consumer behaviors, and societal impacts.
+         - **Technological:** Investigate technological advancements and their effects on the industry.
+         - **Legal:** Highlight key legal considerations and compliance issues facing the industry.
+         - **Environmental:** Consider environmental regulations, sustainability efforts, and ecological impacts.
+      
+      3. **Emerging Trends & Future Outlook:** Conclude with insights on current trends within the industry, future growth prospects, and potential challenges you foresee in the upcoming years.
+      
+      Ensure your response adheres to the following criteria:
+      - Language: {{Language}}
+      - Word Limit: {{max_length}} words
+      - Clearly structure the report, ensuring easy readability and logical flow from one section to the next.
 input_variables:
   Field:
     type: string
@@ -36,6 +44,6 @@ input_variables:
   max_length:
     type: number
     description: ''
-model: gpt-4o-mini
+model: anthropic.claude-3-haiku-20240307-v1:0
 parameters:
   temperature: 0.1
