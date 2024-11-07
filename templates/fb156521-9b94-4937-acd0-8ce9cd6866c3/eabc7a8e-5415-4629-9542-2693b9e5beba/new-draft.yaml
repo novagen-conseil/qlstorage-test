@@ -1,0 +1,6 @@
+name: new draft
+version: 1.0.0
+description: ded
+author: bewalthew
+content: draft
+model: gpt-4o-mini
