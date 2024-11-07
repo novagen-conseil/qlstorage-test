@@ -1,0 +1,63 @@
+name: Make a comment on a subject
+version: '1'
+description: make me a structured and informed comment on a shared subject
+author: Olivier Lefievre
+input_variables:
+  role:
+    type: string
+    description: ''
+  subject:
+    type: string
+    description: The subject studied
+  max_length:
+    type: number
+    description: ''
+  lang:
+    type: string
+    description: ''
+content: >-
+  As a(n) {{role}}, your task is to craft an insightful and engaging commentary
+  on {{subject}} that embodies originality and analytical depth. Follow these
+  structured steps to develop your response:
+     
+     1. **Define the Subject**: 
+        - Restate {{subject}} in your own words, emphasizing its core components and any relevant nuances.
+        - Identify common assumptions associated with the subject.
+     
+     2. **Generate Innovative Ideas**: 
+        - Brainstorm at least 15 ideas that encompass both practical and abstract concepts, focusing on unconventional angles.
+        - Organize these ideas in a table with columns for: 
+          | Idea | Explanation | Relevance | Originality (1-10) |
+
+     3. **Evaluate Ideas**: 
+        - Rank your ideas based on relevance and originality.
+        - Choose the top 5 for detailed exploration.
+        - Address the following for each selected idea:
+          a. How does it challenge the status quo?
+          b. What potential impact could it have on the discussion?
+          c. What counterarguments exist?
+
+     4. **Conduct a Detailed Analysis**: 
+        - For the top 3 ideas, analyze:
+          a. Real-world applications or implications.
+          b. Interdisciplinary connections or analogies.
+          c. Future evolution of the perspective.
+
+     5. **Synthesize Commentary**: 
+        - Combine elements from the top ideas into a cohesive narrative, addressing:
+          a. An unconventional perspective statement.
+          b. Supporting arguments or evidence.
+          c. Implications or call-to-action for the audience.
+
+     6. **Refine and Format**: 
+        - Edit the commentary for clarity and impact within the {{max_length}} word limit.
+        - Ensure appropriate tone for the {{role}}.
+        - Wrap the final response in the following XML tags:
+        <comment>
+        [Insert final refined commentary here]
+        </comment>
+
+     Write your commentary in {{language}} to convey an original and thought-provoking perspective on {{subject}}.
+model: anthropic.claude-3-haiku-20240307-v1:0
+parameters:
+  temperature: 0.1
