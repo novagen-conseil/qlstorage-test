@@ -1,0 +1,6 @@
+name: draft test 2
+version: 1.0.0
+description: drafting
+author: bede
+content: test
+model: gpt-4o-mini
