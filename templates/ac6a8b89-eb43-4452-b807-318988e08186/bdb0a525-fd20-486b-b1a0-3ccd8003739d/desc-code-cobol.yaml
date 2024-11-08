@@ -1,7 +1,11 @@
 name: Desc-Code COBOL
-version: 1.0.0
+version: '1'
 description: Generation d'une documentation claire et explicative d'un programme COBOL
 author: Olivier Lefievre
+input_variables:
+  Code Cobol:
+    type: string
+    description: Code COBOL analysé
 content: >-
   À partir du code COBOL suivant, veuillez générer une documentation exhaustive
   et bien structurée. La documentation doit couvrir les thèmes suivants, en
@@ -43,10 +47,6 @@ content: >-
   Voici le code COBOL à documenter :
 
   {{Code Cobol}}
-input_variables:
-  Code Cobol:
-    type: string
-    description: Code COBOL analysé
 model: anthropic.claude-3-haiku-20240307-v1:0
 parameters:
   temperature: 0.1
