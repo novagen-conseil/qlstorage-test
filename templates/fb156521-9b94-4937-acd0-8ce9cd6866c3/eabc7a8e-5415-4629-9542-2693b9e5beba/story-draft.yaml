@@ -1,8 +1,7 @@
 name: story draft
-version: 1.0.0
+version: '1'
 description: story draft
 author: bewalthew
-content: write a story about {{theme}} in less then {{words}}
 input_variables:
   theme:
     type: ''
@@ -10,4 +9,5 @@ input_variables:
   words:
     type: number
     description: ''
+content: write a story about {{theme}} in less then {{words}}
 model: gpt-4o-mini
