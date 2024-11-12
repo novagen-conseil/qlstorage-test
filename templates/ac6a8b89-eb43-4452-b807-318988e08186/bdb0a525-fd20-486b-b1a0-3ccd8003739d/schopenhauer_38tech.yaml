@@ -1,0 +1,51 @@
+name: Schopenhauer_38Optim
+version: '1'
+description: >-
+  Voici un prompt pour analyser un dialogue entre deux individus en utilisant
+  les 38 techniques de négociation de Schopenhauer. Pour chaque interlocuteur,
+  les techniques identifiées sont listées et expliquées. L'efficacité globale de
+  chaque participant en termes de persuasion et de contrôle de la conversation
+  est également évaluée.
+author: Olivier Lefievre
+input_variables:
+  dialogue:
+    type: string
+    description: ''
+  Language:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
+content: >-
+  Analysez le dialogue suivant entre deux personnes en utilisant les 38
+  techniques de négociation d'Arthur Schopenhauer tirées de son livre 'L'Art
+  d'avoir toujours raison'. Pour chaque réplique, identifiez et listez les
+  techniques utilisées. 
+
+
+  1. Pour chaque interlocuteur, écrivez les techniques identifiées et fournissez
+  une brève explication sur leur utilisation.
+
+  2. Évaluez l'efficacité de chaque interlocuteur en termes de persuasion et de
+  contrôle de la conversation.
+
+  3. Résumez le ton général de la conversation.
+
+
+  Dialogue à analyser : {{dialogue}}. Exprimez le résultat de l'analyse en
+  {{Language}}. Limitez la réponse à {{max_length}} mots.
+
+
+  **Exemple d'analyse :**
+
+  - Interlocuteur A :
+    - Techniques : Exagération, Provocation de la colère
+    - Explication : Utilisation d'hyperboles pour accentuer son point de vue et susciter l'émotion chez l'autre partie.
+
+  - Interlocuteur B :
+    - Techniques : Réponse ad hominem, Déformation des propos
+    - Explication : Critique personnelle à la place de l'argumentation logique, amenant la discussion à un niveau émotionnel plutôt que rationnel.
+model: anthropic.claude-3-5-haiku-20241022-v1:0
+parameters:
+  temperature: 0.1
