@@ -1,10 +1,20 @@
 name: schopenhauer_38
-version: 1.0.0
+version: '1'
 description: >-
   Here is a prompt that can be used for analysing a dialogue between two
   individuals using Schopenhauer's 38 negotiation techniques. For each speaker,
   the techniques identified are listed and explained.
 author: Olivier Lefievre
+input_variables:
+  Dialogue:
+    type: string
+    description: ''
+  Language:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
 content: >-
   Analyze the following dialogue between two people, identifying and discussing
   Arthur Schopenhauer's negotiation techniques as presented in ‘The Art of Being
@@ -26,16 +36,6 @@ content: >-
 
   Please express the results in {{Language}} and ensure the total response does
   not exceed {{max_length}} words.
-input_variables:
-  Dialogue:
-    type: string
-    description: ''
-  Language:
-    type: ''
-    description: ''
-  max_length:
-    type: number
-    description: ''
 model: anthropic.claude-3-5-haiku-20241022-v1:0
 parameters:
   temperature: 0.1
