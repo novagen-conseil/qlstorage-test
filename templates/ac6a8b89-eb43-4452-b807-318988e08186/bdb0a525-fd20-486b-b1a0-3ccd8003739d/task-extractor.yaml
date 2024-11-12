@@ -1,0 +1,50 @@
+name: task extractor
+version: '1'
+description: >-
+  you have meeting minutes, you want in a short time to have task list with
+  worload assessment... 
+author: Olivier Lefievre
+input_variables:
+  document:
+    type: string
+    description: ''
+content: >-
+  Given a text document, the following actions are required:
+
+
+  1. Identify and categorize the various elements located between the hash
+  symbols (#) in the document.
+
+  2. Create a structured Markdown table with the following columns: 
+     - Task Type (e.g., Analyze, Execute, Evaluate)
+     - Task Title
+     - Associated Actions (e.g., Collect Data, Analyze Results)
+     - Complexity (rated as low, medium, or high based on the criteria outlined below)
+
+  ### Complexity Evaluation Criteria:
+
+  - **Low Complexity**: Tasks that require minimal time (e.g., reviewing a brief
+  report), few resources (1-2), and basic expertise (e.g., data entry).
+
+  - **Medium Complexity**: Tasks that take an hour (e.g., preparing a
+  presentation), require moderate resources (3-5), and intermediate expertise
+  (e.g., creating analysis).
+
+  - **High Complexity**: Tasks demanding several hours (e.g., developing a
+  comprehensive project plan), numerous resources (6+), and specialized
+  expertise (e.g., advanced technical projects).
+
+
+  ### Example Output Structure:
+
+
+  | Task Type | Task Title | Associated Actions | Complexity |
+
+  |-----------|------------|-------------------|------------|
+
+  | Analyze   | Text Review| Extract Keywords  | Medium     |
+
+
+  After completing the task, provide the Markdown table reflecting the elements
+  from the document.
+model: gpt-4o-mini
