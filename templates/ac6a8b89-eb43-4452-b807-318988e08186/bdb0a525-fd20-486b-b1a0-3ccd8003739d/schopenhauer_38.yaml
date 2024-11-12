@@ -1,0 +1,41 @@
+name: schopenhauer_38
+version: 1.0.0
+description: >-
+  Here is a prompt that can be used for analysing a dialogue between two
+  individuals using Schopenhauer's 38 negotiation techniques. For each speaker,
+  the techniques identified are listed and explained.
+author: Olivier Lefievre
+content: >-
+  Analyze the following dialogue between two people, identifying and discussing
+  Arthur Schopenhauer's negotiation techniques as presented in ‘The Art of Being
+  Right: 38 Ways to Win an Argument.’ 
+
+
+  1. For each line of dialogue, clearly identify the technique(s) employed by
+  each interlocutor.
+
+  2. Provide an illustrated explanation of the identified technique(s) using a
+  minimum of three sentences. Ensure that:
+     - The explanation uses the original dialogue text as a reference.
+     - The connection between the technique and its application in the dialogue is explicitly articulated.
+
+  Additionally, reflect on how these techniques might be applied in your own
+  negotiation practices or discussions. 
+
+  dialogue to be analysed {{Dialogue}}
+
+  Please express the results in {{Language}} and ensure the total response does
+  not exceed {{max_length}} words.
+input_variables:
+  Dialogue:
+    type: string
+    description: ''
+  Language:
+    type: ''
+    description: ''
+  max_length:
+    type: number
+    description: ''
+model: anthropic.claude-3-5-haiku-20241022-v1:0
+parameters:
+  temperature: 0.1
