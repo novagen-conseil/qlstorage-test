@@ -1,5 +1,5 @@
-name: Pestle Framework-test
-version: 1.0.0
+name: Pestle Framework-test1
+version: '1'
 description: >-
   Un outil de gestion stratégique utilisé pour analyser les facteurs
   macro-environnementaux qui ont un impact sur une organisation. PESTLE englobe
@@ -8,6 +8,19 @@ description: >-
   appréhender le contexte dans lequel elles opèrent, ce qui leur permet de
   prendre des décisions stratégiques plus éclairées.
 author: Olivier Lefievre
+input_variables:
+  Field:
+    type: string
+    description: ''
+  Geographical area:
+    type: string
+    description: ''
+  Language:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
 content: >-
   Assume the role of a senior consultant from a renowned firm (such as
   Accenture, McKinsey, or the Boston Consulting Group) specializing in the
@@ -31,19 +44,6 @@ content: >-
       - Language: {{Language}}
       - Word Limit: {{max_length}} words
       - Clearly structure the report, ensuring easy readability and logical flow from one section to the next.
-input_variables:
-  Field:
-    type: string
-    description: ''
-  Geographical area:
-    type: string
-    description: ''
-  Language:
-    type: string
-    description: ''
-  max_length:
-    type: number
-    description: ''
 model: anthropic.claude-3-haiku-20240307-v1:0
 parameters:
   temperature: 0.1
