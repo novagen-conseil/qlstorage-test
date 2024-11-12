@@ -1,4 +1,4 @@
-name: Schopenhauer_38optim
+name: Schopenhauer_38Tech
 version: '1'
 description: >-
   Voici un prompt pour analyser un dialogue entre deux individus en utilisant
@@ -24,28 +24,16 @@ content: >-
   techniques utilisées. 
 
 
-  1. Pour chaque interlocuteur, écrivez les techniques identifiées et fournissez
-  une brève explication sur leur utilisation.
-
-  2. Évaluez l'efficacité de chaque interlocuteur en termes de persuasion et de
-  contrôle de la conversation.
-
-  3. Résumez le ton général de la conversation.
+  1. Pour chaque interlocuteur, à chaque fois que vous identifiez une technique
+  utilisée, nommez la ou les techniques identifiées et fournissez une
+  explication précise et illustrée sur leur utilisation. L'illustration doit
+  reprendre le morceau de texte identifié et présenter l'explication de la
+  technique utilisée en la présentant avec un minimum de trois phrases,
+  permettant de valoriser la technique utilisée.
 
 
   Dialogue à analyser : {{dialogue}}. Exprimez le résultat de l'analyse en
   {{Language}}. Limitez la réponse à {{max_length}} mots.
-
-
-  **Exemple d'analyse :**
-
-  - Interlocuteur A :
-    - Techniques : Exagération, Provocation de la colère
-    - Explication : Utilisation d'hyperboles pour accentuer son point de vue et susciter l'émotion chez l'autre partie.
-
-  - Interlocuteur B :
-    - Techniques : Réponse ad hominem, Déformation des propos
-    - Explication : Critique personnelle à la place de l'argumentation logique, amenant la discussion à un niveau émotionnel plutôt que rationnel.
 model: anthropic.claude-3-5-haiku-20241022-v1:0
 parameters:
   temperature: 0.1
