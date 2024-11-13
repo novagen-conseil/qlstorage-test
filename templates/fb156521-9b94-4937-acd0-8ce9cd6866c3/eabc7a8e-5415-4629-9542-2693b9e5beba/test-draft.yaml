@@ -1,6 +1,6 @@
 name: test draft
 version: 1.0.0
-description: ''
+description: test
 author: bewalthew
-content: test
+content: testing
 model: gpt-4o-mini
