@@ -1,0 +1,12 @@
+name: Write a story with animal
+version: 1.0.0
+description: A story generated automatically with 2 characters and a cat
+author: Olivier Lefievre
+content: |-
+  Write a story with 2 characters speaking to a cat
+  Max words {{max_words}}
+input_variables:
+  max_words:
+    type: number
+    description: ''
+model: gpt-4o-mini
