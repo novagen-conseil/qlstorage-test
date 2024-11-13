@@ -1,8 +1,0 @@
-name: try
-version: 1.0.0
-description: trying
-author: bewalthew
-content: 'try this out '
-model: anthropic.claude-3-haiku-20240307-v1:0
-parameters:
-  temperature: 0.5
