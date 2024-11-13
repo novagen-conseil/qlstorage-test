@@ -1,0 +1,43 @@
+name: PromQL query explaination
+version: 1.0.0
+description: Explain what represent the given promQL query
+author: steven
+content: >
+  postgresql exporter 
+
+
+  tell me what represent the promql <query> 
+
+
+  You will provide me : 
+
+  - a title that best describe the metric
+
+  - a description
+
+  - what value indicate an healthy database ?
+
+  - what value indicate an unhealthy database ? (with explaination)
+
+  - How to react when the database is unhealthy
+
+  - give me a suggestion if there is a better metric to display (only if
+  relevant)
+
+  - Tell me what is the best Grafana visualization for this metrics (with all
+  the visualization parameters like unit)
+
+
+
+  # promql query
+
+  <query>
+
+  {{query}}
+
+  </query>
+input_variables:
+  query:
+    type: string
+    description: Promql query you want to be explained
+model: gpt-4o-mini
