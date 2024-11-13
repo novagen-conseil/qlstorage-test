@@ -1,6 +1,0 @@
-name: test edit
-version: '1'
-description: etest
-author: bewalthew
-content: test new content
-model: gpt-4o-mini
