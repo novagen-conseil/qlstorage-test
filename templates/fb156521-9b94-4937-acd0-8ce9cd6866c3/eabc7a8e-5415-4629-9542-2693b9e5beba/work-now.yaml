@@ -2,5 +2,5 @@ name: work now
 version: '1'
 description: please
 author: bewalthew
-content: work
+content: work test
 model: gpt-4o-mini
