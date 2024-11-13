@@ -1,6 +1,6 @@
-name: test
-version: 1.0.0
+name: test test
+version: '1'
 description: test
 author: bede
-content: test
+content: test qzpdojqz
 model: gpt-4o-mini
