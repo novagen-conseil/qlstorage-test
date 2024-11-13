@@ -1,6 +1,6 @@
-name: work now
+name: work now try
 version: '1'
 description: please
 author: bewalthew
-content: work test
+content: work test try
 model: gpt-4o-mini
