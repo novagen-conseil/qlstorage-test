@@ -1,0 +1,10 @@
+name: fv
+version: 1.0.0
+description: fefe
+author: youcef
+content: tell me more bout {{title}}
+input_variables:
+  title:
+    type: string
+    description: bgvfd
+model: gpt-4o-mini
