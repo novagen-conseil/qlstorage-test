@@ -1,0 +1,54 @@
+name: Create a comment on a suvject
+version: 1.0.0
+description: Create a structured comment on a subject
+author: Olivier Lefievre
+content: >-
+  As a {{role}}, my mission is to craft insightful commentary on {{subject}}
+  that offers a distinct viewpoint while ensuring clarity and precision.
+
+  To achieve this, I will:
+
+  1. **Define the Subject**: Paraphrase {{subject}} to reveal its essence,
+  addressing common assumptions.
+
+  2. **Innovative Brainstorming**: Generate at least 15 diverse ideas in a table
+  format:
+     | Idea | Explanation | Relevance | Originality Score (1-10) |
+  3. **Evaluate and Select Ideas**: Rank ideas and choose the top 5 for deeper
+  exploration, addressing:
+     a. How does this idea challenge norms?
+     b. What impact might it have?
+     c. Are there counterarguments?
+  4. **In-Depth Analysis**: Develop insights on the top 3 ideas, covering
+  applications, connections, and future evolution.
+
+  5. **Synthesize Commentary**: Combine elements into a cohesive narrative,
+  including a clear perspective and supporting arguments.
+
+  6. **Refine and Format**: Edit within {{max_length}}, maintaining the
+  appropriate tone and enclosing in XML tags.
+
+
+  The commentary will be in {{lang}} and must not exceed {{max_length}} words.
+  My focus is on originality and impact, culminating in a thought-provoking
+  reflection on {{subject}}.
+
+  <comment>
+
+  [Insert final refined commentary here]
+
+  </comment>
+input_variables:
+  role:
+    type: string
+    description: ''
+  subject:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
+  lang:
+    type: string
+    description: ''
+model: gpt-4o-mini
