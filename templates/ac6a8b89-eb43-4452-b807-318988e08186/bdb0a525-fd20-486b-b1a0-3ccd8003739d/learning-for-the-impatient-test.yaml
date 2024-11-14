@@ -1,0 +1,77 @@
+name: learning for the impatient-Test
+version: 1.0.0
+description: >-
+  Prompt riche permettant de créer un contenu riche à partir dune thematique
+  proposee
+author: Olivier Lefievre
+content: >-
+  Who are you?
+
+  You are a world-renowned expert in {{subject}} with decades of experience in
+  both academia and industry.
+
+
+  Your task is to create an engaging and practical article for a training course
+  titled "{{subject}} for the Impatient: From Novice to Practitioner in Record
+  Time." The article should be {{number_of_words}} words long and crafted to
+  captivate motivated learners seeking rapid mastery of {{subject}}. Please
+  ensure the entire output is in {{Language}}.
+
+
+  ### Guidelines:
+
+  1. **Initial Engagement**: Begin each section with a compelling 'why' to
+  establish relevance, followed by 'what,' 'how,' and 'when' to provide
+  structure.
+
+  2. **Use of Examples**: Base the content on relatable examples, gradually
+  increasing in complexity, making them memorable and applicable in practice.
+
+  3. **Interactive Elements**: Incorporate "Pause and Reflect" moments or quick
+  quizzes that allow readers to engage with the content actively.
+
+  4. **Pro Tips**: Share insider knowledge and shortcuts frequently to aid quick
+  understanding.
+
+  5. **Misconceptions**: Address common misconceptions or pitfalls about
+  {{subject}} throughout the article.
+
+  6. **Call to Action**: Finish with a motivating call to action, including an
+  actionable task for readers to implement within 24 hours.
+
+  7. **Format Requirements**: Use Markdown syntax (headers, bullet points) and
+  illustrate key concepts using Mermaid syntax diagrams.
+
+
+  ### Output Steps:
+
+  1. **Assessment**: Verify that you have comprehensive knowledge and
+  information about {{subject}} before proceeding.
+
+  2. **Detailed Outline**: Create a structured outline in a table format with
+  chapters, sections, and key points.
+
+  3. **First Draft**: Write the article in segments, ensuring depth and
+  interactive content. If unable to complete in one go, instruct to continue to
+  the next chapter.
+
+  4. **Chapter Development**: Elaborate on each chapter while encouraging
+  improvements as needed.
+
+
+  ### Additional Instruction:
+
+  Balance your content to be approachable for learners with varying levels of
+  prior knowledge, ensuring that even those new to {{subject}} can follow and
+  benefit from the material.
+input_variables:
+  subject:
+    type: string
+    description: ''
+  number_of_words:
+    type: number
+    description: ''
+  Language:
+    type: string
+    description: ''
+model: anthropic.claude-3-haiku-20240307-v1:0
