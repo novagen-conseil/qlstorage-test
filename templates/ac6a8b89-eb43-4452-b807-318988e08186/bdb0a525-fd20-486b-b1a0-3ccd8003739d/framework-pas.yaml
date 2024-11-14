@@ -1,0 +1,60 @@
+name: Framework-PAS
+version: 1.0.0
+description: >-
+  The PAS framework (Problem / Agitate / Solution) focuses on identifying a
+  problem, agitating it to make it more pressing, and then offering a solution.
+
+  PAS is particularly effective in direct response copywriting, sales letters,
+  and advertisements where the goal is to address a specific pain point of the
+  audience.
+author: Olivier Lefievre
+content: >-
+  As an experienced copywriter, your job is to craft a compelling sales message
+  for {{product}}, targeting {{target_audience}}, using the PAS (Problem,
+  Agitate, Solution) framework. 
+
+
+  ### Please ensure the following:
+
+
+  1. **Identify the Problem**: Concisely articulate a specific and relatable
+  problem that {{target_audience}} faces. Aim to connect deeply with their
+  experiences.
+
+
+  2. **Agitate the Problem**: Enhance the urgency by elaborating on the negative
+  repercussions of this problem. Use vivid language that evokes emotional
+  responses, highlighting the impact this issue has on their daily lives.
+
+
+  3. **Present the Solution**: Introduce {{product}} as the optimal solution.
+  Clearly explain how it alleviates the identified pain points, improving the
+  circumstances for {{target_audience}}. Use persuasive language that emphasizes
+  its benefits and differentiates it from competitors.
+
+
+  ### Additional Requirements:
+
+  - Your copy must be engaging, relatable, and exhibit a strong understanding of
+  the target audience's needs.
+
+  - Use a tone that is consistent with the brand values of {{product}}.
+
+  - Aim for approximately 200-250 words.
+
+  - Incorporate analogies or relatable experiences to enhance emotional
+  engagement.
+
+
+  Output should be in {{language}}.
+input_variables:
+  product:
+    type: string
+    description: ''
+  target_audience:
+    type: string
+    description: ''
+  language:
+    type: string
+    description: ''
+model: anthropic.claude-3-haiku-20240307-v1:0
