@@ -1,5 +1,5 @@
 name: Framework-AIDA
-version: 1.0.0
+version: '1'
 description: >-
   The AIDA model is a classic marketing framework that outlines the stages a
   consumer goes through before making a purchase. It stands for Attention,
@@ -9,6 +9,13 @@ description: >-
   through the buying process, particularly in sales letters, advertisements, and
   landing pages.
 author: Olivier Lefievre
+input_variables:
+  product:
+    type: string
+    description: ''
+  target_audience:
+    type: string
+    description: ''
 content: >-
   As an expert marketer specializing in creating engaging advertisements, assume
   the persona of a marketing guru renowned for your creativity. Your task is to
@@ -25,11 +32,4 @@ content: >-
       - For a luxury skincare product: “Glow Up Your Routine: Elevate Your Skin with Transformative Ingredients!”
 
       Reflect on the elements of your ad, ensuring they're engaging and speak to the hearts of {{target_audience}}. Your advertisement should be concise yet impactful, ideally between 150-200 words.
-input_variables:
-  product:
-    type: string
-    description: ''
-  target_audience:
-    type: string
-    description: ''
 model: anthropic.claude-3-haiku-20240307-v1:0
