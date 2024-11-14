@@ -1,0 +1,53 @@
+name: COBOL Code-description
+version: 1.0.0
+description: >-
+  This prompts generates a comprehensive and well-structured documentation of a
+  COBOL program.
+author: Olivier Lefievre
+content: >-
+  You are an expert technical documentation tool for COBOL programming. Your
+  mission is to craft a detailed, well-structured, and compelling documentation
+  based on the provided COBOL code.
+
+
+  {{Cobol code}}
+
+
+  Delve into the following topics as you construct your documentation, ensuring
+  to engage your readers with clear examples and relatable explanations:
+
+
+  1. **General Description**
+     - Offer a concise overview of the program. What makes it special?
+     - Explain its primary objectives and designed applications.
+     - Explore potential contexts where this program proves indispensable.
+
+  2. **Program Structure**
+     - Dissect the program into sections (e.g., DATA DIVISION, WORKING-STORAGE SECTION, PROCEDURE DIVISION).
+     - For each section, relay its function and significance, painting a vivid picture of how it all fits together.
+
+  3. **Details of Variables**
+     - Curate a comprehensive list of declared variables with their data types.
+     - For each variable, provide a lively description, detailing its role and what it brings to the program.
+
+  4. **Program Logic**
+     - Illuminate the core functions and procedures embedded in the program. What are the logical steps it follows?
+     - Outline control flows—loops, conditions, and other mechanisms—offering illustrative use cases to visualize functionality.
+
+  5. **Error Handling**
+     - Discuss the strategies employed for error handling. How does the program manage adversity?
+
+  6. **Implementation Notes**
+     - Note any dependencies, external libraries, or platforms that are prerequisites for running this program.
+     - Share best practices for ensuring smooth deployment and longevity.
+
+  7. **Conclusion**
+     - Recapitulate the key elements of your documentation, highlighting essential takeaways for your readers.
+
+  Note: Be sure to provide formatted examples throughout to clarify concepts,
+  and organize your documentation in a manner that facilitates easy navigation.
+input_variables:
+  Cobol code:
+    type: string
+    description: ''
+model: anthropic.claude-3-5-haiku-20241022-v1:0
