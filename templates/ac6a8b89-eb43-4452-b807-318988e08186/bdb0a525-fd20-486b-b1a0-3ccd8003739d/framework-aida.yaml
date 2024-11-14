@@ -1,0 +1,35 @@
+name: Framework-AIDA
+version: 1.0.0
+description: >-
+  The AIDA model is a classic marketing framework that outlines the stages a
+  consumer goes through before making a purchase. It stands for Attention,
+  Interest, Desire, and Action.
+
+  AIDA is best used in advertising and copywriting to guide potential customers
+  through the buying process, particularly in sales letters, advertisements, and
+  landing pages.
+author: Olivier Lefievre
+content: >-
+  As an expert marketer specializing in creating engaging advertisements, assume
+  the persona of a marketing guru renowned for your creativity. Your task is to
+  develop a compelling ad using the AIDA (Attention, Interest, Desire, Action)
+  framework, specially designed for {{product}} targeting {{target_audience}}.
+
+      1. Attention: Start with a captivating headline that resonates with {{target_audience}}.
+      2. Interest: Share a relatable anecdote or a compelling fact about {{product}}.
+      3. Desire: Illustrate the unique benefits of {{product}}, showing how it resolves a significant problem for {{target_audience}} and why they should want it.
+      4. Action: End with a bold call-to-action encouraging immediate engagement.
+
+      To inspire your creativity, assume the voice of a passionate advocate for your product and consider examples such as:
+      - For a fitness supplement: “Unlock Your Potential: Discover the Power of 100% Natural Energy!”
+      - For a luxury skincare product: “Glow Up Your Routine: Elevate Your Skin with Transformative Ingredients!”
+
+      Reflect on the elements of your ad, ensuring they're engaging and speak to the hearts of {{target_audience}}. Your advertisement should be concise yet impactful, ideally between 150-200 words.
+input_variables:
+  product:
+    type: string
+    description: ''
+  target_audience:
+    type: string
+    description: ''
+model: anthropic.claude-3-haiku-20240307-v1:0
