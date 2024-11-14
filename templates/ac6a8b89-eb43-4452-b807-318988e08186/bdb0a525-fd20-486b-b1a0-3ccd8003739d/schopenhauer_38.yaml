@@ -32,7 +32,7 @@ content: >-
   Additionally, reflect on how these techniques might be applied in your own
   negotiation practices or discussions. 
 
-  dialogue to be analysed {{Dialogue}}
+  Dialogue to be analysed {{Dialogue}}
 
   Please express the results in {{Language}} and ensure the total response does
   not exceed {{max_length}} words.
