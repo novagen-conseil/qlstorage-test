@@ -1,7 +1,20 @@
 name: english club planner
-version: 1.0.0
+version: '1'
 description: plans activites
 author: bewalthew
+input_variables:
+  number:
+    type: number
+    description: ''
+    place_holder: ''
+  age:
+    type: number
+    description: ''
+    place_holder: ''
+  language:
+    type: string
+    description: ''
+    place_holder: ''
 content: >-
   Imagine you are a game designer specializing in educational games for young
   children. Design <strong>three interactive games</strong> aimed at a group of
@@ -20,16 +33,48 @@ content: >-
     As a bonus, reflect on the methods you’d use to adapt these games for a mixed-ability group, considering both challenges and opportunities for each skill level.
 
     Additionally, as you draft your responses, imagine the perspective of young children engaged with the games and the types of interactions they might have. Feel free to explore innovative game formats and mechanics that could enhance their engagement and learning experience.
-input_variables:
-  number:
-    type: number
-    description: ''
-    place_holder: ''
-  age:
-    type: number
-    description: ''
-    place_holder: ''
-  language:
-    type: string
-    description: ''
-    place_holder: ''
+
+
+
+  -----
+
+
+  Imagine you are a game designer specializing in educational games for young
+  children. Design <strong>three interactive games</strong> aimed at a group of
+  <strong>{{number}} children aged {{age}}</strong> to enhance their proficiency
+  in <strong>{{language}}</strong>. Each game must fulfill the following
+  criteria:
+
+    1. <strong>Learning Objective:</strong> Clearly specify the target skill (e.g., vocabulary acquisition, sentence formation, conversational fluency).
+    2. <strong>Materials Needed:</strong> List all necessary materials with specific examples to facilitate gameplay.
+    3. <strong>Gameplay Description:</strong> Provide a concise overview of how the game is played, including sample instructions that clarify the approach.
+    4. <strong>Assessment Criteria:</strong> Define clear metrics to measure children's progress, suggesting observations or tangible outputs.
+    5. <strong>Skill Level Adaptation:</strong> Suggest targeted modifications to ensure inclusivity for varying skill levels among children.
+
+    Ensure one game focuses on vocabulary, another on grammar, and the last on conversation skills.
+
+    As a bonus, reflect on the methods you’d use to adapt these games for a mixed-ability group, considering both challenges and opportunities for each skill level.
+
+    Additionally, as you draft your responses, imagine the perspective of young children engaged with the games and the types of interactions they might have. Feel free to explore innovative game formats and mechanics that could enhance their engagement and learning experience.
+
+  ----
+
+
+  Imagine you are a game designer specializing in educational games for young
+  children. Design <strong>three interactive games</strong> aimed at a group of
+  <strong>{{number}} children aged {{age}}</strong> to enhance their proficiency
+  in <strong>{{language}}</strong>. Each game must fulfill the following
+  criteria:
+
+    1. <strong>Learning Objective:</strong> Clearly specify the target skill (e.g., vocabulary acquisition, sentence formation, conversational fluency).
+    2. <strong>Materials Needed:</strong> List all necessary materials with specific examples to facilitate gameplay.
+    3. <strong>Gameplay Description:</strong> Provide a concise overview of how the game is played, including sample instructions that clarify the approach.
+    4. <strong>Assessment Criteria:</strong> Define clear metrics to measure children's progress, suggesting observations or tangible outputs.
+    5. <strong>Skill Level Adaptation:</strong> Suggest targeted modifications to ensure inclusivity for varying skill levels among children.
+
+    Ensure one game focuses on vocabulary, another on grammar, and the last on conversation skills.
+
+    As a bonus, reflect on the methods you’d use to adapt these games for a mixed-ability group, considering both challenges and opportunities for each skill level.
+
+    Additionally, as you draft your responses, imagine the perspective of young children engaged with the games and the types of interactions they might have. Feel free to explore innovative game formats and mechanics that could enhance their engagement and learning experience.
+model: gpt-4o-mini
