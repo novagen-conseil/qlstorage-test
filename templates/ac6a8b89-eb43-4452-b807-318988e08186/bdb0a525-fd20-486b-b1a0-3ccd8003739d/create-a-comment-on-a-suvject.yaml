@@ -1,7 +1,20 @@
 name: Create a comment on a suvject
-version: 1.0.0
+version: '1'
 description: Create a structured comment on a subject
 author: Olivier Lefievre
+input_variables:
+  role:
+    type: string
+    description: ''
+  subject:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
+  lang:
+    type: string
+    description: ''
 content: >-
   As a {{role}}, my mission is to craft insightful commentary on {{subject}}
   that offers a distinct viewpoint while ensuring clarity and precision.
@@ -38,17 +51,4 @@ content: >-
   [Insert final refined commentary here]
 
   </comment>
-input_variables:
-  role:
-    type: string
-    description: ''
-  subject:
-    type: string
-    description: ''
-  max_length:
-    type: number
-    description: ''
-  lang:
-    type: string
-    description: ''
 model: gpt-4o-mini
