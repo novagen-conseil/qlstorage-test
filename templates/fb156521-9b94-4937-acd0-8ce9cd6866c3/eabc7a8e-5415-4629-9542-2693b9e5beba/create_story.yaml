@@ -6,7 +6,7 @@ input_variables: {}
 output_variables:
   story:
     type: string
-    description: 'the story '
+    description: the story
 content: |-
   'Write a small story about Paris. Less than 200 words.
 
