@@ -1,0 +1,56 @@
+name: Scene Visualization Generator
+version: 1.0.0
+description: Transform story scenes into vivid visual descriptions
+author: bewalthew
+content: |2-
+   ## Scene Input
+        <source_scene>
+        {{scene_text}}
+        </source_scene>
+
+        Style: {{visual_style}}
+        Mood: {{atmospheric_mood}}
+
+        ## Visualization Requirements
+        - Create detailed visual descriptions
+        - Include sensory details
+        - Describe lighting and atmosphere
+        - Capture character appearances
+        - Detail environmental elements
+
+        ## Always include the Output in Format:
+
+        <visualization>
+        [Detailed scene visualization]
+        </visualization>
+
+        <mood_elements>
+        [Atmospheric and emotional elements]
+        </mood_elements>
+
+        <cinematic_elements>
+        [Camera angles and visual direction suggestions]
+        </cinematic_elements>
+
+        END.
+input_variables:
+  scene_text:
+    type: string
+    description: the scene
+  visual_style:
+    type: string
+    description: visual style
+  atmospheric_mood:
+    type: string
+    description: mood
+output_variables:
+  visualization:
+    type: string
+    description: Detailed scene visualization
+  mood_elements:
+    type: string
+    description: Atmospheric and emotional elements
+  cinematic_elements:
+    type: string
+    description: Camera angles and visual direction suggestions
+model: gpt-4o-mini
