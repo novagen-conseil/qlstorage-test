@@ -1,0 +1,36 @@
+name: story with output
+version: 1.0.0
+description: story
+author: bewalthew
+content: >-
+  think about a scene that could appear in a book about {{theme}} then right a
+  specific description about an element in that scene
+
+
+  ## Always include the Output in Format :
+
+
+  <reflexion>
+
+  [the scene you think about]
+
+  </reflexion>
+
+
+  <description>
+
+  [the description of the element]
+
+  </description>
+input_variables:
+  theme:
+    type: string
+    description: theme
+output_variables:
+  reflexion:
+    type: string
+    description: the scene you think about
+  description:
+    type: string
+    description: the description of the element
+model: gpt-4o-mini
