@@ -1,0 +1,57 @@
+name: AI Story Generator
+version: 1.0.0
+description: Create compelling stories with rich narratives
+author: bewalthew
+content: |2
+   ## Story Parameters
+        Genre: {{genre}}
+        Theme: {{theme}}
+        Length: {{word_count}} words
+        Target Audience: {{target_audience}}
+
+        ## Story Elements Requirements
+        - Develop complex characters
+        - Create engaging plot arcs
+        - Build immersive settings
+        - Include meaningful dialogue
+        - Maintain consistent narrative voice
+
+        ## Always include the Output in Format:
+
+        <story_structure>
+        [Plot outline and story beats]
+        </story_structure>
+
+        <story>
+        [Complete story text]
+        </story>
+
+        <story_elements>
+        [List of characters, settings, and major plot points]
+        </story_elements>
+
+        END.
+input_variables:
+  genre:
+    type: string
+    description: genre of story
+  theme:
+    type: string
+    description: theme of story
+  word_count:
+    type: number
+    description: max amount of words
+  target_audience:
+    type: string
+    description: traget audience of story
+output_variables:
+  story_structure:
+    type: string
+    description: Plot outline and story beats
+  story:
+    type: string
+    description: Complete story text
+  story_elements:
+    type: string
+    description: List of characters, settings, and major plot points
+model: gpt-4o-mini
