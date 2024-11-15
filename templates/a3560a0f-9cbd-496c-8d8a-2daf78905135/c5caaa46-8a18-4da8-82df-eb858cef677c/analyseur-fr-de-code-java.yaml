@@ -1,7 +1,11 @@
 name: analyseur FR de code Java
-version: 1.0.0
+version: '1'
 description: analyse le code java et donne des exemples
 author: hubert
+input_variables:
+  code_java:
+    type: string
+    description: ''
 content: >-
   je veux analyser le code java suivant 
 
@@ -11,8 +15,4 @@ content: >-
   et que tu me dises, en tant qu'expert de développement, comment je peux
   l'améliorer en utilisant toutes les bonnes pratiques de d'artisanat logiciel
   (autrement dit software craftmanship).
-input_variables:
-  code_java:
-    type: string
-    description: ''
 model: gpt-4o-mini
