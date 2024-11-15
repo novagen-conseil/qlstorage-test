@@ -1,0 +1,24 @@
+name: story
+version: 1.0.0
+description: 'story '
+author: bewalthew
+content: |-
+  write a story about {{theme}} in less then {{words}} words
+
+  ## Always include the Output in Format :
+
+  <test>
+  test
+  </test>
+input_variables:
+  theme:
+    type: ''
+    description: ''
+  words:
+    type: number
+    description: ''
+output_variables:
+  test:
+    type: string
+    description: test
+model: gpt-4o-mini
