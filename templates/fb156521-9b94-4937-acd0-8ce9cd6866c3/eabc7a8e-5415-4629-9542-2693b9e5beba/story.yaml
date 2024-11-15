@@ -1,18 +1,10 @@
 name: story
-version: 1.0.0
+version: '1'
 description: 'story '
 author: bewalthew
-content: |-
-  write a story about {{theme}} in less then {{words}} words
-
-  ## Always include the Output in Format :
-
-  <test>
-  test
-  </test>
 input_variables:
   theme:
-    type: ''
+    type: string
     description: ''
   words:
     type: number
@@ -21,4 +13,12 @@ output_variables:
   test:
     type: string
     description: test
+content: |-
+  write a story about {{theme}} in less then {{words}} words
+
+  ## Always include the Output in Format :
+
+  <test>
+  test
+  </test>
 model: gpt-4o-mini
