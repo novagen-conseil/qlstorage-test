@@ -1,0 +1,21 @@
+name: story output
+version: 1.0.0
+description: story
+author: bewalthew
+content: |-
+  write a story about {{theme}} in 50 words
+
+  ## Always include the Output in Format :
+
+  <story>
+  the story
+  </story>
+input_variables:
+  theme:
+    type: string
+    description: theme
+output_variables:
+  story:
+    type: string
+    description: the story
+model: gpt-4o-mini
