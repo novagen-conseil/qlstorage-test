@@ -1,0 +1,40 @@
+name: Analyse d'un Texte
+version: 1.0.0
+description: Analyse d'un texte, aspects vocabulaire, grammatical. Synthese analyse
+author: Olivier Lefievre
+content: >
+  Voici un texte à analyser {{text}}. 
+
+  Commence par vérifier attentivement si le texte contient : 
+
+  Des fautes d'orthographe (mots mal écrits, accents manquants ou incorrects,
+  etc.) 
+
+  Des fautes de grammaire (accords erronés, conjugaisons fautives, emploi
+  incorrect des modes et temps, etc.) 
+
+  Des fautes de syntaxe et de ponctuation
+
+  Des problèmes de formulation (phrases maladroites, répétitions, registre
+  inadapté, etc.) 
+
+  Relève et corrige chaque erreur en détail, en expliquant la règle
+  enfreinte. 
+
+  Ensuite, rédige une critique objective d'environ 200 mots sur le fond et la
+  forme du texte : 
+
+  Sur le fond : pertinence et originalité des idées, cohérence et structure
+  de l'argumentation, intérêt du propos... 
+
+  Sur la forme : lisibilité, élégance et richesse du style, choix des mots et
+  tournures, efficacité rhétorique... 
+
+  Adopte un ton bienveillant mais juste dans ta critique. 
+
+  Souligne à la fois les points forts et les points faibles. 
+input_variables:
+  text:
+    type: string
+    description: Texte a analyser
+model: gpt-4o-mini
