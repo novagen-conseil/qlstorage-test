@@ -1,0 +1,54 @@
+name: Text Analyzis
+version: 1.0.0
+description: >-
+  Critical analysis of a text. Study of vocabulary, language and grammar.
+  Optimization proposal
+author: Olivier Lefievre
+content: >
+  Here's a text to analyze {{Text}}.
+
+  Start by carefully checking the text for :
+
+  spelling mistakes (misspelled words, missing or incorrect accents, etc.)
+
+  Grammatical errors (incorrect agreements, incorrect conjugations, incorrect
+  use of modes and tenses, etc.).
+
+  Syntax and punctuation errors
+
+  Wording problems (awkward sentences, repetitions, inappropriate register,
+  etc.)
+
+  Identify and correct each error in detail, explaining the rule broken.
+
+  Then write an objective critique of around 200 words on the content and form
+  of the text:
+
+  Substance: relevance and originality of ideas, coherence and structure of
+  argument, interest of the subject...
+
+  Form: readability, elegance and richness of style, choice of words and
+  phrases, rhetorical effectiveness...
+
+
+  Adopt a sympathetic but fair tone in your criticism.
+
+  Emphasize both strengths and weaknesses.
+
+  Compare the text to high quality standards, without discouraging the author.
+
+  End with a numbered list of at least 5 concrete, actionable tips for improving
+  the text, both in terms of content and style.
+
+  For example, enrich an argument, qualify a statement, vary vocabulary, shorten
+  sentences, etc.
+
+  Make sure your feedback is detailed, constructive and motivating, so as to
+  help the author progress in his writing.
+
+  Your analysis should significantly improve the quality of your text.
+input_variables:
+  Text:
+    type: string
+    description: ''
+model: gpt-4o-mini
