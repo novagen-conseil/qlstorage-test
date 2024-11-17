@@ -1,12 +1,7 @@
 name: story2
-version: 1.0.0
+version: '1'
 description: story
 author: Olivier Lefievre
-content: >-
-  raconte moi une histoire d'amour - dans un style d'écriture {{style}} entre
-  une jeune comptable et un artiste peintre basé à Paris.
-
-  Nombre de mots {{max words}}
 input_variables:
   style:
     type: string
@@ -14,4 +9,9 @@ input_variables:
   max words:
     type: ''
     description: ''
-model: anthropic.claude-3-5-haiku-20241022-v1:0
+content: >-
+  raconte moi une histoire d'amour - dans un style d'écriture {{style}} entre
+  une jeune comptable et un artiste peintre basé à Paris.
+
+  Nombre de mots {{max words}}
+model: gpt-4o-mini
