@@ -1,7 +1,11 @@
 name: Create README.md for Ansible role
-version: 1.0.0
+version: '1'
 description: Return a detailed README of an Ansible role
 author: steven
+input_variables:
+  ansible_role:
+    type: string
+    description: Your Ansible codebase
 content: >-
   Write a README.md for the attached ansible role. 
 
@@ -16,5 +20,10 @@ content: >-
   required, default
 
   4. Give a playbool example
-input_variables: {}
+
+
+
+  # Codebase
+
+  {{ansible_role}}
 model: gpt-4o-mini
