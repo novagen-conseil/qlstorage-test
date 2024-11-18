@@ -1,0 +1,20 @@
+name: Create README.md for Ansible role
+version: 1.0.0
+description: Return a detailed README of an Ansible role
+author: steven
+content: >-
+  Write a README.md for the attached ansible role. 
+
+
+  The README.md will :
+
+  1. Give a detailed description of the role 
+
+  2. indicate the Requirements
+
+  3. specify the role variables in a table with columns name, type, description,
+  required, default
+
+  4. Give a playbool example
+input_variables: {}
+model: gpt-4o-mini
