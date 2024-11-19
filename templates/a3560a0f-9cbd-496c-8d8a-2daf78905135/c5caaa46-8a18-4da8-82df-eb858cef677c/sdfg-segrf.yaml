@@ -1,0 +1,10 @@
+name: sdfg segrf
+version: 1.0.0
+description: 'zqesrt er tqez '
+author: hubert
+content: this is a tst prompt without {{variable}}
+input_variables:
+  variable:
+    type: boolean
+    description: ''
+model: gpt-4o-mini
