@@ -1,0 +1,46 @@
+name: Research Topic Analyzer
+version: 1.0.0
+description: Analyze research topics and identify key areas
+author: bewalthew
+content: |+
+  ## Research Topic Analysis
+      Topic: {{topic}}
+      Depth: {{depth}}
+      Focus Areas: {{focus_areas}}
+
+      ## Analysis Requirements
+      - Current state of research
+      - Key challenges and opportunities
+      - Future research directions
+      - Practical applications
+
+      ## Always include the Output in Format:
+
+      <analysis>
+      [Comprehensive analysis of the topic]
+      </analysis>
+
+      <key_points>
+      [Key findings and insights]
+      </key_points>
+
+      END.
+
+input_variables:
+  topic:
+    type: string
+    description: ''
+  depth:
+    type: string
+    description: ''
+  focus_areas:
+    type: string
+    description: ''
+output_variables:
+  analysis:
+    type: string
+    description: Comprehensive analysis of the topic
+  key_points:
+    type: string
+    description: Key findings and insights
+model: gpt-4o-mini
