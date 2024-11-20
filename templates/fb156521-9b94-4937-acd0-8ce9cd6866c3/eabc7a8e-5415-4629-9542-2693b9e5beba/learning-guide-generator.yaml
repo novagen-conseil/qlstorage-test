@@ -1,7 +1,27 @@
 name: Learning Guide Generator
-version: 1.0.0
+version: '1'
 description: Generate comprehensive learning content
 author: bewalthew
+input_variables:
+  research_analysis:
+    type: string
+    description: ''
+  audience:
+    type: string
+    description: ''
+  word_count:
+    type: number
+    description: ''
+  style:
+    type: string
+    description: ''
+output_variables:
+  article:
+    type: string
+    description: Generated learning content
+  summary:
+    type: string
+    description: Key learning points
 content: |2
    ## Content Generation Parameters
       Research Analysis: {{research_analysis}}
@@ -19,24 +39,4 @@ content: |2
       </summary>
 
       END.
-input_variables:
-  research_analysis:
-    type: string
-    description: ''
-  audience:
-    type: string
-    description: ''
-  word_count:
-    type: number
-    description: ''
-  style:
-    type: ''
-    description: ''
-output_variables:
-  article:
-    type: string
-    description: Generated learning content
-  summary:
-    type: string
-    description: Key learning points
 model: gpt-4o-mini
