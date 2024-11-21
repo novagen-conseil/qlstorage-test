@@ -1,0 +1,6 @@
+name: 'for workflow ? '
+version: 1.0.0
+description: test workflow
+author: hubtest
+content: test prompt by hubert
+model: gpt-4o-mini
