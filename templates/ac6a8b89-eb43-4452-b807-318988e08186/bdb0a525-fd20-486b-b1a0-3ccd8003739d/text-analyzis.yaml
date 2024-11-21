@@ -1,10 +1,21 @@
 name: Text Analyzis
-version: 1.0.0
+version: '1'
 description: >-
   Critical analysis of a text. Study of vocabulary, language and grammar.
   Optimization proposal
 author: Olivier Lefievre
-content: >
+input_variables:
+  Text:
+    type: string
+    description: ''
+output_variables:
+  Mistakes:
+    type: string
+    description: All mistakes that you found (syntax, vocabulay, Grammar, repetition ...)
+  Critique written:
+    type: string
+    description: The critique that you wrote
+content: >-
   Here's a text to analyze {{Text}}.
 
   Start by carefully checking the text for :
@@ -47,8 +58,22 @@ content: >
   help the author progress in his writing.
 
   Your analysis should significantly improve the quality of your text.
-input_variables:
-  Text:
-    type: string
-    description: ''
+
+
+
+  ## Always include the Output in Format :
+
+
+  <Mistakes>
+
+  [All mistakes that you found (syntax, vocabulay, Grammar, repetition ...)]
+
+  </Mistakes>
+
+
+  <Critique written>
+
+  [The critique that you wrote]
+
+  </Critique written>
 model: gpt-4o-mini
