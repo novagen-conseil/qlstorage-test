@@ -1,0 +1,29 @@
+name: Text-Analyzis-Rewrite
+version: 1.0.0
+description: Rewriting of an initial Text analyzed
+author: Olivier Lefievre
+content: >-
+  From this Text : {{Text}}, using this critique {{critique}}, write a reviewed
+  version in a number of words similar
+
+
+  ## Always include the Output in Format :
+
+
+  <Reviewed version>
+
+  [Text that you rewrite]
+
+  </Reviewed version>
+input_variables:
+  Text:
+    type: string
+    description: ''
+  critique:
+    type: string
+    description: ''
+output_variables:
+  Reviewed version:
+    type: string
+    description: Text that you rewrite
+model: gpt-4o-mini
