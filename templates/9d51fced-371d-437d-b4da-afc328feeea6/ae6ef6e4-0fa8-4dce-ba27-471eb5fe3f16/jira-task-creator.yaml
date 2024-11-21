@@ -1,0 +1,20 @@
+name: jira task creator
+version: 1.0.0
+description: >-
+  creates the content for a jira ticket based of of your natural description of
+  the task
+author: bede
+content: >-
+  From this task : {{task}} create a jira ticket structure where you will create
+  a simplified ticket title : for this title you will always include at the
+  start of the title a key word between [] this keyword should be the filed of
+  development so front back database ... and create a more detailed description
+  of the task and then add {{extra_sections}}
+input_variables:
+  task:
+    type: string
+    description: 'the task you want to create a ticket for '
+  extra_sections:
+    type: string
+    description: any aditional sections for your ticket
+model: gpt-4o-mini
