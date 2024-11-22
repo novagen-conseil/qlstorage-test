@@ -1,0 +1,6 @@
+name: joke
+version: 1.0.0
+description: test
+author: bewalthew
+content: write a joke
+model: gpt-4o-mini
