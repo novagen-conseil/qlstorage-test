@@ -1,0 +1,6 @@
+name: blog
+version: 1.0.0
+description: test
+author: bewalthew
+content: right a blog
+model: gpt-4o-mini
