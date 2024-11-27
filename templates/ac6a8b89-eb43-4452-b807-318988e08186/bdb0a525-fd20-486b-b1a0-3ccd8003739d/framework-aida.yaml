@@ -9,10 +9,6 @@ input_variables:
   target_audience:
     type: string
     description: Audience targeted
-output_variables:
-  Advertisement proposed:
-    type: string
-    description: Output generated
 content: >-
   As an expert marketer, your task is to create a compelling advertisement using
   the AIDA (Attention, Interest, Desire, Action) framework for {{product}}
