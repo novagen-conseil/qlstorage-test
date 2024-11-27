@@ -2,18 +2,7 @@ name: code_analysis
 version: '1'
 description: Analyze and compare the code
 author: bewalthew
-input_variables:
-  content:
-    type: string
-    description: the content
-output_variables:
-  result:
-    type: string
-    description: Ananlysis of the code
-  review:
-    type: string
-    description: review of code
-content: >
+content: >-
   ## As expert sofware engineer you have mission to analyze and improve the code
   provided in xml tag <code_to_improve> below.
 
@@ -94,6 +83,36 @@ content: >
   [The complete final version of the improved code]
 
   </result>
+
+
+
+  ## Always include the Output in Format in xml tags :
+
+
+  <result>
+
+  [Ananlysis of the code]
+
+  </result>
+
+
+  <review>
+
+  [review of code]
+
+  </review>
+input_variables:
+  content:
+    type: string
+    description: the content
+    place_holder: ''
+output_variables:
+  result:
+    type: string
+    description: Ananlysis of the code
+  review:
+    type: string
+    description: review of code
 model: gpt-4o-mini
 parameters:
   max_tokens: 40000
