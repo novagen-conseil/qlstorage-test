@@ -1,0 +1,24 @@
+name: code review
+description: code review
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: github downloader
+    description: test
+    tool: githubLoader
+    input:
+      repositoryUrl: '{{input}}'
+      authToken: '{{token}}'
+      exclude: '**/node_modules/**, **/dist/**, **/*.test.js, **/*.spec.ts, **/*.md'
+      include: '**/*.ts, **/*.js'
+    output: template_content
+  - name: code review
+    description: code
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/code_analysis.yaml
+    provider: openai
+    input:
+      content: '{{content}}'
+    output:
+      result: result
