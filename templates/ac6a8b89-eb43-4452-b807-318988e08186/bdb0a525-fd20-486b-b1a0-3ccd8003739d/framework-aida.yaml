@@ -9,6 +9,10 @@ input_variables:
   target_audience:
     type: string
     description: Audience targeted
+output_variables:
+  Output:
+    type: string
+    description: output generated
 content: >-
   As an expert marketer, your task is to create a compelling advertisement using
   the AIDA (Attention, Interest, Desire, Action) framework for {{product}}
@@ -38,9 +42,9 @@ content: >-
   ## Always include the Output in Format in xml tags :
 
 
-  <Advertisement proposed>
+  <Output>
 
-  [Output generated]
+  [output generated]
 
-  </Advertisement proposed>
+  </Output>
 model: gpt-4o-mini
