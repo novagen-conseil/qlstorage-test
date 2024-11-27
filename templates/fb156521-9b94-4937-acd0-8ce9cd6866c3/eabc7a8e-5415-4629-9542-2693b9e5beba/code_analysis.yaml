@@ -53,47 +53,8 @@ content: >-
     </strategy>
 
 
-  ## Always include the Output in Format :
-
-
-
-  ## Code Review Summary:
-
-
-  <review>
-
-  - Summary of changes made
-
-  - Impact on code quality
-
-  - Performance improvements
-
-  - Maintainability enhancements
-
-  - Best practices implemented
-
-  </review>
-
-
-  ## Final Result:
-
-
-  <result>
-
-  [The complete final version of the improved code]
-
-  </result>
-
-
 
   ## Always include the Output in Format in xml tags :
-
-
-  <result>
-
-  [Ananlysis of the code]
-
-  </result>
 
 
   <review>
@@ -101,18 +62,25 @@ content: >-
   [review of code]
 
   </review>
+
+
+  <result>
+
+  [rewritten code]
+
+  </result>
 input_variables:
   content:
     type: string
     description: the content
     place_holder: ''
 output_variables:
-  result:
-    type: string
-    description: Ananlysis of the code
   review:
     type: string
     description: review of code
+  result:
+    type: string
+    description: rewritten code
 model: gpt-4o-mini
 parameters:
   max_tokens: 40000
