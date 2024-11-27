@@ -1,7 +1,18 @@
 name: code_analysis
-version: 1.0.0
+version: '1'
 description: Analyze and compare the code
 author: bewalthew
+input_variables:
+  content:
+    type: string
+    description: the content
+output_variables:
+  result:
+    type: string
+    description: Ananlysis of the code
+  review:
+    type: string
+    description: review of code
 content: >
   ## As expert sofware engineer you have mission to analyze and improve the code
   provided in xml tag <code_to_improve> below.
@@ -52,37 +63,37 @@ content: >
     | Strategy | Description |
     </strategy>
 
-    ## Improved Code:
 
-    Include the improved code block in the result tag below:  
-    Do you understand that you must generate in <result> tag the improved code based on the analysis of the original code ?
-    
-    ## Conclusion:
+  ## Always include the Output in Format :
 
-    <result>
-    Provide a summary of the code analysis, highlighting key findings, areas of improvement, and potential future directions.
-    
-    Describe in details what's has been improved in the code and how it will impact the performance or readability of the code.
 
-    
-      .. The improved code goes here ...
-      DON'T BE LAZY. No Brief or partial code !!!
-      The life of earth depends on the quality of your code !!!
-      YOU MUST PROVIDE FULL CODE ONLY !!! no partial code !!! No code snippets !!!
-      Rewrite the FULL updated code, don't loose original features and style, be extra careful !!!
-      Are you fully aware that you must provide the FULL improved code in the <code> tag ?
-      Don't loose any comments or documentation. Add or update comments if necessary.
-      Double check the code before submitting.
 
-    </result>
-input_variables:
-  content:
-    type: string
-    description: the content
-output_variables:
-  result:
-    type: string
-    description: Ananlysis of the code
+  ## Code Review Summary:
+
+
+  <review>
+
+  - Summary of changes made
+
+  - Impact on code quality
+
+  - Performance improvements
+
+  - Maintainability enhancements
+
+  - Best practices implemented
+
+  </review>
+
+
+  ## Final Result:
+
+
+  <result>
+
+  [The complete final version of the improved code]
+
+  </result>
 model: gpt-4o-mini
 parameters:
   max_tokens: 40000
