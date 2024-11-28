@@ -1,0 +1,29 @@
+name: summerizerr tool
+version: 1.0.0
+description: tool to sumerize documents
+author: youcef
+content: >-
+  "Please act as a document summarization expert. Summarize the following
+  article: {{article}}. Depending on the length desired (choose from concise,
+  detailed, or medium), provide an overview that addresses these requirements:
+
+
+  - Highlight the main arguments and themes.
+
+  - Bullet point significant findings or conclusions.
+
+  - Include any critical data or examples mentioned.
+
+  - Specify the intended audience or purpose of the article.
+
+
+  Ensure the summary is well-organized and easy to understand."
+input_variables:
+  article:
+    type: file_path
+    description: ''
+model: gpt-4o-mini
+parameters:
+  max_tokens: 300
+  temperature: 0.1
+  top_p: 0.01
