@@ -1,13 +1,30 @@
 name: make a comment_WF2
-version: 1.0.0
+version: '1'
 description: STEP 2 du WF make a comment
 author: Olivier Lefievre
+input_variables:
+  output1:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
+  role:
+    type: string
+    description: ''
+  lang:
+    type: string
+    description: ''
+output_variables:
+  output2:
+    type: string
+    description: Final Analysis
 content: >-
   Please continue your analysis as follows:
 
   Throughout this process, you will continuously reflect on the originality and
   potential impact of your ideas, striving to provide a truly insightful and
-  thought-provoking commentary on {{subject}}.
+  thought-provoking commentary on {{output1}}.
 
 
   4. Detailed Analysis:
@@ -43,23 +60,6 @@ content: >-
   [Final Analysis]
 
   </output2>
-input_variables:
-  subject:
-    type: string
-    description: ''
-  max_length:
-    type: number
-    description: ''
-  role:
-    type: string
-    description: ''
-  lang:
-    type: string
-    description: ''
-output_variables:
-  output2:
-    type: string
-    description: Final Analysis
 model: anthropic.claude-3-5-haiku-20241022-v1:0
 parameters:
   max_tokens: 3000
