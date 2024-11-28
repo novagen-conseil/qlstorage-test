@@ -1,19 +1,7 @@
 name: test
-version: 1.0.0
+version: '1'
 description: test
 author: steven
-content: |-
-  The test {{test name}} ({{test_file_path}}) failed.
-
-  {{reason}}
-
-  <error_msg>
-  {{error_msg}}
-  </error_msg>
-
-  <codebase>
-  {{codebase}}
-  </codebase>
 input_variables:
   test name:
     type: string
@@ -30,4 +18,16 @@ input_variables:
   codebase:
     type: string
     description: ''
+content: |-
+  The test {{test name}} failed.
+
+  {{reason}}
+
+  <error_msg>
+  {{error_msg}}
+  </error_msg>
+
+  <codebase>
+  {{codebase}}
+  </codebase>
 model: gpt-4o-mini
