@@ -1,8 +1,16 @@
 name: React nextjs feature builder
-version: 1.0.0
+version: '1'
 description: prompt for building features with react nextjs tsx and tailwind
 author: bewalthew
-content: >
+input_variables:
+  feature:
+    type: string
+    description: a feature to develop
+output_variables:
+  feature_code:
+    type: string
+    description: the code of the feature
+content: >-
   Objectives:
 
 
@@ -54,8 +62,15 @@ content: >
   Please refer to the project’s existing folder structure for components and
   pages to ensure proper integration and reuse of existing components when
   possible.
-input_variables:
-  feature:
-    type: string
-    description: a feature to develop
+
+
+
+  ## Always include the Output in Format in xml tags :
+
+
+  <feature_code>
+
+  [the code of the feature]
+
+  </feature_code>
 model: gpt-4o-mini
