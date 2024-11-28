@@ -1,0 +1,61 @@
+name: React nextjs feature builder
+version: 1.0.0
+description: prompt for building features with react nextjs tsx and tailwind
+author: bewalthew
+content: >
+  Objectives:
+
+
+
+  Your task is to create the following feature: {{feature}}.
+
+
+
+
+  Implement the UI Component: Use Shadcn components styled with Tailwind CSS to
+  create a visually appealing and responsive interface for the feature.
+
+
+  Integrate with Next.js: Ensure server-side rendering or static generation as
+  appropriate for the feature within a Next.js environment.
+
+
+  Type Safety: Utilize TypeScript for defining props and component structure to
+  ensure type safety and better development experience.
+
+
+  Functional Behavior: Implement any necessary functional behavior that enhances
+  user interaction with the feature, ensuring a smooth user experience.
+
+
+
+
+  Context:
+
+
+
+
+  The feature must be implemented within a Next.js application using TypeScript,
+  following the project's existing architectural patterns.
+
+
+  All styles should be applied using Tailwind CSS, adhering to the existing
+  design system of the application.
+
+
+  Any state management (if needed) should use either React context or a suitable
+  state management library that fits within the Next.js ecosystem.
+
+
+  The feature must be responsive and work seamlessly on mobile and desktop
+  devices.
+
+
+  Please refer to the project’s existing folder structure for components and
+  pages to ensure proper integration and reuse of existing components when
+  possible.
+input_variables:
+  feature:
+    type: string
+    description: a feature to develop
+model: gpt-4o-mini
