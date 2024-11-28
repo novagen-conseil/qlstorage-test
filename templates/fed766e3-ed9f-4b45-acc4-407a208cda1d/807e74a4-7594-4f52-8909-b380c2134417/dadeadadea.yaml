@@ -1,7 +1,20 @@
 name: DADEADADEA
-version: 1.0.0
+version: '1'
 description: dededzdedez
 author: youcef
+input_variables:
+  test_name:
+    type: string
+    description: ''
+  reason:
+    type: string
+    description: ''
+  error_msg:
+    type: string
+    description: ''
+  codebase:
+    type: string
+    description: ''
 content: |-
   The test {{test_name}}  failed.
 
@@ -17,17 +30,4 @@ content: |-
   <codebase>
   {{codebase}}
   </codebase>
-input_variables:
-  test_name:
-    type: string
-    description: ''
-  reason:
-    type: string
-    description: ''
-  error_msg:
-    type: string
-    description: ''
-  codebase:
-    type: string
-    description: ''
 model: gpt-4o-mini
