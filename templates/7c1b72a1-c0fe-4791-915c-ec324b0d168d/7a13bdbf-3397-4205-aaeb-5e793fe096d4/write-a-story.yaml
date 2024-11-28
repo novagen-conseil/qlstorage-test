@@ -1,7 +1,11 @@
 name: Write a story
-version: 1.0.0
+version: '1'
 description: Write a story
 author: Raphael MANSUY
+input_variables:
+  subject:
+    type: string
+    description: ''
 content: >-
   Craft a compelling story featuring a protagonist who embarks on a
   transformative adventure involving {{subject}}. Outline the following:
@@ -21,8 +25,4 @@ content: >-
   Engage the reader with vivid language and sensory details, aiming for a
   satisfying conclusion that reflects the protagonist’s journey and emotional
   evolution.
-input_variables:
-  subject:
-    type: string
-    description: ''
 model: anthropic.claude-3-5-sonnet-20241022-v2:0
