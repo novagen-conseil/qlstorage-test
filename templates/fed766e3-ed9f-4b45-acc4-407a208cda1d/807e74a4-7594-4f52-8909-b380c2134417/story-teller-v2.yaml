@@ -1,0 +1,43 @@
+name: story teller v2
+version: 1.0.0
+description: story teller Olv 2
+author: youcef
+content: >-
+  Craft a captivating cinematic story in the genre of {{genre}} centered around
+  the theme of {{title}}. Begin by introducing the main character and their
+  primary conflict. Develop a rich setting that reflects the themes of the
+  story, and create at least three distinct scenes with dynamic interactions.
+  Aim for vivid descriptions and emotional resonance, ensuring that the
+  narrative pulls the reader into a cinematic experience.
+
+
+  ## Always include the Output in Format in xml tags :
+
+
+  <story_generated>
+
+  []
+
+  </story_generated>
+
+
+  <cinematics>
+
+  []
+
+  </cinematics>
+input_variables:
+  genre:
+    type: string
+    description: ''
+  title:
+    type: string
+    description: ''
+output_variables:
+  story_generated:
+    type: string
+    description: ''
+  cinematics:
+    type: string
+    description: ''
+model: gpt-4o-mini
