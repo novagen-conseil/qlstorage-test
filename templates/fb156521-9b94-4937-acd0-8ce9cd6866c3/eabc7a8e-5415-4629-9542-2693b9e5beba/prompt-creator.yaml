@@ -1,0 +1,18 @@
+name: prompt creator
+version: 1.0.0
+description: creates a prompt
+author: bewalthew
+content: >-
+  Please create a highly specific and detailed prompt to effectively facilitate
+  the task represented by '{{task}}'. Consider the aspects listed below to
+  tailor your prompt appropriately:
+      - Audience: Who will interact with this prompt? Are they novices or experts?
+      - Objectives: What are the specific tasks or outcomes expected?
+      - Context: What constraints or relevant background information should you include?
+      - Examples: Provide 1-2 illustrative examples that demonstrate desired outcomes.
+      Ensure your language is clear and adjust the complexity of your prompt according to the task at hand, striving for a balance between simplicity and detail.
+input_variables:
+  task:
+    type: string
+    description: the task
+model: gpt-4o-mini
