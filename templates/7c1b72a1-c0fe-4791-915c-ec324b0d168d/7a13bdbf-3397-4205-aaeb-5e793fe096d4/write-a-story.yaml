@@ -1,0 +1,28 @@
+name: Write a story
+version: 1.0.0
+description: Write a story
+author: Raphael MANSUY
+content: >-
+  Craft a compelling story featuring a protagonist who embarks on a
+  transformative adventure involving {{subject}}. Outline the following:
+
+  1. **Setting:** Describe the environment and time period where the adventure
+  takes place.
+
+  2. **Character Development:** Detail the protagonist's background, inner
+  struggles, and motivations.
+
+  3. **Conflict:** Identify a central conflict or challenge related to
+  {{subject}} and explore the protagonist’s emotional responses.
+
+  4. **Resolution:** Describe how the protagonist resolves the conflict, the
+  personal growth they experience, and any lessons learned.
+
+  Engage the reader with vivid language and sensory details, aiming for a
+  satisfying conclusion that reflects the protagonist’s journey and emotional
+  evolution.
+input_variables:
+  subject:
+    type: string
+    description: ''
+model: anthropic.claude-3-5-sonnet-20241022-v2:0
