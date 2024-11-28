@@ -1,0 +1,33 @@
+name: test API debug 2
+version: 1.0.0
+description: test 2
+author: steven
+content: |-
+  The test {{test name}} failed.
+
+  {{reason}}
+
+  <error_msg>
+  {{error_msg}}
+  </error_msg>
+
+  <codebase>
+  {{codebase}}
+  </codebase>
+input_variables:
+  test name:
+    type: string
+    description: ''
+  test_file_path:
+    type: string
+    description: ''
+  reason:
+    type: string
+    description: ''
+  error_msg:
+    type: string
+    description: ''
+  codebase:
+    type: ''
+    description: ''
+model: gpt-4o-mini
