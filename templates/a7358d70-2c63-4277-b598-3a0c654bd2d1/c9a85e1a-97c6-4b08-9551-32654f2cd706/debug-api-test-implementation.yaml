@@ -1,21 +1,9 @@
 name: Debug API test implementation
-version: 1.0.0
+version: '1'
 description: >-
   Help you to fix error that occur during the implementation of tests for an API
   endpoint
 author: steven
-content: |-
-  The test {{test name}} ({{test_file_path}}) failed. 
-
-  {{reason}}
-
-  <error_msg>
-  {{error_msg}}
-  </error_msg>
-
-  <codebase>
-  {{codebase}}
-  </codebase>
 input_variables:
   test name:
     type: string
@@ -30,6 +18,18 @@ input_variables:
     type: string
     description: The error message of the failed test.
   codebase:
-    type: ''
+    type: string
     description: The code base for the whole area/endpoint.
+content: |-
+  The test {{test name}} ({{test_file_path}}) failed. 
+
+  {{reason}}
+
+  <error_msg>
+  {{error_msg}}
+  </error_msg>
+
+  <codebase>
+  {{codebase}}
+  </codebase>
 model: anthropic.claude-3-5-sonnet-20241022-v2:0
