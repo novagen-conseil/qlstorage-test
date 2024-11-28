@@ -1,0 +1,32 @@
+name: Make a comment
+description: 'Commentaire structuré '
+defaultProvider: openai
+organization_name: Test Novagen1
+author_name: Olivier Lefievre
+steps:
+  - name: Make a comment_step1
+    description: ''
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/ac6a8b89-eb43-4452-b807-318988e08186/bdb0a525-fd20-486b-b1a0-3ccd8003739d/make-a_comment_wf1.yaml
+    provider: openai
+    input:
+      role: '{{role}}'
+      subject: '{{subject}}'
+      lang: '{{lang}}'
+      max_length: '{{max_length}}'
+    output:
+      output1: ''
+  - name: Make a comment-Step 2
+    description: Suite
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/ac6a8b89-eb43-4452-b807-318988e08186/bdb0a525-fd20-486b-b1a0-3ccd8003739d/make-a-comment_wf2.yaml
+    provider: openai
+    input:
+      subject: '{{subject}}'
+      max_length: '{{max_length}}'
+      role: '{{role}}'
+      lang: '{{lang}}'
+    output:
+      output2: ''
