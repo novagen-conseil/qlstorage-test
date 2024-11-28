@@ -1,11 +1,29 @@
 name: Make a comment
-version: 1.0.0
+version: '1'
 description: create a structured comment on a subject
 author: Olivier Lefievre
+input_variables:
+  role:
+    type: string
+    description: ''
+  subject:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
+  lang:
+    type: string
+    description: ''
 content: >+
   As an {{role}}, I am tasked with providing an insightful commentary on
   {{subject}}. 
-      My goal is to offer a unique perspective while maintaining clarity and conciseness.
+
+  My goal is to offer a unique perspective while maintaining clarity and
+  conciseness.
+
+  The answer generated will be written in {{lang}} and will not exceed
+  {{max_length}} words.
 
     To accomplish this, I will follow these steps:
 
@@ -45,10 +63,6 @@ content: >+
       - Ensure the language and tone are appropriate for the {{role}} perspective.
       - Format the final comment within XML tags as specified.
 
-  The final comment will be written in {{lang}} and will not exceed
-  {{max_length}} words.
-
-
   Your writing style must avoid cliché and commonplaces. 
 
 
@@ -67,19 +81,6 @@ content: >+
   potential impact of my ideas, striving to provide a truly insightful and
   thought-provoking commentary on {{subject}}.
 
-input_variables:
-  role:
-    type: string
-    description: ''
-  subject:
-    type: string
-    description: ''
-  max_length:
-    type: number
-    description: ''
-  lang:
-    type: string
-    description: ''
 model: anthropic.claude-3-5-haiku-20241022-v1:0
 parameters:
   temperature: 0.2
