@@ -1,7 +1,24 @@
 name: make-a_comment_WF1
-version: 1.0.0
+version: '1'
 description: Generation of a structured comment on a subject
 author: Olivier Lefievre
+input_variables:
+  role:
+    type: string
+    description: ''
+  subject:
+    type: string
+    description: ''
+  lang:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
+output_variables:
+  output1:
+    type: string
+    description: Final comment
 content: >-
   As an {{role}}, I am tasked with providing an insightful commentary on
   {{subject}}. 
@@ -51,23 +68,6 @@ content: >-
   [Final comment]
 
   </output1>
-input_variables:
-  role:
-    type: string
-    description: ''
-  subject:
-    type: string
-    description: ''
-  lang:
-    type: string
-    description: ''
-  max_length:
-    type: number
-    description: ''
-output_variables:
-  output1:
-    type: string
-    description: Final comment
 model: anthropic.claude-3-5-haiku-20241022-v1:0
 parameters:
   temperature: 0.1
