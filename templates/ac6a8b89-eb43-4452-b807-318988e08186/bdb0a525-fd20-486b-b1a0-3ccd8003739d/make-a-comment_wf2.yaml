@@ -1,0 +1,66 @@
+name: make a comment_WF2
+version: 1.0.0
+description: STEP 2 du WF make a comment
+author: Olivier Lefievre
+content: >-
+  Please continue your analysis as follows:
+
+  Throughout this process, you will continuously reflect on the originality and
+  potential impact of your ideas, striving to provide a truly insightful and
+  thought-provoking commentary on {{subject}}.
+
+
+  4. Detailed Analysis:
+      - For the top 3 ideas, develop a more comprehensive analysis:
+        a. Explore potential real-world applications or implications.
+        b. Identify any interdisciplinary connections or analogies.
+        c. Consider how this perspective might evolve in the future.
+
+  5. Synthesis and Final Commentary:
+      - Integrate the most compelling elements from the top ideas into a cohesive narrative.
+      - Ensure the commentary addresses the following:
+        a. A clear statement of the unconventional perspective.
+        b. Supporting arguments or evidence for this viewpoint.
+        c. Potential implications or call-to-action for the audience.
+
+  6. Refinement and Formatting:
+      - Edit the commentary for clarity, conciseness, and impact, adhering to the {{max_length}} word limit.
+      - Ensure the language and tone are appropriate for the {{role}} perspective.
+      - Format the final comment within XML tags as specified.
+
+  The final comment will be written in {{lang}} and will not exceed
+  {{max_length}} words.
+
+  Your writing style must avoid cliché and commonplaces. 
+
+
+
+  ## Always include the Output in Format in xml tags :
+
+
+  <output2>
+
+  [Final Analysis]
+
+  </output2>
+input_variables:
+  subject:
+    type: string
+    description: ''
+  max_length:
+    type: number
+    description: ''
+  role:
+    type: string
+    description: ''
+  lang:
+    type: string
+    description: ''
+output_variables:
+  output2:
+    type: string
+    description: Final Analysis
+model: anthropic.claude-3-5-haiku-20241022-v1:0
+parameters:
+  max_tokens: 3000
+  temperature: 0.1
