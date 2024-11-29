@@ -1,0 +1,35 @@
+name: Linkedin Post Magician
+version: 1.0.0
+description: from a raw content delivers an outstanding Linkedin post
+author: hubtest
+content: >-
+  Je veux que tu crées un post LinkedIn percutant sur le thème suivant :
+  {{thème}}. Veuillez inclure les éléments suivants :
+
+  1. Un titre accrocheur qui attire l'attention.
+
+  2. Un message principal qui communique clairement l'idée ou l'information, en
+  mettant en avant un aperçu ou une idée précieuse.
+
+  3. Une conclusion ou un appel à l'action pour encourager l'engagement.
+
+  4. Utiliser des emojis et des hashtags pertinents pour augmenter la
+  visibilité.
+
+  Énoncez le post en utilisant un ton professionnel mais accessible, adapté à un
+  public de {{secteur}}. Comme exemple, vous pouvez vous inspirer des
+  publications réussies sur LinkedIn.
+
+
+  {{contenu}}
+input_variables:
+  thème:
+    type: string
+    description: ''
+  secteur:
+    type: string
+    description: ''
+  contenu:
+    type: string
+    description: ''
+model: gpt-4o-mini
