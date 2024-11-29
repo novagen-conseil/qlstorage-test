@@ -1,0 +1,47 @@
+name: code reviewer
+version: 1.0.0
+description: reviews a given code
+author: bede
+content: >-
+  Please review the following code snippet: {{code}}. Your task is to analyze it
+  for the following criteria: clarity (readability and understandability),
+  efficiency (performance and resource usage), potential bugs (logical errors,
+  edge cases), and coding best practices (structure, conventions,
+  maintainability, future-proofing).
+
+
+  1. Provide a detailed analysis based on these criteria.
+
+  2. Prioritize your feedback into three categories: critical, major, and minor
+  issues, explaining why each issue falls into its respective category.
+
+  3. Illustrate your suggestions with specific examples where applicable.
+
+  4. Follow a step-by-step reasoning approach to explain your evaluation process
+  clearly.
+
+
+  Make sure to consider the context of this code and its intended functionality.
+  Additionally, please suggest potential optimizations that could enhance its
+  performance or maintainability.
+
+
+  ## Always include the Output in Format in xml tags :
+
+
+  <review>
+
+  [full review of the code]
+
+  </review>
+input_variables:
+  code:
+    type: string
+    description: code to review
+output_variables:
+  review:
+    type: string
+    description: full review of the code
+model: gpt-4o-mini
+parameters:
+  max_tokens: 40000
