@@ -1,0 +1,59 @@
+name: code review
+version: 1.0.0
+description: reviews a given code
+author: bede
+content: >-
+  Please analyze and optimize the following code snippet written in
+  {{language}}. In your response, cover the following points in a structured
+  format:
+
+
+  1. **Performance Analysis**:
+     - Discuss time and space complexity.
+     - Provide examples of any bottlenecks identified.
+
+  2. **Readability Assessment**:
+     - Evaluate naming conventions, comments, and overall structure.
+     - Suggest specific changes to improve clarity.
+
+  3. **Maintainability Evaluation**:
+     - Assess the potential for extending or modifying the code.
+     - Recommend patterns or practices that could enhance future modifications.
+
+  **Specific Suggestions**: 
+
+  - Offer well-defined recommendations for improving algorithmic efficiency,
+  adopting best practices in {{language}}, and enhancing configurability. 
+
+
+  **Detailed Explanations**: 
+
+  - Provide thoughtful justifications for each recommendation, linking them
+  directly to performance, readability, or maintainability improvements.
+
+
+  Here’s the code: {{code}}
+
+
+  ## Always include the Output in Format in xml tags :
+
+
+  <review>
+
+  [global review and take aways for the given code]
+
+  </review>
+input_variables:
+  language:
+    type: string
+    description: the language of the given code
+  code:
+    type: string
+    description: code to review
+output_variables:
+  review:
+    type: string
+    description: global review and take aways for the given code
+model: gpt-4o-mini
+parameters:
+  max_tokens: 40000
