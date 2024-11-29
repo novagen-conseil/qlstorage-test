@@ -1,0 +1,29 @@
+name: Github code reviewer
+description: given a github repo link reviews the code and suggests changes
+defaultProvider: openai
+organization_name: bede
+author_name: bede
+steps:
+  - name: github downloader
+    description: pulls a github repo
+    type: tool
+    templateUrl: ''
+    provider: openai
+    input:
+      repositoryUrl: '{{input}}'
+      authToken: '{{token}}'
+      exclude: '**/node_modules/**, **/dist/**, **/*.test.js, **/*.spec.ts, **/*.md'
+      include: '**/*.ts, **/*.js'
+    output: template_content
+    tool: githubLoader
+  - name: Code reviewer
+    description: reviews a given code
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/9d51fced-371d-437d-b4da-afc328feeea6/ae6ef6e4-0fa8-4dce-ba27-471eb5fe3f16/code-review.yaml
+    provider: openai
+    input:
+      language: '{{language}}'
+      code: $template_content
+    output:
+      review: review
