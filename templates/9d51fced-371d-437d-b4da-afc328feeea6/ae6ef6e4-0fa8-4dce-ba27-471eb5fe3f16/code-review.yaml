@@ -1,43 +1,31 @@
 name: code review
 version: 1.0.0
-description: 'reviews your code '
+description: reviews a given code base
 author: bede
-content: >-
-  Please review and improve the following code snippet: {{code}}. Consider its
-  intended application and any constraints it may face. Focus on the following
-  aspects:
-    1. **Performance**: Identify any bottlenecks and suggest optimizations.
-    2. **Readability**: Propose changes for better clarity and maintainability.
-    3. **Security**: Point out any vulnerabilities and recommend fixes.
-     
+content: |2-
+
+      Imagine you are a senior developer tasked with mentoring a junior colleague. Please analyze the following code snippet for its functionality, efficiency, and adherence to best programming practices:
+
+      {{code}}
+
+      In your review, consider your role as a mentor and address the following questions:
+      1. Does the code perform its intended function correctly, and are there any potential bugs?
+      2. How efficient is the code in terms of time and space complexity?
+      3. Is the code structured well for readability and maintainability? Please suggest specific improvements.
+      4. Are there any best practices or design patterns that should be followed? Feel free to share your thought process in the review.
 
 
   ## Always include the Output in Format in xml tags :
 
-
-  <review>
-
-  [reviews and comments on the overall code, no actual written code]
-
-  </review>
-
-
-  <new_code>
-
-  [new and better version of code]
-
-  </new_code>
+  <code_review>
+  [all take aways from the code review]
+  </code_review>
 input_variables:
   code:
     type: string
-    description: the code that needs reviewing
+    description: reviews a given code
 output_variables:
-  review:
+  code_review:
     type: string
-    description: reviews and comments on the overall code, no actual written code
-  new_code:
-    type: string
-    description: new and better version of code
+    description: all take aways from the code review
 model: gpt-4o-mini
-parameters:
-  max_tokens: 39998
