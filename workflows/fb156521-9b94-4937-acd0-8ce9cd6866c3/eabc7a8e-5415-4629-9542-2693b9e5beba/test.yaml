@@ -1,9 +1,21 @@
 name: test
-description: estset
+description: test
 defaultProvider: openai
 organization_name: bede
 author_name: bewalthew
 steps:
+  - name: github downloader
+    description: bhyjnk,l;m
+    type: tool
+    templateUrl: ''
+    provider: openai
+    input:
+      repositoryUrl: '{{input}}'
+      authToken: '{{token}}'
+      exclude: '**/node_modules/**, **/dist/**, **/*.test.js, **/*.spec.ts, **/*.md'
+      include: '**/*.ts, **/*.js'
+    output: template_content
+    tool: githubLoader
   - name: test
     description: test
     type: template
