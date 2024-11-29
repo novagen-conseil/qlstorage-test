@@ -1,7 +1,11 @@
 name: code reviewer
-version: 1.0.0
+version: '1'
 description: reviews given code
 author: bewalthew
+input_variables:
+  code:
+    type: string
+    description: code to review
 content: |-
   Please review the following code snippet: {{code}}. 
 
@@ -13,8 +17,4 @@ content: |-
       5. **Overall Design:** What is your opinion on the overall design and structure of the code? Are there alternative approaches that could be considered?
 
       Feel free to provide suggestions for improvement and highlight any strengths you observe.
-input_variables:
-  code:
-    type: string
-    description: code to review
 model: gpt-4o-mini
