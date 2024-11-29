@@ -1,0 +1,12 @@
+name: ducment summerize v2
+version: 1.0.0
+description: doc summerizer
+author: youcef
+content: |-
+  summerize my document :
+   {{doc}}
+input_variables:
+  doc:
+    type: file_path
+    description: document
+model: gpt-4o-mini
