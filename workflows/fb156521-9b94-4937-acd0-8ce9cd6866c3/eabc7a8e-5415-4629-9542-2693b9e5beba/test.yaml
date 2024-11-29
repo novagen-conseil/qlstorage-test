@@ -4,7 +4,7 @@ defaultProvider: openai
 organization_name: bede
 author_name: bewalthew
 steps:
-  - name: testt
+  - name: test
     description: test
     type: template
     templateUrl: >-
