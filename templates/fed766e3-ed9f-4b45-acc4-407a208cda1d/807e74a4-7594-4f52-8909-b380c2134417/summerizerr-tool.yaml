@@ -1,7 +1,11 @@
 name: summerizerr tool
-version: 1.0.0
+version: '1'
 description: tool to sumerize documents
 author: youcef
+input_variables:
+  article:
+    type: file_path
+    description: ''
 content: >-
   "Please act as a document summarization expert. Summarize the following
   article: {{article}}. Depending on the length desired (choose from concise,
@@ -18,10 +22,6 @@ content: >-
 
 
   Ensure the summary is well-organized and easy to understand."
-input_variables:
-  article:
-    type: file_path
-    description: ''
 model: gpt-4o-mini
 parameters:
   max_tokens: 300
