@@ -1,0 +1,43 @@
+name: code review
+version: 1.0.0
+description: 'reviews your code '
+author: bede
+content: >-
+  Please review and improve the following code snippet: {{code}}. Consider its
+  intended application and any constraints it may face. Focus on the following
+  aspects:
+    1. **Performance**: Identify any bottlenecks and suggest optimizations.
+    2. **Readability**: Propose changes for better clarity and maintainability.
+    3. **Security**: Point out any vulnerabilities and recommend fixes.
+     
+
+
+  ## Always include the Output in Format in xml tags :
+
+
+  <review>
+
+  [reviews and comments on the overall code, no actual written code]
+
+  </review>
+
+
+  <new_code>
+
+  [new and better version of code]
+
+  </new_code>
+input_variables:
+  code:
+    type: string
+    description: the code that needs reviewing
+output_variables:
+  review:
+    type: string
+    description: reviews and comments on the overall code, no actual written code
+  new_code:
+    type: string
+    description: new and better version of code
+model: gpt-4o-mini
+parameters:
+  max_tokens: 39998
