@@ -1,0 +1,14 @@
+name: mariage
+version: 1.0.0
+description: mariage
+author: Raphael MANSUY
+content: |2
+
+      Je travaille sur un projet {{NOM DU PROJET}} qui nécessite un diagramme de Gantt. Pouvez-vous, s'il vous plaît, lister les principaux jalons et échéances sous forme de points, en indiquant les durées estimées pour chaque jalon et en mentionnant si certains peuvent se chevaucher ? Si vous avez besoin de plus d'informations sur le projet pour fournir une réponse plus précise, n'hésitez pas à demander.
+
+  Utiliser des diagrammes mermaid.
+input_variables:
+  NOM DU PROJET:
+    type: ''
+    description: Préparation d'un mariage
+model: gpt-4o-mini
