@@ -1,0 +1,10 @@
+name: test
+version: 1.0.0
+description: test ............
+author: youcef
+content: tell me a story {{title}}
+input_variables:
+  title:
+    type: string
+    description: ''
+model: gpt-4o-mini
