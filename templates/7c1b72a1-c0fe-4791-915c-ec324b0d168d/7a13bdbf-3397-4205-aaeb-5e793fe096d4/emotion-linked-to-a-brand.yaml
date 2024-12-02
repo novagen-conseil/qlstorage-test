@@ -1,0 +1,21 @@
+name: Emotion linked to a brand
+version: 1.0.0
+description: Give the emotion associated with a brand
+author: Raphael MANSUY
+content: >-
+  "Imagine you are a seasoned brand analyst. Given the brand name
+  {{brand_name}}, please identify and describe the primary emotion that this
+  brand evokes in consumers. Consider the following aspects:
+
+  1. What values and characteristics does the brand embody? (For example, trust,
+  joy, nostalgia)
+
+  2. How do these elements influence customer perceptions and experiences?
+
+  3. Use specific examples or anecdotes to illustrate your point where
+  applicable."
+input_variables:
+  brand_name:
+    type: string
+    description: A brand name such as Nike, Decathlon, Mac Donald
+model: gpt-4o-mini
