@@ -1,0 +1,26 @@
+name: jira task creator
+description: from given code creates a list of jira task to do with imroving your code
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: improvement recomendation
+    description: gives a list of improvements from given code
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/code-improver-list.yaml
+    provider: openai
+    input:
+      code: '{{code}}'
+    output:
+      improvement_list: improvement_list
+  - name: jira task creator
+    description: creates jira tasks based of a list of improvements
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/jira-task-creator.yaml
+    provider: openai
+    input:
+      improvements: $improvement_list
+    output:
+      tasks: tasks
