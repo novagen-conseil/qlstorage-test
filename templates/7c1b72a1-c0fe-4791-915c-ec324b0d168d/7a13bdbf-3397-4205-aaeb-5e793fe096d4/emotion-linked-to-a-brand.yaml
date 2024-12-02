@@ -1,7 +1,11 @@
 name: Emotion linked to a brand
-version: 1.0.0
+version: '1'
 description: Give the emotion associated with a brand
 author: Raphael MANSUY
+input_variables:
+  brand_name:
+    type: string
+    description: A brand name such as Nike, Decathlon, Mac Donald
 content: >-
   "Imagine you are a seasoned brand analyst. Given the brand name
   {{brand_name}}, please identify and describe the primary emotion that this
@@ -14,8 +18,4 @@ content: >-
 
   3. Use specific examples or anecdotes to illustrate your point where
   applicable."
-input_variables:
-  brand_name:
-    type: string
-    description: A brand name such as Nike, Decathlon, Mac Donald
 model: gpt-4o-mini
