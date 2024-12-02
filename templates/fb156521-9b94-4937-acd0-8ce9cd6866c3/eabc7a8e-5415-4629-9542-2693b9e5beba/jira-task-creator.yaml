@@ -1,0 +1,40 @@
+name: jira task creator
+version: 1.0.0
+description: creates list of jira tasks from a given list of improvments to do
+author: bewalthew
+content: >-
+  Based on the following list of improvements categorized as: {{improvements}},
+  encompassing bug fixes, enhancements, and new features, please develop a
+  structured list of Jira tasks. Each task must include:
+
+  1. **Title**: A concise and descriptive title summarizing the task.
+
+  2. **Short Description**: A brief explanation of the task outlining its
+  purpose.
+
+  3. **Detailed Specifications**:
+     - Technical requirements and considerations
+     - Acceptance criteria
+     - Related documentation or resources
+     - Expected impact on existing functionality
+  Be explicit about the type of improvement being addressed and ensure a clear
+  definition for easy integration into the Jira system.
+
+
+  ## Always include the Output in Format in xml tags :
+
+
+  <tasks>
+
+  [all created jira stask]
+
+  </tasks>
+input_variables:
+  improvements:
+    type: string
+    description: list of improvments
+output_variables:
+  tasks:
+    type: string
+    description: all created jira stask
+model: gpt-4o-mini
