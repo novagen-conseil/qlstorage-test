@@ -1,0 +1,11 @@
+name: create a docker script
+version: 1.0.0
+description: Generate a Docker script to create a simple linux machine
+author: Olivier Lefievre
+content: >-
+  Generate a Docker script to create a simple linux machine that has python 3.10
+  (prebuilt) installed with following libraries: pandas, tensorflow, numpy
+model: anthropic.claude-3-5-haiku-20241022-v1:0
+parameters:
+  temperature: 0.2
+  max_tokens: 2000
