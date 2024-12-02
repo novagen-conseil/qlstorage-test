@@ -1,0 +1,44 @@
+name: code improver list
+version: 1.0.0
+description: 'returns a list of improvements to make '
+author: bewalthew
+content: >-
+  Given the following code snippet: {{code}} , please perform a comprehensive
+  analysis of the snippet. 
+
+  Your analysis should focus on the following aspects:
+
+  1. **Performance Improvements:** Identify optimizations to enhance execution
+  speed or reduce resource consumption.
+
+  2. **Readability Enhancements:** Suggest changes to improve clarity and
+  comprehensibility.
+
+  3. **Maintainability Suggestions:** Recommend refactors or practices that will
+  facilitate easier updates in the future.
+
+  4. **Error Handling Recommendations:** Point out improvements to ensure robust
+  error management.
+
+
+  Please present your findings as a detailed list, including code examples where
+  applicable, and justify each recommendation with concise reasoning.
+
+
+  ## Always include the Output in Format in xml tags :
+
+
+  <improvement_list>
+
+  [list of improvements to make ]
+
+  </improvement_list>
+input_variables:
+  code:
+    type: string
+    description: the code to give feedback on
+output_variables:
+  improvement_list:
+    type: string
+    description: 'list of improvements to make '
+model: gpt-4o-mini
