@@ -1,0 +1,56 @@
+name: xml to markdown
+version: 1.0.0
+description: takes a xml content and makes transfroms it to markdown
+author: bewalthew
+content: >-
+  Convert the following XML content into Markdown format while maintaining the
+  original structure as closely as possible. 
+
+  Please pay attention to the following elements and their representations:
+
+
+  1. **Headings:** Convert &lt;h1&gt; to #, &lt;h2&gt; to ##, etc.
+
+  2. **Paragraphs:** Convert &lt;p&gt; tags to plain text paragraphs.
+
+  3. **Links:** Convert &lt;a href="URL"&gt;link text&lt;/a&gt; to [link
+  text](URL).
+
+  4. **Images:** Convert &lt;img src="URL" alt="description"/&gt; to
+  ![description](URL).
+
+  5. **Lists:** Convert &lt;ul&gt; into bullet points and &lt;ol&gt; into
+  numbered lists. 
+
+  6. **Error Handling:** If there are XML elements that don't have a direct
+  Markdown equivalent, describe how you would handle them (e.g., ignore, convert
+  to plain text).
+
+
+  Here is the XML content:
+
+  {{content}}
+
+
+  Make sure to provide a clear and well-formatted Markdown output while
+  documenting any elements that were unrecognized and your approach to handling
+  them.
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <markdown_content>
+
+  [the markdown content]
+
+  </markdown_content>
+input_variables:
+  content:
+    type: string
+    description: the xml content
+output_variables:
+  markdown_content:
+    type: string
+    description: the markdown content
+model: gpt-4o-mini
