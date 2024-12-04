@@ -1,0 +1,40 @@
+name: Summarize2
+version: 1.0.0
+description: Smmarize text
+author: Olivier Lefievre
+content: >-
+  Je vais te confier la tâche de résumer un document que je vais te fournir.
+  Suis ces étapes simples pour créer un résumé efficace :
+
+
+  1. **Analyse Préliminaire** : Quelle est la nature du document et quel est son
+  but ? Qui est le public visé ?
+
+  2. **Identification des Thèmes** : Quels sont les principaux sujets abordés ?
+
+  3. **Extraction des Informations** : Note les idées clés et les faits
+  importants, et leur provenance.
+
+  4. **Synthèse** : Crée un résumé fluide en préservant la logique de
+  l'original.
+
+  5. **Clarté** : Utilise un langage simple.
+
+  6. **Réflexion** : Vérifie que ton résumé est complet et pertinent. Pose des
+  questions si des parties te semblent floues.
+
+
+  Exemple : Pour un document sur le changement climatique, cela pourrait
+  ressembler à cela... 
+
+
+  Prêt ? Voici le document : {{document}}.
+input_variables:
+  document:
+    type: file_path
+    description: ''
+model: gpt-4o-mini
+parameters:
+  max_tokens: 500
+  temperature: 0.1
+  top_p: 0.6
