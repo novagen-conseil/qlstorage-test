@@ -1,0 +1,49 @@
+name: Summarize text
+version: 1.0.0
+description: Prompt qui permet de résumer de maniere qualitative un contenu en entrée
+author: Olivier Lefievre
+content: >-
+  Je vais te fournir un document. Ta mission est de réaliser un résumé
+  qualitatif et structuré en extrayant les éléments clés. Aborde ce processus de
+  manière dynamique et méthodique :
+
+
+  1. **Plongée dans le Document:** Commence par lire attentivement le texte.
+  Quelles thématiques centrales émergent ? 
+     - (Aide : Pense à des catégories comme 'problématique principale', 'arguments clés', ou 'solutions proposées'.)
+
+  2. **Extraction Dynamique:** Pour chaque thème identifié, tire les
+  informations essentielles, y compris des données, chiffres ou citations
+  significatives. 
+     - (Rappel : Considère la pertinence et l'impact des informations dans le contexte général.)
+
+  3. **Synthèse Créative:** À partir des éléments extraits, crée un résumé
+  fluide qui connecte les idées tout en respectant l'architecture du document.
+     - (Repense à la manière dont les idées interagissent et se complètent.)
+
+  4. **Références:** Note avec précision où chaque information a été puisée.
+  Cela facilitera la consultation future et la vérification des faits.
+
+
+  5. **Clarté et Impact:** Rédige un résumé synthétique, engageant et
+  accessible, utilisant un langage clair et percutant, adapté à ton public.
+
+
+  **Réflexion Finale:** Envisage qui utilisera ce résumé et comment il pourrait
+  être amélioré pour maximiser son impact. 
+
+
+  Maintenant, je vais te fournir le document : {{document}}
+
+  Nombre de mots max : {{max words}}
+input_variables:
+  document:
+    type: file_path
+    description: ''
+  max words:
+    type: number
+    description: ''
+model: anthropic.claude-3-5-haiku-20241022-v1:0
+parameters:
+  max_tokens: 1000
+  temperature: 0.1
