@@ -1,0 +1,19 @@
+name: doc summerize improved
+version: 1.0.0
+description: doc summerize improved with llm
+author: youcef
+content: >-
+  Please summarize the following document, focusing on its main arguments, key
+  points, and conclusions. Your summary should be approximately 200 words and
+  formatted in a bullet-point list for clarity. Be sure to highlight any
+  counterarguments or differing viewpoints that the document presents. Feel free
+  to include relevant examples to illustrate the main points. Consider the
+  potential audience for this summary—individuals seeking a quick and
+  informative overview—and tailor your language and tone accordingly.
+
+  {{doc}}
+input_variables:
+  doc:
+    type: file_path
+    description: ''
+model: gpt-4o-mini
