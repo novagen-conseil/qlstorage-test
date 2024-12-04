@@ -1,0 +1,29 @@
+name: summarize1
+version: 1.0.0
+description: BLA
+author: 'Adonis '
+content: >-
+  Please provide a concise summary of the following text (which is an academic
+  article). Your summary should clearly outline the main arguments and
+  conclusions while omitting unnecessary details. Aim for a length of
+  approximately 100-150 words. Additionally, maintain the original tone and
+  intent of the text. Here is the text: {{insert text here}}.
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <output1>
+
+  []
+
+  </output1>
+input_variables:
+  insert text here:
+    type: string
+    description: ''
+output_variables:
+  output1:
+    type: string
+    description: ''
+model: gpt-4o-mini
