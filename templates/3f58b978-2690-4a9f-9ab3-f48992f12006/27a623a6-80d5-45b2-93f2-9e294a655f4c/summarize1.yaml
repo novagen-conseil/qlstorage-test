@@ -27,3 +27,6 @@ output_variables:
     type: string
     description: ''
 model: gpt-4o-mini
+parameters:
+  max_tokens: 500
+  temperature: 0.3
