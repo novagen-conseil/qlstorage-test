@@ -1,7 +1,11 @@
 name: Expert in file processing case
-version: 1.0.0
+version: '1'
 description: Expert in file processing case with data to solve complexe problemes
 author: youcef
+input_variables:
+  documents:
+    type: file_path
+    description: path file
 content: >-
 
   Rôle : Expert-comptable senior spécialisé en PME & restauration rapide
@@ -82,10 +86,6 @@ content: >-
   process mes  documents : 
 
   {{documents}}
-input_variables:
-  documents:
-    type: file_path
-    description: path file
 model: anthropic.claude-3-5-sonnet-20241022-v2:0
 parameters:
   max_tokens: 8000
