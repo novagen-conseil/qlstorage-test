@@ -57,7 +57,7 @@ output_variables:
   OutputSummarize:
     type: string
     description: ''
-model: anthropic.claude-3-5-haiku-20241022-v1:0
+model: gpt-4o-mini
 parameters:
   max_tokens: 1000
   temperature: 0.1
