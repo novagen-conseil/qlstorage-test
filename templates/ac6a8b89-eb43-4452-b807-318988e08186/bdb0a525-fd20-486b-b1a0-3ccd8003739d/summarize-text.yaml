@@ -36,12 +36,26 @@ content: >-
   Maintenant, je vais te fournir le document : {{document}}
 
   Nombre de mots max : {{max words}}
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <OutputSummarize>
+
+  []
+
+  </OutputSummarize>
 input_variables:
   document:
     type: file_path
     description: ''
   max words:
     type: number
+    description: ''
+output_variables:
+  OutputSummarize:
+    type: string
     description: ''
 model: anthropic.claude-3-5-haiku-20241022-v1:0
 parameters:
