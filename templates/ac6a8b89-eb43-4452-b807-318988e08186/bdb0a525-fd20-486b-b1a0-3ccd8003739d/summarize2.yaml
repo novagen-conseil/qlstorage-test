@@ -1,7 +1,11 @@
 name: Summarize2
-version: 1.0.0
+version: '1'
 description: Smmarize text
 author: Olivier Lefievre
+input_variables:
+  document:
+    type: file_path
+    description: ''
 content: >-
   Je vais te confier la tâche de résumer un document que je vais te fournir.
   Suis ces étapes simples pour créer un résumé efficace :
@@ -29,10 +33,6 @@ content: >-
 
 
   Prêt ? Voici le document : {{document}}.
-input_variables:
-  document:
-    type: file_path
-    description: ''
 model: gpt-4o-mini
 parameters:
   max_tokens: 500
