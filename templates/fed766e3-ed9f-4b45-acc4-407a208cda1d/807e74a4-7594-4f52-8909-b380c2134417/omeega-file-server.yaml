@@ -1,0 +1,16 @@
+name: OMEEGA FILE SERVER
+version: 1.0.0
+description: HBGVHNJBGFV
+author: youcef
+content: >-
+  Please summarize the following document: {{doc}} . Your summary should include
+  the key points, such as main arguments, supporting evidence, and critical
+  data. Aim for a concise overview, ideally in two to three paragraphs.
+  Additionally, provide key highlights as bullet points, focusing on significant
+  themes or insights that emerge. Ensure clarity and coherence in your
+  responses.
+input_variables:
+  doc:
+    type: file_path
+    description: ''
+model: anthropic.claude-3-haiku-20240307-v1:0
