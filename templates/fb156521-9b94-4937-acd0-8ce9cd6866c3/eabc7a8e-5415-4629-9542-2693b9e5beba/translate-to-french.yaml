@@ -1,0 +1,21 @@
+name: translate to french
+version: 1.0.0
+description: translates a text to french
+author: bewalthew
+content: |-
+  translate this text: {{text}} to french 
+
+  ### Always include the Output in Format in xml tags :
+
+  <translation>
+  [translation of text in french]
+  </translation>
+input_variables:
+  text:
+    type: string
+    description: text to translate
+output_variables:
+  translation:
+    type: string
+    description: translation of text in french
+model: gpt-4o-mini
