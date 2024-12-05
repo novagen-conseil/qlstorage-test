@@ -33,3 +33,15 @@ steps:
       encoding: utf-8
     output: save_result
     tool: fileSaver
+  - name: s3 save
+    description: Save files to S3
+    type: tool
+    templateUrl: ''
+    provider: openai
+    input:
+      operation: save
+      bucket: '{{bucket_name}}'
+      key: '{{save_key}}'
+      filePath: '{{local_save_path}}'
+    output: s3_save_result
+    tool: s3
