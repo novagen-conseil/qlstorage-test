@@ -1,0 +1,38 @@
+name: testog
+description: test
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: github downloaderrrrrr
+    description: bhyjnk,l;m
+    type: tool
+    templateUrl: ''
+    provider: openai
+    input:
+      repositoryUrl: '{{input}}'
+      authToken: '{{token}}'
+      exclude: '**/node_modules/**, **/dist/**, **/*.test.js, **/*.spec.ts, **/*.md'
+      include: '**/*.ts, **/*.js'
+    output: template_content
+    tool: githubLoader
+  - name: code reviewer
+    description: reviews given code
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/code-reviewer.yaml
+    provider: openai
+    input:
+      code: $template_content
+    output: {}
+    promptContent: |-
+      Please review the following code snippet: {{code}}. 
+
+          In your review, consider the following aspects:
+          1. **Functionality:** Does the code achieve its intended purpose? Are there any bugs or logical issues?
+          2. **Readability:** Is the code easy to read and understand? Are variable names and comments clear and informative?
+          3. **Efficiency:** Are there any areas where performance could be improved? 
+          4. **Best Practices:** Does the code adhere to industry best practices for the language used?
+          5. **Overall Design:** What is your opinion on the overall design and structure of the code? Are there alternative approaches that could be considered?
+
+          Feel free to provide suggestions for improvement and highlight any strengths you observe.
