@@ -4,24 +4,32 @@ defaultProvider: openai
 organization_name: bede
 author_name: bewalthew
 steps:
-  - name: github downloader
-    description: bhyjnk,l;m
+  - name: translate to french
+    description: translates a text to french
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/translate-to-french.yaml
+    provider: openai
+    input:
+      text: '{{text}}'
+    output:
+      translation: translation
+    promptContent: |-
+      translate this text: {{text}} to french 
+
+      ### Always include the Output in Format in xml tags :
+
+      <translation>
+      [translation of text in french]
+      </translation>
+  - name: tool to save
+    description: ghghg
     type: tool
     templateUrl: ''
     provider: openai
     input:
-      repositoryUrl: '{{input}}'
-      authToken: '{{token}}'
-      exclude: '**/node_modules/**, **/dist/**, **/*.test.js, **/*.spec.ts, **/*.md'
-      include: '**/*.ts, **/*.js'
-    output: template_content
-    tool: githubLoader
-  - name: test
-    description: test
-    type: template
-    templateUrl: >-
-      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/code-reviewer.yaml
-    provider: openai
-    input:
-      code: '{{code}}'
-    output: {}
+      path: '{{path}}'
+      content: $translation
+      encoding: utf-8
+    output: save_result
+    tool: fileSaver
