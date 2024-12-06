@@ -1,35 +1,7 @@
 name: Better english for my post
-version: 1.0.0
+version: '1'
 description: takes badly formed english text and turn it into more appealing information
 author: hubtest
-content: >-
-  I want to improve a french text badly translated into english with the
-  following principles :
-
-
-  1. make concise sentences.
-
-  2. keep original meaning without creating any additional content.
-
-  3. make the content aligned with expected style in LinkedIn posts
-
-
-
-  optionally include specificity from my personal professional scope :
-  {{example}}
-
-
-  {{content}}
-
-
-  ### Always include the Output in Format in xml tags :
-
-
-  <output1>
-
-  [prepared text for linkedin post]
-
-  </output1>
 input_variables:
   example:
     type: string
@@ -41,4 +13,31 @@ output_variables:
   output1:
     type: string
     description: prepared text for linkedin post
+content: >-
+  Transform the following poorly translated French text into polished English
+  while focusing on these guiding principles: 
+
+  1. Craft concise sentences that maximize clarity. 
+
+  2. Preserve the original meaning without introducing new ideas or altering the
+  intent. 
+
+  3. Tailor the tone and style to be professional and engaging for a LinkedIn
+  audience. 
+
+  4. Reflect on the key message or takeaway that would resonate with
+  professionals in the field. 
+
+
+  Here is the text to enhance: {{content}}
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <output1>
+
+  [prepared text for linkedin post]
+
+  </output1>
 model: mistral-large-latest
