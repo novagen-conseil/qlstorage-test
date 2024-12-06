@@ -1,0 +1,95 @@
+name: code to jira tasks
+description: 'given code will return a lis of jira tasks to do '
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: s3 load
+    description: Load files from S3
+    type: tool
+    templateUrl: ''
+    provider: openai
+    input:
+      operation: load
+      bucket: quantalogic-bucket
+      key: '{{load_key}}'
+    output: code
+    tool: s3
+  - name: code improver list
+    description: 'returns a list of improvements to make '
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/code-improver-list.yaml
+    provider: openai
+    input:
+      code: $code
+    output:
+      improvement_list: improvement_list
+    promptContent: >-
+      Given the following code snippet: {{code}} , please perform a
+      comprehensive analysis of the snippet. 
+
+      Your analysis should focus on the following aspects:
+
+      1. **Performance Improvements:** Identify optimizations to enhance
+      execution speed or reduce resource consumption.
+
+      2. **Readability Enhancements:** Suggest changes to improve clarity and
+      comprehensibility.
+
+      3. **Maintainability Suggestions:** Recommend refactors or practices that
+      will facilitate easier updates in the future.
+
+      4. **Error Handling Recommendations:** Point out improvements to ensure
+      robust error management.
+
+
+      Please present your findings as a detailed list, including code examples
+      where applicable, and justify each recommendation with concise reasoning.
+
+
+      ## Always include the Output in Format in xml tags :
+
+
+      <improvement_list>
+
+      [list of improvements to make ]
+
+      </improvement_list>
+  - name: jira task creator
+    description: creates list of jira tasks from a given list of improvments to do
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/jira-task-creator.yaml
+    provider: openai
+    input:
+      improvements: $improvement_list
+    output:
+      tasks: tasks
+    promptContent: >-
+      Based on the following list of improvements categorized as:
+      {{improvements}}, encompassing bug fixes, enhancements, and new features,
+      please develop a structured list of Jira tasks. Each task must include:
+
+      1. **Title**: A concise and descriptive title summarizing the task.
+
+      2. **Short Description**: A brief explanation of the task outlining its
+      purpose.
+
+      3. **Detailed Specifications**:
+         - Technical requirements and considerations
+         - Acceptance criteria
+         - Related documentation or resources
+         - Expected impact on existing functionality
+      Be explicit about the type of improvement being addressed and ensure a
+      clear definition for easy integration into the Jira system.
+
+
+      ## Always include the Output in Format in xml tags :
+
+
+      <tasks>
+
+      [all created jira stask]
+
+      </tasks>
