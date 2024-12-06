@@ -1,0 +1,19 @@
+name: Better English
+version: 1.0.0
+description: pimp my french
+author: hubtest
+content: >-
+  Please enhance the following text that has been poorly translated from French
+  into English. The goal is to create a more fluent and natural English version
+  while ensuring the original meaning and intent are preserved. The text to be
+  improved is: {{content}}. 
+
+    Please provide the improved version along with brief explanations for each significant change, focusing particularly on:
+    - Enhancing sentence structure and clarity
+    - Integrating idiomatic expressions common in English
+    - Adjusting the tone to align with the original message
+input_variables:
+  content:
+    type: string
+    description: original text
+model: gpt-4o-mini
