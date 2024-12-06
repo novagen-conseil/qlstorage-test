@@ -6,6 +6,10 @@ input_variables:
   content:
     type: string
     description: original text
+output_variables:
+  output1:
+    type: string
+    description: sortie
 content: >-
   Please enhance the following text that has been poorly translated from French
   into English. The goal is to create a more fluent and natural English version
@@ -20,16 +24,9 @@ content: >-
   ### Always include the Output in Format in xml tags :
 
 
-  <the improved text>
+  <output1>
 
-  [the improved text]
+  [sortie]
 
-  </the improved text>
-
-
-  <explanation>
-
-  [place here the explanations]
-
-  </explanation>
+  </output1>
 model: anthropic.claude-3-5-haiku-20241022-v1:0
