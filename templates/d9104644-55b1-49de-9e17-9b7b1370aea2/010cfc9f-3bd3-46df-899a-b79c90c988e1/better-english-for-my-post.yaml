@@ -1,0 +1,36 @@
+name: Better english for my post
+version: 1.0.0
+description: takes badly formed english text and turn it into more appealing information
+author: hubtest
+content: >-
+  I want to improve a french text badly translated into english with the
+  following principles :
+
+
+  1. make concise sentences.
+
+  2. keep original meaning without creating any additional content.
+
+  3. make the content aligned with expected style in LinkedIn posts
+
+
+  {{content}}
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <output1>
+
+  [prepared text for linkedin post]
+
+  </output1>
+input_variables:
+  content:
+    type: string
+    description: ''
+output_variables:
+  output1:
+    type: string
+    description: prepared text for linkedin post
+model: gpt-4o-mini
