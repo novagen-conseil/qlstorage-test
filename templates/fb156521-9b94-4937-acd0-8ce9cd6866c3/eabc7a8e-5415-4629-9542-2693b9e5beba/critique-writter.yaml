@@ -1,0 +1,36 @@
+name: critique writter
+version: 1.0.0
+description: writes a critique from a given article
+author: bewalthew
+content: >-
+  Based on the insights presented in the article titled {{article}} and the
+  accompanying analysis {{analysis}}, craft a detailed critique formatted as
+  follows:
+    
+    1. **Introduction**: Briefly summarize the main argument of the article and its significance in the field.
+    2. **Main Critique**: Analyze key points made in the article, detailing strengths and weaknesses, including any potential biases. Utilize examples where appropriate to illustrate your arguments.
+    3. **Contextual Relevance**: Discuss how the findings relate to existing literature or current practices in the field, considering contrasting viewpoints.
+    4. **Conclusion**: Offer constructive suggestions for future research or practical applications stemming from the article's insights.
+    
+    Ensure your critique maintains an academic tone suitable for publication in a scholarly journal.
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <critique>
+
+  [the critique of the article]
+
+  </critique>
+input_variables:
+  article:
+    type: string
+    description: article
+  analysis:
+    type: string
+    description: article
+output_variables:
+  critique:
+    type: string
+    description: the critique of the article
+model: gpt-4o-mini
