@@ -1,0 +1,35 @@
+name: 'load s3 '
+description: test
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: s3 load
+    description: Load files from S3
+    type: tool
+    templateUrl: ''
+    provider: openai
+    input:
+      operation: load
+      bucket: '{{bucket_name}}'
+      key: '{{load_key}}'
+    output: template_content
+    tool: s3
+  - name: translate to french
+    description: translates a text to french
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/translate-to-french.yaml
+    provider: openai
+    input:
+      text: $template_content
+    output:
+      translation: translation
+    promptContent: |-
+      translate this text: {{text}} to french 
+
+      ### Always include the Output in Format in xml tags :
+
+      <translation>
+      [translation of text in french]
+      </translation>
