@@ -1,0 +1,10 @@
+name: test file
+version: 1.0.0
+description: file
+author: bewalthew
+content: summarize this file {{file}}
+input_variables:
+  file:
+    type: file_path
+    description: test
+model: gpt-4o-mini
