@@ -1,7 +1,18 @@
 name: Better English
-version: 1.0.0
+version: '1'
 description: pimp my french
 author: hubtest
+input_variables:
+  content:
+    type: string
+    description: original text
+output_variables:
+  the improved text:
+    type: string
+    description: the improved text
+  explanation:
+    type: string
+    description: place here the explanations
 content: >-
   Please enhance the following text that has been poorly translated from French
   into English. The goal is to create a more fluent and natural English version
@@ -12,8 +23,20 @@ content: >-
     - Enhancing sentence structure and clarity
     - Integrating idiomatic expressions common in English
     - Adjusting the tone to align with the original message
-input_variables:
-  content:
-    type: string
-    description: original text
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <the improved text>
+
+  [the improved text]
+
+  </the improved text>
+
+
+  <explanation>
+
+  [place here the explanations]
+
+  </explanation>
 model: gpt-4o-mini
