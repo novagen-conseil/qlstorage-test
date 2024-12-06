@@ -6,13 +6,6 @@ input_variables:
   content:
     type: string
     description: original text
-output_variables:
-  the improved text:
-    type: string
-    description: the improved text
-  explanation:
-    type: string
-    description: place here the explanations
 content: >-
   Please enhance the following text that has been poorly translated from French
   into English. The goal is to create a more fluent and natural English version
@@ -39,4 +32,4 @@ content: >-
   [place here the explanations]
 
   </explanation>
-model: gpt-4o-mini
+model: anthropic.claude-3-5-haiku-20241022-v1:0
