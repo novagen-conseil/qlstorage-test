@@ -1,7 +1,11 @@
 name: tutorial
-version: 1.0.0
+version: '1'
 description: tutorial
 author: Raphael MANSUY
+input_variables:
+  subject:
+    type: string
+    description: subject
 content: >-
   Create a concise, example-driven tutorial for an impatient learner on the
   topic of {{subject}}. The tutorial should follow this structure:
