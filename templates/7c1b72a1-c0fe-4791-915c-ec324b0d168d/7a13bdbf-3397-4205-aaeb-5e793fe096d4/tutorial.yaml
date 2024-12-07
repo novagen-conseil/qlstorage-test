@@ -1,0 +1,17 @@
+name: tutorial
+version: 1.0.0
+description: tutorial
+author: Raphael MANSUY
+content: >-
+  Create a concise, example-driven tutorial for an impatient learner on the
+  topic of {{subject}}. The tutorial should follow this structure:
+
+    1. **Introduction**: Briefly explain what {{subject}} is and why it matters.
+    2. **Key Concepts**: Outline essential concepts or terminology associated with {{subject}}. 
+    3. **Example**: Provide a clear, step-by-step example that illustrates the main idea or application of {{subject}}.
+    4. **Practical Tips**: Share quick tips or best practices that can help learners grasp {{subject}} faster.
+    5. **Common Pitfalls**: Highlight potential misunderstandings or mistakes to avoid when learning {{subject}}.
+    6. **Conclusion**: Summarize the key takeaways and encourage further exploration.
+
+    Ensure the language is clear and straightforward, avoiding jargon unless defined. Address any potential biases in the subject matter, and maintain ethical considerations throughout the tutorial. Aim for a tone that is engaging and supportive, catering to quick learners who prefer immediate application over theoretical concepts.
+model: gpt-4o-mini
