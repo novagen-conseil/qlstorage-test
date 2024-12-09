@@ -1,0 +1,24 @@
+name: review story
+version: 1.0.0
+description: test
+author: bewalthew
+content: |-
+  given a story: {{story}}, write a review in {{language}}
+
+  ### Always include the Output in Format in xml tags :
+
+  <review>
+  [review of story]
+  </review>
+input_variables:
+  story:
+    type: string
+    description: story
+  language:
+    type: string
+    description: language
+output_variables:
+  review:
+    type: string
+    description: review of story
+model: gpt-4o-mini
