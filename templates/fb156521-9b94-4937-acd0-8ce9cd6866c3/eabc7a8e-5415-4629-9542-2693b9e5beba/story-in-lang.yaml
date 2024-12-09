@@ -1,0 +1,21 @@
+name: story in lang
+version: 1.0.0
+description: story
+author: bewalthew
+content: |-
+  write a story in {{language}}
+
+  ### Always include the Output in Format in xml tags :
+
+  <story>
+  [story]
+  </story>
+input_variables:
+  language:
+    type: string
+    description: language of story
+output_variables:
+  story:
+    type: string
+    description: story
+model: gpt-4o-mini
