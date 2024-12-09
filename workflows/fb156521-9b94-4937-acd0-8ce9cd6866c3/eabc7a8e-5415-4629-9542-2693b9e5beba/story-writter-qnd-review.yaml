@@ -1,0 +1,43 @@
+name: story writter qnd review
+description: test
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: story in lang
+    description: story
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/story-in-lang.yaml
+    provider: openai
+    input:
+      language: '{{language}}'
+    output:
+      story: story
+    promptContent: |-
+      write a story in {{language}}
+
+      ### Always include the Output in Format in xml tags :
+
+      <story>
+      [story]
+      </story>
+  - name: review story
+    description: test
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/review-story.yaml
+    provider: openai
+    input:
+      story: $story
+      language: '{{language}}'
+    output:
+      review: review
+    promptContent: |-
+      given a story: {{story}}, write a review in {{language}}
+
+      ### Always include the Output in Format in xml tags :
+
+      <review>
+      [review of story]
+      </review>
