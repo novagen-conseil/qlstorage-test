@@ -1,0 +1,56 @@
+name: code list  improvements
+description: lits
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: S3 Load
+    description: Load files from S3
+    type: tool
+    tool: s3:load
+    input:
+      operation: load
+      bucket: quantalogic-bucket
+      key: '{{key}}'
+    output: template_content
+  - name: code improver list
+    description: 'returns a list of improvements to make '
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/code-improver-list.yaml
+    provider: openai
+    input:
+      code: $template_content
+    output:
+      improvement_list: improvement_list
+    promptContent: >-
+      Given the following code snippet: {{code}} , please perform a
+      comprehensive analysis of the snippet. 
+
+      Your analysis should focus on the following aspects:
+
+      1. **Performance Improvements:** Identify optimizations to enhance
+      execution speed or reduce resource consumption.
+
+      2. **Readability Enhancements:** Suggest changes to improve clarity and
+      comprehensibility.
+
+      3. **Maintainability Suggestions:** Recommend refactors or practices that
+      will facilitate easier updates in the future.
+
+      4. **Error Handling Recommendations:** Point out improvements to ensure
+      robust error management.
+
+
+      Please present your findings as a detailed list, including code examples
+      where applicable, and justify each recommendation with concise reasoning.
+
+
+      ## Always include the Output in Format in xml tags :
+
+
+      <improvement_list>
+
+      [list of improvements to make ]
+
+      </improvement_list>
