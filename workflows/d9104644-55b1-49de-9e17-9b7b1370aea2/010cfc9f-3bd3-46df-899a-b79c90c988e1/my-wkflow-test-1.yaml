@@ -1,0 +1,44 @@
+name: my wkflow test 1
+description: ''
+defaultProvider: openai
+organization_name: new orga
+author_name: hubtest
+steps:
+  - name: S3 Load
+    description: Load files from S3
+    type: tool
+    tool: s3:load
+    input:
+      operation: load
+      bucket: quantalogic-bucket
+      key: '{{key}}'
+    output: template_content
+  - name: Better English
+    description: pimp my french
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/d9104644-55b1-49de-9e17-9b7b1370aea2/010cfc9f-3bd3-46df-899a-b79c90c988e1/better-english.yaml
+    provider: openai
+    input:
+      content: $template_content
+    output:
+      output1: output1
+    promptContent: >-
+      Please enhance the following text that has been poorly translated from
+      French into English. The goal is to create a more fluent and natural
+      English version while ensuring the original meaning and intent are
+      preserved. The text to be improved is: {{content}}. 
+
+        Please provide the improved version along with brief explanations for each significant change, focusing particularly on:
+        - Enhancing sentence structure and clarity
+        - Integrating idiomatic expressions common in English
+        - Adjusting the tone to align with the original message
+
+      ### Always include the Output in Format in xml tags :
+
+
+      <output1>
+
+      [sortie]
+
+      </output1>
