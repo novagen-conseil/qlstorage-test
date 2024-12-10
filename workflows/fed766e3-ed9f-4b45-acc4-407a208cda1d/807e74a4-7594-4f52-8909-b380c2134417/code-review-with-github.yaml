@@ -1,0 +1,64 @@
+name: Code review with github
+description: Code review with github tool to test out the pipeline
+defaultProvider: openai
+organization_name: youcef
+author_name: youcef
+steps:
+  - name: GitHub Downloader
+    description: Loads a GitHub repository
+    type: tool
+    tool: githubLoader
+    input:
+      repositoryUrl: '{{input}}'
+      authToken: '{{token}}'
+      exclude: '**/node_modules/**, **/dist/**, **/*.test.js, **/*.spec.ts, **/*.md'
+      include: '{{include}}'
+    output: repo_content
+  - name: Code review with diagram
+    description: a simple templatee for code review with diagram mermaid test
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fed766e3-ed9f-4b45-acc4-407a208cda1d/807e74a4-7594-4f52-8909-b380c2134417/code-review-with-diagram.yaml
+    provider: openai
+    input:
+      code: $repo_content
+    output:
+      mermaid_diagram: mermaid_diagram
+      code_review: code_review
+    promptContent: >-
+      Please review the following code snippet for overall functionality,
+      readability, and potential improvements, and provide reasoning for each
+      suggestion:
+
+      {{code}}
+
+
+      After the review, create a simple Mermaid diagram that illustrates the
+      main components or workflow of the code, ensuring that it includes:
+
+      1. Key functions or methods
+
+      2. Variable interactions
+
+      3. Control flow (if applicable)
+
+
+      The output should include both a summary of your review, with explanations
+      for your suggestions, and the Mermaid diagram in a clear format.
+
+
+      ### Always include the Output in Format in xml tags :
+
+
+      <mermaid_diagram>
+
+      [the mermaid diagram generated]
+
+      </mermaid_diagram>
+
+
+      <code_review>
+
+      [the full code review generated]
+
+      </code_review>
