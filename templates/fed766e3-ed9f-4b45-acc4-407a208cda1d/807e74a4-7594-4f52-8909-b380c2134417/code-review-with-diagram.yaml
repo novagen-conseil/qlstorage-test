@@ -1,0 +1,53 @@
+name: Code review with diagram
+version: 1.0.0
+description: a simple templatee for code review with diagram mermaid test
+author: youcef
+content: >-
+  Please review the following code snippet for overall functionality,
+  readability, and potential improvements, and provide reasoning for each
+  suggestion:
+
+  {{code}}
+
+
+  After the review, create a simple Mermaid diagram that illustrates the main
+  components or workflow of the code, ensuring that it includes:
+
+  1. Key functions or methods
+
+  2. Variable interactions
+
+  3. Control flow (if applicable)
+
+
+  The output should include both a summary of your review, with explanations for
+  your suggestions, and the Mermaid diagram in a clear format.
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <mermaid_diagram>
+
+  [the mermaid diagram generated]
+
+  </mermaid_diagram>
+
+
+  <code_review>
+
+  [the full code review generated]
+
+  </code_review>
+input_variables:
+  code:
+    type: string
+    description: code
+output_variables:
+  mermaid_diagram:
+    type: string
+    description: the mermaid diagram generated
+  code_review:
+    type: string
+    description: the full code review generated
+model: gpt-4o-mini
