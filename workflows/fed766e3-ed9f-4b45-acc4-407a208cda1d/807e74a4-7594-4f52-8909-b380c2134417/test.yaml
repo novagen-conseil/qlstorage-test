@@ -1,0 +1,35 @@
+name: TEST
+description: TEST
+defaultProvider: openai
+organization_name: youcef
+author_name: youcef
+steps:
+  - name: github downloader
+    description: loads a github repo
+    type: tool
+    tool: githubLoader
+    input:
+      repositoryUrl: '{{input}}'
+      authToken: '{{token}}'
+      exclude: '**/node_modules/**, **/dist/**, **/*.test.js, **/*.spec.ts, **/*.md'
+      include: '{{files_to_include}}'
+    output: repo_content
+  - name: CODE REV 1
+    description: CODE REV 1
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fed766e3-ed9f-4b45-acc4-407a208cda1d/807e74a4-7594-4f52-8909-b380c2134417/code-rev-1.yaml
+    provider: openai
+    input:
+      code: $repo_content
+    output: {}
+    promptContent: >-
+      Please review the following code snippet written in  {{code}}. I am
+      specifically looking for feedback on the following aspects:
+          1. Code efficiency and optimization.
+          2. Readability and maintainability.
+          3. Any potential bugs or issues.
+          4. Suggestions for improvements or best practices.
+          5. How does this code align with current industry standards?
+          
+          Additionally, please provide any resources or references that could help me enhance my skills in this area.
