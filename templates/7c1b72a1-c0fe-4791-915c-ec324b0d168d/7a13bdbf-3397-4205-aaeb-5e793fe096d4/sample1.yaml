@@ -1,0 +1,18 @@
+name: Sample1
+version: 1.0.0
+description: Sample1
+author: Raphael MANSUY
+content: >-
+  Considering the complexities of {{specific_topic}}, please provide a detailed
+  analysis that addresses the following points:
+    1. Define the key concepts and terminology related to this topic.
+    2. Explore at least three recent perspectives or arguments surrounding this issue, citing data or examples from the last five years.
+    3. Suggest potential solutions or strategies based on the various viewpoints discussed.
+    4. Reflect on possible future implications if these solutions are implemented.
+
+    Your response should be structured with clear sections for each point, providing evidence or examples where necessary to support your analysis. Aim for a comprehensive yet concise discussion of about 500 words.
+input_variables:
+  specific_topic:
+    type: string
+    description: Topic
+model: gpt-4o-mini
