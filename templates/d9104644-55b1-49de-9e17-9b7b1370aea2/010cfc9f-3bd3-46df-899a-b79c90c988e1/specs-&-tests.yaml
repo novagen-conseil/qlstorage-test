@@ -1,0 +1,77 @@
+name: specs & tests
+version: 1.0.0
+description: specifications and test cases generatir
+author: hubtest
+content: >-
+  You are a product owner with expertise in software development and user
+  experience design. Your task is to provide an exhaustive specification for a
+  product incorporating the following characteristics:
+      
+      {{main_characteristics}}
+      
+  Please ensure your response covers the following elements in detail:
+
+
+  1. **Functionality Details**:
+     - Provide a clear and thorough description of each functionality.
+     - Illustrate potential user interaction scenarios, focusing on user experience.
+
+  2. **Operational Sequence**:
+     - Use Mermaid.js syntax to create a flowchart representing the sequence of operations. For example:
+       ```
+       graph TD;
+           A[Start] --> B{Decision};
+           B -->|Yes| C[Complete Operation];
+           B -->|No| D[Retry];
+       ```
+     - Include key actions, decisions, and outcomes in your diagram.
+
+  3. **Security Considerations**:
+     - Identify critical security measures relevant to each functionality.
+     - Incorporate aspects such as input validation, data encryption, and user authentication within your pseudo code examples.
+
+  4. **Functional Tests**:
+     - Draft a set of specific functional tests that must pass for each feature to be considered fully operational and acceptable.
+
+  To further guide your response, take the following specifications into
+  account:
+
+      {{specifications}}
+
+  Remember to adhere to the following advanced product design principles:
+  user-centric design, scalability, and maintainability. Provide examples where
+  applicable, and ensure you offer a nuanced perspective.
+
+
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <specifications>
+
+  []
+
+  </specifications>
+
+
+  <tests cases>
+
+  []
+
+  </tests cases>
+input_variables:
+  main_characteristics:
+    type: string
+    description: chraacteristics
+  specifications:
+    type: ''
+    description: specifications
+output_variables:
+  specifications:
+    type: string
+    description: ''
+  tests cases:
+    type: string
+    description: ''
+model: gpt-4o-mini
