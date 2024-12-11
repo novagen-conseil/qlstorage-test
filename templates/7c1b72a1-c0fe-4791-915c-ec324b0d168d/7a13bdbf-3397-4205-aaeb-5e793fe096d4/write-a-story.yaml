@@ -1,28 +1,22 @@
 name: Write a story
-version: '1'
+version: 1.0.0
 description: Write a story
 author: Raphael MANSUY
+content: >-
+  Write an engaging and imaginative story about {{subject}}. As you develop the
+  narrative, consider the following elements: 
+      1. **Genre:** Choose a {{genre}} (e.g., fantasy, mystery, science fiction) that suits the subject.
+      2. **Character Development:** Introduce at least one protagonist and one antagonist, detailing their motivations and backgrounds.
+      3. **Setting:** Describe the world or location where the story takes place, incorporating sensory details.
+      4. **Plot Structure:** Outline the main conflict, rising action, climax, and resolution of your story.
+      5. **Theme:** Reflect on a central theme or message that your story conveys.
+      6. **Choice:** Include moments where characters make crucial decisions, leading to different possible outcomes or adventures.
+      Feel free to weave in unique twists and character arcs to enrich your narrative.
 input_variables:
   subject:
     type: string
     description: ''
-content: >-
-  Craft a compelling story featuring a protagonist who embarks on a
-  transformative adventure involving {{subject}}. Outline the following:
-
-  1. **Setting:** Describe the environment and time period where the adventure
-  takes place.
-
-  2. **Character Development:** Detail the protagonist's background, inner
-  struggles, and motivations.
-
-  3. **Conflict:** Identify a central conflict or challenge related to
-  {{subject}} and explore the protagonist’s emotional responses.
-
-  4. **Resolution:** Describe how the protagonist resolves the conflict, the
-  personal growth they experience, and any lessons learned.
-
-  Engage the reader with vivid language and sensory details, aiming for a
-  satisfying conclusion that reflects the protagonist’s journey and emotional
-  evolution.
-model: anthropic.claude-3-5-sonnet-20241022-v2:0
+  genre:
+    type: string
+    description: ''
+model: gpt-4o-mini
