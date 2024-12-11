@@ -1,0 +1,39 @@
+name: spec xml form
+version: 1.0.0
+description: 'qsdf qsdf zqef '
+author: hubtest
+content: >-
+  Please provide comprehensive specifications for the following parameter:
+  {{specification}}. 
+
+
+  Your response should include the following elements:
+
+  <element>
+    <title>Detailed Specifications</title>
+    <description>Outline the requirements and functionalities of {{specification}}.</description>
+  </element>
+
+  <element>
+    <title>Mermaid.js Schema</title>
+    <description>Visualize the sequence of operations using a mermaid.js diagram, detailing all major components and their interactions.</description>
+  </element>
+
+  <element>
+    <title>Security Considerations</title>
+    <description>Present a bulleted list of security aspects, categorized into:
+      <subelement>Threats: Identify possible threats to the system.</subelement>
+      <subelement>Vulnerabilities: Highlight vulnerabilities that need attention.</subelement>
+      <subelement>Mitigations: Discuss strategies for addressing the identified threats and vulnerabilities.</subelement>
+    </description>
+  </element>
+
+  <element>
+    <title>Pseudo Code Examples</title>
+    <description>Provide pseudocode snippets to exemplify key functionalities without using language-specific syntax.</description>
+  </element>
+input_variables:
+  specification:
+    type: string
+    description: 'wdrgfse dgwd '
+model: gpt-4o-mini
