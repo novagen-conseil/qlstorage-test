@@ -1,0 +1,15 @@
+name: test
+description: test
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: S3 Load
+    description: Load files from S3
+    type: tool
+    tool: s3
+    input:
+      operation: load
+      bucket: quantalogic-bucket
+      key: '{{key}}'
+    output: template_content
