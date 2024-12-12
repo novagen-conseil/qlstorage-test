@@ -4,59 +4,53 @@ defaultProvider: openai
 organization_name: bede
 author_name: bewalthew
 steps:
-  - name: s3 load
+  - name: S3 Load
     description: Load files from S3
     type: tool
-    templateUrl: ''
-    provider: openai
+    tool: s3
     input:
       operation: load
       bucket: quantalogic-bucket
-      key: '{{load_key}}'
+      key: '{{key}}'
     output: template_content
-    tool: s3
-  - name: article analysis
-    description: analyses an article
+  - name: code improver list
+    description: 'returns a list of improvements to make '
     type: template
     templateUrl: >-
-      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/article-analysis.yaml
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/code-improver-list.yaml
     provider: openai
     input:
-      article: $template_content
+      code: $template_content
     output:
-      analysis: analysis
+      improvement_list: improvement_list
     promptContent: >-
-      Please analyze the following article: {{article}}. Your analysis should
-      encompass: 
+      Given the following code snippet: {{code}} , please perform a
+      comprehensive analysis of the snippet. 
 
-      1. **Main Arguments:** Summarize the core thesis and arguments presented
-      by the author.
+      Your analysis should focus on the following aspects:
 
-      2. **Supporting Evidence:** Identify and assess the key pieces of evidence
-      supporting the main arguments.
+      1. **Performance Improvements:** Identify optimizations to enhance
+      execution speed or reduce resource consumption.
 
-      3. **Contextual Significance:** Discuss the contextual factors influencing
-      the article, i.e., historical, social, or political aspects.
+      2. **Readability Enhancements:** Suggest changes to improve clarity and
+      comprehensibility.
 
-      4. **Critical Assessment:** Provide a critique of the arguments,
-      addressing potential biases, strengths, and weaknesses.
+      3. **Maintainability Suggestions:** Recommend refactors or practices that
+      will facilitate easier updates in the future.
 
-      5. **Alternative Perspectives:** Explore any possible counterarguments or
-      differing interpretations that may add to the discussion.
-
-      6. **Conclusion:** Summarize your analysis, highlighting significant
-      insights or implications.
+      4. **Error Handling Recommendations:** Point out improvements to ensure
+      robust error management.
 
 
-      Aim for a structured response of around 400-600 words that engages
-      critically with the text.
+      Please present your findings as a detailed list, including code examples
+      where applicable, and justify each recommendation with concise reasoning.
 
 
-      ### Always include the Output in Format in xml tags :
+      ## Always include the Output in Format in xml tags :
 
 
-      <analysis>
+      <improvement_list>
 
-      [the analysis]
+      [list of improvements to make ]
 
-      </analysis>
+      </improvement_list>
