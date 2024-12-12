@@ -1,20 +1,22 @@
 name: my labeller for products descritpion
-version: 1.0.0
+version: '1'
 description: generates classification labels
 author: hubtest
+input_variables:
+  fiche_produit:
+    type: string
+    description: ''
+output_variables:
+  labels:
+    type: string
+    description: libellés de catégorie
 content: >-
   Pour optimiser le SEO de votre site, veuillez extraire les éléments clés de la
   fiche produit suivante ({{fiche_produit}}): 
 
-  1. Identifiez les mots-clés pertinents liés à la catégorie.
 
-  2. Détaillez les descriptions de produits ou services qui peuvent améliorer la
-  visibilité.
+  1. Identifiez les 5 (au maximum) mots-clés pertinents liés à la catégorie.
 
-  3. Notez les balises meta qui pourraient être utilisées pour cette catégorie.
-
-  4. Pour chaque élément extrait, expliquez pourquoi il est pertinent pour le
-  SEO et comment il pourrait être optimisé.
 
 
   Concentrez-vous sur l'impact SEO des informations que vous extrayez.
@@ -28,12 +30,4 @@ content: >-
   [libellés de catégorie]
 
   </labels>
-input_variables:
-  fiche_produit:
-    type: string
-    description: ''
-output_variables:
-  labels:
-    type: string
-    description: libellés de catégorie
 model: gpt-4o-mini
