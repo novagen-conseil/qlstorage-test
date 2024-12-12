@@ -1,0 +1,33 @@
+name: product reference optimizer
+version: 1.0.0
+description: from a simple text, create a stunning product reference
+author: hubtest
+content: >-
+  Create a detailed and structured product description for a DIY e-commerce
+  platform targeting DIY enthusiasts and professionals. The product description
+  must include the following sections:
+    <section>
+      <title>Caractéristiques du produit</title>
+      <details>Détaillez les spécifications.</details>
+    </section>
+    <section>
+      <title>Avantages du produit</title>
+      <details>Listez les bénéfices.</details>
+    </section>
+    <section>
+      <title>Cas d'utilisation privilégiés</title>
+      <details>Décrivez les scénarios efficaces.</details>
+    </section>
+    <section>
+      <title>Précautions d'usage</title>
+      <details>Mentionnez les mesures de sécurité.</details>
+    </section>
+    <instruction>
+      Assurez-vous que les descriptions soient captivantes et adaptées aux besoins des utilisateurs. Insérez le texte dans cette structure : 
+      {{description_produit}}
+    </instruction>
+input_variables:
+  description_produit:
+    type: string
+    description: première description du produit
+model: gpt-4o-mini
