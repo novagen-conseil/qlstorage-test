@@ -1,0 +1,51 @@
+name: VVVVV
+version: 1.0.0
+description: VVVVV
+author: youcef
+content: >-
+  As a professional web developer with expertise in HTML, CSS, and Tailwind, 
+
+
+  I need your assistance in creating a comprehensive one-file template for a
+  modern web page. 
+
+
+  Main topic : {{topic}}
+
+
+  and using these specific steps to deliver the output:
+
+
+  1. **Understand the Specifications**: 
+
+  {{spec}}
+
+
+  will include elements such as color schemes, layout structure (header, main
+  content, footer), and specific features (e.g., navigation bar, buttons).
+
+
+  2. **Design Considerations**: The design should be responsive
+  (mobile-friendly) and utilize Tailwind CSS for styling. 
+
+
+  3. **Code Structure**: Output the HTML and CSS code in one file, ensuring
+  inline styles where necessary to meet the design specifications.
+
+
+  Please ensure the result is both functional and visually appealing, adhering
+  to modern web design principles.
+
+
+  Give me the full html code styled with html, css tailwind
+input_variables:
+  topic:
+    type: string
+    description: ''
+  spec:
+    type: string
+    description: ''
+model: anthropic.claude-3-5-sonnet-20241022-v2:0
+parameters:
+  max_tokens: 12000
+  temperature: 0.7
