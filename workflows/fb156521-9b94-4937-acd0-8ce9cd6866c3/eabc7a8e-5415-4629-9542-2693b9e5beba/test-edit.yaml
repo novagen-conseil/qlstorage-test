@@ -1,0 +1,16 @@
+name: test edit
+description: test
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: GitHub Downloader
+    description: Loads a GitHub repository
+    type: tool
+    tool: githubLoader
+    input:
+      repositoryUrl: '{{input}}'
+      authToken: '{{token}}'
+      exclude: '**/node_modules/**, **/dist/**, **/*.test.js, **/*.spec.ts, **/*.md'
+      include: '{{include}}'
+    output: repo_content
