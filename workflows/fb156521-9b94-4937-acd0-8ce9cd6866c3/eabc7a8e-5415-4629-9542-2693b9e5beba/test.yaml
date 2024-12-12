@@ -4,15 +4,12 @@ defaultProvider: openai
 organization_name: bede
 author_name: bewalthew
 steps:
-  - name: JiraTool
-    description: Create tickets to Jira
+  - name: S3 Load
+    description: Load files from S3
     type: tool
-    tool: JiraTool
+    tool: s3
     input:
-      operation: create
-      projectKey: '{{projectKey}}'
-      summary: '{{summary}}'
-      description: '{{description}}'
-      issueType: '{{issueType}}'
-      storyPoints: '{{storyPoints}}'
-    output: createdTicket
+      operation: load
+      bucket: quantalogic-bucket
+      key: '{{key}}'
+    output: template_content
