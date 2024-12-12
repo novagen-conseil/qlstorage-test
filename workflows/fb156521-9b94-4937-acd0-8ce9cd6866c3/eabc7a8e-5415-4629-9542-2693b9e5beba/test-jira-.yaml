@@ -1,0 +1,18 @@
+name: 'test jira '
+description: test jira
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: jiraTool
+    description: Create tickets to Jira
+    type: tool
+    tool: jiraTool
+    input:
+      operation: create
+      projectKey: '{{projectKey}}'
+      summary: '{{summary}}'
+      description: '{{description}}'
+      issueType: '{{issueType}}'
+      storyPoints: '{{storyPoints}}'
+    output: createdTicket
