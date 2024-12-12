@@ -1,0 +1,47 @@
+name: Spec generator for website
+version: 1.0.0
+description: Tool to create a Spec for website
+author: youcef
+content: >-
+  As an experienced web developer with expertise in HTML, CSS, and Tailwind CSS,
+  please provide a detailed specification for a modern website design based on
+  the topic "{{topic}}". Your specification should include:
+
+
+  1. **Header**: Outline the structure and elements (like navigation, logo,
+  etc.) you would use in the header.
+     
+  2. **Three Content Sections**: 
+     - Each section should have a brief description of its purpose (e.g., introduction, services, testimonials).
+     - Suggest at least two different design elements for each section, emphasizing how Tailwind can be utilized for responsiveness and aesthetics.
+
+  3. **Footer**: Describe the components of the footer including contact
+  information, social media links, and copyright text.
+
+
+  Ensure that you incorporate modern design principles and Tailwind CSS
+  features. Provide examples of classes and layout techniques that would enhance
+  the design. Feel free to include any best practices or tips for implementing
+  this specification.
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <spec_generated>
+
+  [the spec generated for the website using the topic]
+
+  </spec_generated>
+input_variables:
+  topic:
+    type: string
+    description: topic of the webpage
+output_variables:
+  spec_generated:
+    type: string
+    description: the spec generated for the website using the topic
+model: anthropic.claude-3-5-sonnet-20241022-v2:0
+parameters:
+  max_tokens: 12002
+  temperature: 0.7
