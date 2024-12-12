@@ -18,8 +18,26 @@ content: >-
   1. Identifiez les 5 (au maximum) mots-clés pertinents liés à la catégorie.
 
 
-
   Concentrez-vous sur l'impact SEO des informations que vous extrayez.
+
+
+
+  Exemple de sortie :
+
+
+  <labels>
+
+  <label>categorie 1</label>
+
+  <label>categorie 2</label>
+
+  <label>categorie 3</label>
+
+  <label>categorie 4</label>
+
+  <label>categorie 5</label>
+
+  </labels>
 
 
   ### Always include the Output in Format in xml tags :
