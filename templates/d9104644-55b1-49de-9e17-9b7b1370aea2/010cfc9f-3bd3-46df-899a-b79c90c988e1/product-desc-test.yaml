@@ -1,0 +1,66 @@
+name: product desc test
+version: 1.0.0
+description: SEO
+author: hubtest
+content: >-
+  Je souhaite générer une description détaillée et engageante d’un produit pour
+  mon site e-commerce spécialisé dans les produits de bricolage, ateliers de
+  mécanique, travail du bois et d'électricité. La description doit être bien
+  structurée en Markdown et contenir les informations suivantes :
+
+
+  ### Caractéristiques du Produit
+
+  - Décrivez les spécifications techniques en détail.
+
+
+  ### Avantages
+
+  - Mettez en avant les principaux avantages et pourquoi ce produit se distingue
+  de la concurrence à l'aide d'un langage persuasif.
+
+
+  ### Cas d'Utilisation
+
+  - Indiquez des scénarios typiques d'utilisation où ce produit serait
+  particulièrement utile, en prenant soin d'inclure des exemples concrets.
+
+
+  ### Précautions d'Usage
+
+  - Donnez des avertissements ou des conseils sur la manière d'utiliser le
+  produit en toute sécurité.
+
+
+  ### Conseils Marketing
+
+  - Incorporez des mots-clés ou expressions qui captivent l'intérêt des clients
+  potentiels.
+
+
+  ### Exemple de produit :
+
+  {{description_produit}} 
+
+
+  Assurez-vous que le texte soit engageant, informatif et facile à lire, tout en
+  attirant l’attention du client.
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <output1>
+
+  [pimp my description]
+
+  </output1>
+input_variables:
+  description_produit:
+    type: string
+    description: product description
+output_variables:
+  output1:
+    type: string
+    description: pimp my description
+model: gpt-4o-mini
