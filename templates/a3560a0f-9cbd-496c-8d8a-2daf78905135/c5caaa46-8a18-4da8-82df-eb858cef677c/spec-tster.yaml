@@ -1,0 +1,15 @@
+name: spec tster
+version: 1.0.0
+description: test
+author: hubert
+content: |-
+  I want detailed specification about 
+  {{initial_specification}}
+
+  - please use markdown format
+  - insert mermaid.js format if relevant. 
+input_variables:
+  initial_specification:
+    type: string
+    description: ''
+model: gpt-4o-mini
