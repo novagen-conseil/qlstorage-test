@@ -1,0 +1,51 @@
+name: spec detailer
+version: 1.0.0
+description: my xml spec generator
+author: hubtest
+content: >-
+  please write a detailed version of functional specification for the following
+  topic : 
+
+
+  {{topic}}
+
+
+  * it is probably relevant to generate a mermaid.js schema to highlight the
+  flow of functionalities
+
+  * emphasize the context expectations : starting situation, final states, error
+  handling.
+
+  * write an example story
+
+  * use xml output following the proposed schema : 
+
+
+  <specification>
+
+  <title> provide a title here </title>
+
+  <description> use markdown to write the detailed specification</description>
+
+  <storypoint>estimation of storypoints</storypoints>
+
+  </specification>
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <jira optimisation>
+
+  []
+
+  </jira optimisation>
+input_variables:
+  topic:
+    type: string
+    description: ''
+output_variables:
+  jira optimisation:
+    type: string
+    description: ''
+model: gpt-4o-mini
