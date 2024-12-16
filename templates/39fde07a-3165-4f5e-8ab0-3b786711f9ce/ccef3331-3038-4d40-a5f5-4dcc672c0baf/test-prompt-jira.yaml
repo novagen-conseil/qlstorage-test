@@ -2,6 +2,10 @@ name: Test Prompt Jira
 version: '1'
 description: prompt pour creation de ticket jira
 author: Jimmy
+input_variables:
+  specifications:
+    type: string
+    description: test
 content: >-
   Prompt
 
