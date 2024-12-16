@@ -1,0 +1,6 @@
+name: testtest
+version: 1.0.0
+description: test
+author: bewalthew
+content: test
+model: gpt-4o-mini
