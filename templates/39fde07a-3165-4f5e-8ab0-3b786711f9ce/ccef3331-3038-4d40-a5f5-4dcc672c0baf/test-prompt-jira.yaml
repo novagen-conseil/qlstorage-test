@@ -2,6 +2,10 @@ name: Test Prompt Jira
 version: '1'
 description: prompt pour creation de ticket jira
 author: Jimmy
+input_variables:
+  specifications:
+    type: ''
+    description: test
 content: >-
   En tant qu'expert en développement de produits SaaS B2B, je vais vous aider à
   transformer vos besoins spécifiques en spécifications fonctionnelles
