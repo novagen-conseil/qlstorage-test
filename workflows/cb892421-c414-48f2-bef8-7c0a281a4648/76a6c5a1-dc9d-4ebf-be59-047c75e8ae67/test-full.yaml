@@ -1,0 +1,33 @@
+name: test full
+description: ''
+defaultProvider: openai
+organization_name: test
+author_name: Jimmy
+steps:
+  - name: S3 Load
+    description: Load files from S3
+    type: tool
+    tool: s3
+    input:
+      operation: load
+      bucket_name: '{{quantalogic-bucket}}'
+      key: '{{key}}'
+    output: template_content
+  - name: 'test '
+    description: test
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/cb892421-c414-48f2-bef8-7c0a281a4648/76a6c5a1-dc9d-4ebf-be59-047c75e8ae67/test-.yaml
+    provider: openai
+    input:
+      content: $template_content
+    output:
+      result: result
+    promptContent: |-
+      summerize the following content : {{content}}
+
+      ### Always include the Output in Format in xml tags :
+
+      <result>
+      [the summerize expected]
+      </result>
