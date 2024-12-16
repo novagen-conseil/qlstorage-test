@@ -1,0 +1,15 @@
+name: test s3 tool
+description: ''
+defaultProvider: openai
+organization_name: test
+author_name: Jimmy
+steps:
+  - name: S3 Load
+    description: Load files from S3
+    type: tool
+    tool: s3
+    input:
+      operation: load
+      bucket: quantalogic-bucket
+      key: '{{key}}'
+    output: template_content
