@@ -2,43 +2,68 @@ name: Test Prompt Jira
 version: '1'
 description: prompt pour creation de ticket jira
 author: Jimmy
-input_variables:
-  specifications:
-    type: string
-    description: ''
-content: >
-  En tant qu'expert en développement de produits SaaS B2B, spécialisé dans les
-  solutions de haute qualité et sécurisées, je vais vous aider à transformer vos
-  besoins en spécifications fonctionnelles détaillées et tickets JIRA
-  exploitables.
+content: >-
+  # 1. Original Prompt Analysis
+
+  The primary objective of the original prompt is to guide the user in providing
+  specific specifications for a B2B SaaS product feature. The target audience
+  appears to be product managers or stakeholders involved in the development of
+  software solutions who need structured specifications for effective
+  communication with development teams.
 
 
-  Pour la fonctionnalité suivante :
+  Key constraints include the necessity for detailed and actionable outputs such
+  as user stories, business value, and acceptance criteria. Additionally, the
+  prompt requires collaboration from the user to supply key information labeled
+  as {{specifications}}.
+
+
+  Potential weaknesses include a lack of context around the example
+  specifications and the possibility that readers may find the structure
+  overwhelming or unclear, particularly the technical aspects which may not be
+  uniformly understood by all stakeholders.
+
+
+  # 2. First Improved Prompt Version
+
+  ```
+
+  En tant qu'expert en développement de produits SaaS B2B, je vais vous aider à
+  transformer vos besoins spécifiques en spécifications fonctionnelles
+  détaillées et en tickets JIRA exploitables. Pour cela, j'ai besoin de vos
+  informations concernant la fonctionnalité suivante : 
+
 
   {{specifications}}
 
 
-  Je vais fournir :
+  Voici la structure que nous allons utiliser pour garantir une documentation
+  claire et efficace :
 
 
   ## 1. Synthèse
 
   - **Epic Label**: [Type/Domaine] Titre court et descriptif
 
-  - **Business Value**: Description concise de la valeur ajoutée
+  - **Business Value**: Quelles sont les principales valeurs ajoutées de cette
+  fonctionnalité pour l’entreprise et les utilisateurs?
 
-  - **User Story**: En tant que [persona], je veux [action] afin de [bénéfice]
+  - **User Story**: En tant que [persona], je souhaite [action] afin de
+  [bénéfice] – pensez à inclure un exemple concret.
 
 
   ## 2. Spécifications Détaillées
 
-  - **Description Fonctionnelle**: Analyse approfondie des besoins
+  - **Description Fonctionnelle**: Fournissez une analyse approfondie des
+  besoins.
 
-  - **Règles Métier**: Points clés et contraintes à respecter
+  - **Règles Métier**: Liste des priorités, points clés, et contraintes à
+  respecter.
 
-  - **Critères d'Acceptance**: Liste des conditions de validation
+  - **Critères d'Acceptance**: Quelles conditions de validation doivent être
+  remplies?
 
-  - **Maquettes/Wireframes**: Si applicable, références aux designs
+  - **Maquettes/Wireframes**: Inclus ou référence à des designs si disponible.
 
 
   ## 3. Découpage Technique
@@ -54,29 +79,223 @@ content: >
 
   ### Prérequis Techniques
 
-  - **Infrastructure**: Besoins spécifiques
+  - **Infrastructure**: Décrivez les besoins spécifiques.
 
-  - **Sécurité**: Contraintes de sécurité
+  - **Sécurité**: Quelles sont les contraintes de sécurité à respecter?
 
-  - **Performance**: Critères de performance
+  - **Performance**: Quelles sont les exigences de performance?
 
-  - **Compatibilité**: Exigences techniques
+  - **Compatibilité**: Exigences techniques à prévoir.
 
 
   ## 4. Risques et Mitigations
 
-  - **Points d'Attention**: Risques identifiés
+  - **Points d'Attention**: Quels risques pourraient impacter ce projet?
 
-  - **Solutions Proposées**: Approches de mitigation
+  - **Solutions Proposées**: Quelles approches de mitigation pouvez-vous
+  envisager?
 
 
   ## 5. Métriques de Succès
 
-  - **KPIs**: Indicateurs de réussite
+  - **KPIs**: Quels indicateurs de réussite souhaitez-vous suivre?
 
-  - **Monitoring**: Points de contrôle
+  - **Monitoring**: Comment comptez-vous évaluer les performances et les
+  réussites?
 
 
-  Merci de fournir vos {{specifications}} pour que je puisse élaborer ces
-  éléments de manière détaillée.
+  Merci de remplir ce modèle avec vos {{specifications}} pour produire des
+  éléments détaillés et utiles.
+
+  ```
+
+
+  # 3. Explanation of Applied Techniques
+
+  **Chain of Thought (CoT)**: I utilized this technique by breaking down the
+  prompt into clear, logical sections, guiding the user through each step
+  necessary to provide their specifications. This encourages the respondent to
+  think critically about the information they supply while ensuring critical
+  areas are addressed.
+
+
+  **Few-Shot Learning**: I introduced helpful prompts within each section (e.g.,
+  asking for detailed examples). This encourages deeper engagement and helps
+  users visualize what information is necessary. 
+
+
+  # 4. Quality Metric Evaluation
+
+  - **Clarity**: The improved prompt is clearer; it has specific headings that
+  guide the user on what information to provide.
+
+  - **Specificity**: Each section contains detailed prompts that outline exactly
+  what is needed, increasing specificity.
+
+  - **Engagement**: By incorporating questions, it engages the user to think
+  more comprehensively about their needs.
+
+  - **Versatility**: The structure caters to different scenarios, allowing users
+  to adapt the sections as necessary based on the feature specifications.
+
+  - **Depth**: The prompt encourages detailed responses through targeted
+  inquiries and encourages the inclusion of concrete examples.
+
+
+  # 5. Iterative Refinement Process
+
+  Upon reviewing the first improved version, I identified the need for greater
+  engagement through some interactive elements or clarifications for the user.
+  In particular, additional guidance on how to approach filling out certain
+  sections and ensuring they understand the significance of details.
+
+
+  ### Revised Second Prompt Version
+
+  ```
+
+  En tant qu'expert en développement de produits SaaS B2B, je vais vous aider à
+  transformer vos besoins spécifiques en spécifications fonctionnelles
+  détaillées et en tickets JIRA exploitables. Pour cela, j'ai besoin de vos
+  informations concernant la fonctionnalité suivante : 
+
+
+  {{specifications}}
+
+
+  Pour vous aider à structurer vos réflexions, voici un modèle détaillé :
+
+
+  ## 1. Synthèse
+
+  - **Epic Label**: Exprimez cela en deux parties : [Type/Domaine - Titre court
+  et descriptif].
+
+  - **Business Value**: Pensez à décrire comment cette fonctionnalité va générer
+  des bénéfices pour l'utilisateur et l'entreprise. Utilisez des exemples si
+  possible.
+
+  - **User Story**: En tant que [persona], je souhaite [action] afin de
+  [bénéfice] – pensez à un scénario où cela serait réellement utilisé.
+
+
+  ## 2. Spécifications Détaillées
+
+  - **Description Fonctionnelle**: Donnez une vue d’ensemble exhaustive de vos
+  attentes.
+
+  - **Règles Métier**: Notez les priorités et contraintes, par exemple, des
+  exigences réglementaires ou techniques.
+
+  - **Critères d'Acceptance**: Définissez les tests à réaliser pour valider que
+  la fonctionnalité est conforme.
+
+  - **Maquettes/Wireframes**: Si possible, joignez des diagrammes ou spécifiez
+  les nécessités.
+
+
+  ## 3. Découpage Technique
+
+  ### Sous-tâches
+
+  | ID | Description | Complexité | Dépendances | Priorité |
+
+  |----|-------------|------------|-------------|-----------|
+
+  | ST-1 | [Tâche] | XS/S/M/L/XL | [ID Tâche] | P0/P1/P2 |
+
+
+  ### Prérequis Techniques
+
+  - **Infrastructure**: Besoins en matière de serveur ou d'autre matériel
+  nécessaire.
+
+  - **Sécurité**: Indiquez toutes les considérations de sécurité pertinentes à
+  respecter.
+
+  - **Performance**: Fixez des objectifs de performance et réactivité.
+
+  - **Compatibilité**: Quelles versions de technologie le projet doit-il
+  supporter?
+
+
+  ## 4. Risques et Mitigations
+
+  - **Points d'Attention**: Quelles sont les incertitudes que vous envisagez?
+
+  - **Solutions Proposées**: Comment pensez-vous pouvoir atténuer ces risques?
+
+
+  ## 5. Métriques de Succès
+
+  - **KPIs**: Indicateurs pour suivre l’efficacité de cette fonctionnalité.
+
+  - **Monitoring**: Méthodes pour surveiller et évaluer les résultats.
+
+
+  Merci de me fournir vos {{specifications}} pour que je puisse élaborer une
+  réponse précise et utile.
+
+  ```
+
+
+  # 6. Final Thoughts on Improvement
+
+  The iterative refinement process enhanced the user engagement aspect and made
+  the prompt easier to navigate. By ensuring clarity in each section and adding
+  explicit examples and descriptions, the improved prompt not only invites
+  detailed responses but also minimizes ambiguity.
+
+
+  # 7. Final Improved Prompt in XML tags
+
+  ```xml
+
+  <prompt_final>
+    En tant qu'expert en développement de produits SaaS B2B, je vais vous aider à transformer vos besoins spécifiques en spécifications fonctionnelles détaillées et en tickets JIRA exploitables. Pour cela, j'ai besoin de vos informations concernant la fonctionnalité suivante : 
+
+    {{specifications}}
+
+    Pour vous aider à structurer vos réflexions, voici un modèle détaillé :
+
+    ## 1. Synthèse
+    - **Epic Label**: Exprimez cela en deux parties : [Type/Domaine - Titre court et descriptif].
+    - **Business Value**: Pensez à décrire comment cette fonctionnalité va générer des bénéfices pour l'utilisateur et l'entreprise. Utilisez des exemples si possible.
+    - **User Story**: En tant que [persona], je souhaite [action] afin de [bénéfice] – pensez à un scénario où cela serait réellement utilisé.
+
+    ## 2. Spécifications Détaillées
+    - **Description Fonctionnelle**: Donnez une vue d’ensemble exhaustive de vos attentes.
+    - **Règles Métier**: Notez les priorités et contraintes, par exemple, des exigences réglementaires ou techniques.
+    - **Critères d'Acceptance**: Définissez les tests à réaliser pour valider que la fonctionnalité est conforme.
+    - **Maquettes/Wireframes**: Si possible, joignez des diagrammes ou spécifiez les nécessités.
+
+    ## 3. Découpage Technique
+    ### Sous-tâches
+    | ID | Description | Complexité | Dépendances | Priorité |
+    |----|-------------|------------|-------------|-----------|
+    | ST-1 | [Tâche] | XS/S/M/L/XL | [ID Tâche] | P0/P1/P2 |
+
+    ### Prérequis Techniques
+    - **Infrastructure**: Besoins en matière de serveur ou d'autre matériel nécessaire.
+    - **Sécurité**: Indiquez toutes les considérations de sécurité pertinentes à respecter.
+    - **Performance**: Fixez des objectifs de performance et réactivité.
+    - **Compatibilité**: Quelles versions de technologie le projet doit-il supporter?
+
+    ## 4. Risques et Mitigations
+    - **Points d'Attention**: Quelles sont les incertitudes que vous envisagez?
+    - **Solutions Proposées**: Comment pensez-vous pouvoir atténuer ces risques?
+
+    ## 5. Métriques de Succès
+    - **KPIs**: Indicateurs pour suivre l’efficacité de cette fonctionnalité.
+    - **Monitoring**: Méthodes pour surveiller et évaluer les résultats.
+
+    Merci de me fournir vos {{specifications}} pour que je puisse élaborer une réponse précise et utile.
+  </prompt_final>
+
+  ``` 
+
+
+  This final version encapsulates the improvements made throughout the analysis
+  and refinement process, enhancing the prompt's clarity, engagement, and
+  overall effectiveness for generating detailed and actionable specifications.
 model: gpt-4o-mini
