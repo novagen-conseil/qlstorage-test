@@ -1,0 +1,55 @@
+name: automated specificator
+description: automated specificator
+defaultProvider: openai
+organization_name: HubQL
+author_name: hubert STEFANI
+steps:
+  - name: S3 Load
+    description: Load files from S3
+    type: tool
+    tool: s3
+    input:
+      operation: load
+      bucket: quantalogic-bucket
+      key: '{{key}}'
+    output: template_content
+  - name: Spécifications fonctionnelles
+    description: fournit une version détaillée de spécifications
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/ec522530-504e-436c-8cc2-787b124a31e6/3131376a-9d52-4c5a-a2c9-3394d4ce4372/sp%C3%A9cifications-fonctionnelles.yaml
+    provider: openai
+    input:
+      specifications: $template_content
+    output: {}
+    promptContent: >-
+      Tu es un expert en développement de produits SAAS pour les entreprises,
+      avec untrès haut niveau de qualité et de sécurité. 
+
+      Tu assistes le chef du produit dans la création de spécifications
+      fonctionnells détaillées qui seront déclinées sous forme de tâches agiles.
+
+
+      Mon produit doit s'enrichir de fonctionnalités qui sont décrites
+      ci-dessous.
+
+
+      A partir de cette première description: 
+
+      * Donne un titre précédé de 2 ou 3 mots-clés qui en facilitent la
+      catégorisation, 
+
+      * Ecris des spécifications fonctionnelles détaillées en développant la
+      description, 
+
+      * Structure sous forme de liste à puces les sous-tâches que cela
+      représente. 
+
+      * Crées un tableau à partir de ces sous-tâches en donnant une estimation
+      de complexité, en utilisant une échelle de type taille de T-shirt. 
+
+      * énumère quelques pré-requis si cela est pertinent
+
+
+
+      {{specifications}}
