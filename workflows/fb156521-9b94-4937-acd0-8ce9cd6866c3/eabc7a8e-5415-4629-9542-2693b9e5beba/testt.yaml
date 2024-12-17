@@ -1,0 +1,46 @@
+name: testt
+description: etetet
+defaultProvider: openai
+organization_name: bede
+author_name: bewalthew
+steps:
+  - name: S3 Load
+    description: Load files from S3
+    type: tool
+    tool: s3
+    input:
+      operation: load
+      bucket_name: quantalogic-bucket
+      key: '{{key}}'
+    output: template_content
+  - name: critique writter
+    description: writes a critique from a given article
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/fb156521-9b94-4937-acd0-8ce9cd6866c3/eabc7a8e-5415-4629-9542-2693b9e5beba/critique-writter.yaml
+    provider: openai
+    input:
+      article: $template_content
+      analysis: '{{analysis}}'
+    output:
+      critique: critique
+    promptContent: >-
+      Based on the insights presented in the article titled {{article}} and the
+      accompanying analysis {{analysis}}, craft a detailed critique formatted as
+      follows:
+        
+        1. **Introduction**: Briefly summarize the main argument of the article and its significance in the field.
+        2. **Main Critique**: Analyze key points made in the article, detailing strengths and weaknesses, including any potential biases. Utilize examples where appropriate to illustrate your arguments.
+        3. **Contextual Relevance**: Discuss how the findings relate to existing literature or current practices in the field, considering contrasting viewpoints.
+        4. **Conclusion**: Offer constructive suggestions for future research or practical applications stemming from the article's insights.
+        
+        Ensure your critique maintains an academic tone suitable for publication in a scholarly journal.
+
+      ### Always include the Output in Format in xml tags :
+
+
+      <critique>
+
+      [the critique of the article]
+
+      </critique>
