@@ -14,7 +14,7 @@ input_variables:
 output_variables:
   output1:
     type: string
-    description: ''
+    description: my variable
 content: >-
 
   -> TON ROLE  : tu es un responsable de produit en charge de produire des
@@ -48,7 +48,7 @@ content: >-
 
   <output1>
 
-  []
+  [my variable]
 
   </output1>
 model: anthropic.claude-3-5-sonnet-20241022-v2:0
