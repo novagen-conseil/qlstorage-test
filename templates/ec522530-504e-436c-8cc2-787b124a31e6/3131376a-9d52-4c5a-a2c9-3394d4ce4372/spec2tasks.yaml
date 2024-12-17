@@ -3,6 +3,9 @@ version: '1'
 description: découpe lesfonctionnalités en sous-tâches
 author: hubert STEFANI
 input_variables:
+  prefix:
+    type: string
+    description: préfix optionnel pour commenter le nom de la tâche
   specifications:
     type: string
     description: spécifications de départ
@@ -16,7 +19,8 @@ content: >-
   doit être inférieur à 3 jours environ. Les tâches doivent être décrites dans
   des paragraphe distincts avec pour chacune d’entre elles : 
 
-  des identifiants uniques commençant par 'QL-ADMIN-' 
+  des identifiants uniques commençant par 'QL-ADMIN-'  ( ou alors avecle préfix
+  s'il n'est pas vide: '{{prefix}}' )
 
   un titre simple et explicite
 
