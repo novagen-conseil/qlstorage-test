@@ -1,0 +1,39 @@
+name: Spécification de modèle de données
+version: 1.0.0
+description: >-
+  à partir d'un texte décrivant des spécifications, crée la lsite des entités à
+  intégrer à la base de données ainsi qu'un schéma montrant leurs relations. 
+
+  il serait intéressant d'ajouter le modèle existant pour avoir une modification
+  plutôt qu'une création à partir de 0
+author: hubert STEFANI
+content: >
+
+  -> TON ROLE  : tu es un responsable de produit en charge de produire des
+  spécifications fonctionnelles détaillées d’excellentes qualité
+
+
+
+  -> A partir des spécifications ci-dessous, définis les entités qui doivent
+  être persistées en base de données.  
+
+
+  Donne une structure détaillée : 
+
+  au format markdown, précisant le type, la longueur (si cela est pertinent),
+  les règles de validation des données 
+
+  au format mermaid.js pour en faciliter la visualisation de l’entité et de ses
+  relations avec les autres entités du modèle
+
+
+  ```specifications
+
+  {{specifications}}
+
+  ```
+input_variables:
+  specifications:
+    type: string
+    description: spécifications contenant des informations sur le modèle de données
+model: anthropic.claude-3-5-sonnet-20241022-v2:0
