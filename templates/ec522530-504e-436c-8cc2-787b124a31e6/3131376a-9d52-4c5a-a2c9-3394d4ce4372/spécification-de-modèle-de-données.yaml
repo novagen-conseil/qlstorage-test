@@ -1,5 +1,5 @@
 name: Spécification de modèle de données
-version: 1.0.0
+version: '1'
 description: >-
   à partir d'un texte décrivant des spécifications, crée la lsite des entités à
   intégrer à la base de données ainsi qu'un schéma montrant leurs relations. 
@@ -7,6 +7,10 @@ description: >-
   il serait intéressant d'ajouter le modèle existant pour avoir une modification
   plutôt qu'une création à partir de 0
 author: hubert STEFANI
+input_variables:
+  specifications:
+    type: string
+    description: spécifications contenant des informations sur le modèle de données
 content: >
 
   -> TON ROLE  : tu es un responsable de produit en charge de produire des
@@ -32,8 +36,4 @@ content: >
   {{specifications}}
 
   ```
-input_variables:
-  specifications:
-    type: string
-    description: spécifications contenant des informations sur le modèle de données
 model: anthropic.claude-3-5-sonnet-20241022-v2:0
