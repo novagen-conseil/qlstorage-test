@@ -1,0 +1,55 @@
+name: wkfl3 S3 to Spec and schema
+description: ''
+defaultProvider: openai
+organization_name: HubQL
+author_name: hubert STEFANI
+steps:
+  - name: S3 Load
+    description: Load files from S3
+    type: tool
+    tool: s3
+    input:
+      operation: load
+      bucket_name: quantalogic-bucket
+      key: '{{key}}'
+    output: template_content
+  - name: Spécification de modèle de données
+    description: >-
+      à partir d'un texte décrivant des spécifications, crée la lsite des
+      entités à intégrer à la base de données ainsi qu'un schéma montrant leurs
+      relations. 
+
+      il serait intéressant d'ajouter le modèle existant pour avoir une
+      modification plutôt qu'une création à partir de 0
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/ec522530-504e-436c-8cc2-787b124a31e6/3131376a-9d52-4c5a-a2c9-3394d4ce4372/sp%C3%A9cification-de-mod%C3%A8le-de-donn%C3%A9es.yaml
+    provider: openai
+    input:
+      specifications: $template_content
+    output: {}
+    promptContent: >
+
+      -> TON ROLE  : tu es un responsable de produit en charge de produire des
+      spécifications fonctionnelles détaillées d’excellentes qualité
+
+
+
+      -> A partir des spécifications ci-dessous, définis les entités qui doivent
+      être persistées en base de données.  
+
+
+      Donne une structure détaillée : 
+
+      au format markdown, précisant le type, la longueur (si cela est
+      pertinent), les règles de validation des données 
+
+      au format mermaid.js pour en faciliter la visualisation de l’entité et de
+      ses relations avec les autres entités du modèle
+
+
+      ```specifications
+
+      {{specifications}}
+
+      ```
