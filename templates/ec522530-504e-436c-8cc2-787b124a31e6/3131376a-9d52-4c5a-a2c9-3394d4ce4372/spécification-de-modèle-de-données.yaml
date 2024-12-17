@@ -11,7 +11,11 @@ input_variables:
   specifications:
     type: string
     description: spécifications contenant des informations sur le modèle de données
-content: >
+output_variables:
+  output1:
+    type: string
+    description: ''
+content: >-
 
   -> TON ROLE  : tu es un responsable de produit en charge de produire des
   spécifications fonctionnelles détaillées d’excellentes qualité
@@ -36,4 +40,15 @@ content: >
   {{specifications}}
 
   ```
+
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <output1>
+
+  []
+
+  </output1>
 model: anthropic.claude-3-5-sonnet-20241022-v2:0
