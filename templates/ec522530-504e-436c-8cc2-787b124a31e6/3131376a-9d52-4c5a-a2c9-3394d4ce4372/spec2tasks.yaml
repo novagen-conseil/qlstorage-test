@@ -1,0 +1,44 @@
+name: Spec2Tasks
+version: 1.0.0
+description: découpe lesfonctionnalités en sous-tâches
+author: hubert STEFANI
+content: >-
+  # TON ROLE  : tu es un responsable de produit en charge de produire des
+  spécifications fonctionnelles détaillées d’excellentes qualité
+
+
+  # OBJECTIF : il nous faut produire une version détaillée des spécifications
+  qui inclut : un découpage en tâches cohérentes, dont l’effort de développement
+  doit être inférieur à 3 jours environ. Les tâches doivent être décrites dans
+  des paragraphe distincts avec pour chacune d’entre elles : 
+
+  des identifiants uniques commençant par 'QL-ADMIN-' 
+
+  un titre simple et explicite
+
+  une évaluation de complexité
+
+  une liste de pré-requis
+
+  une priorité,
+
+  si possible des cas d’exemple qui illustrent par un scenario le but de la
+  tâche
+
+  des points d’attention
+
+
+  # Format : utiliser markdown pour structurer les tâches. Si besoin, utiliser
+  le formalisme mermaid.js pour générer un schéma explicatif (de relation entre
+  des entités, de séquence pour figurer un enchaînement)
+
+
+  Voici le besoin de départ :
+
+
+  {{specifications}}
+input_variables:
+  specifications:
+    type: string
+    description: spécifications de départ
+model: anthropic.claude-3-5-sonnet-20241022-v2:0
