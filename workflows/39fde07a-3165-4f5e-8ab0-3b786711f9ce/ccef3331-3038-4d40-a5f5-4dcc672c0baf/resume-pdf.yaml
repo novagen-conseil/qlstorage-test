@@ -1,0 +1,33 @@
+name: resume pdf
+description: ''
+defaultProvider: openai
+organization_name: test
+author_name: Jimmy
+steps:
+  - name: S3 Load
+    description: Load files from S3
+    type: tool
+    tool: s3
+    input:
+      operation: load
+      bucket_name: quantalogic-bucket
+      key: '{{key}}'
+    output: template_content
+  - name: resume
+    description: resume
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/39fde07a-3165-4f5e-8ab0-3b786711f9ce/ccef3331-3038-4d40-a5f5-4dcc672c0baf/resume.yaml
+    provider: openai
+    input:
+      content: $template_content
+    output:
+      result: result
+    promptContent: |-
+      Resume the following content : {{content}}
+
+      ### Always include the Output in Format in xml tags :
+
+      <result>
+      [result]
+      </result>
