@@ -1,7 +1,15 @@
 name: Extract main points
-version: 1.0.0
+version: '1'
 description: test mode
 author: Cmsi_dbt
+input_variables:
+  doc:
+    type: string
+    description: doc
+output_variables:
+  result:
+    type: string
+    description: the result of the different main points extracted
 content: >-
   Please summarize the key themes and significant points discussed in the
   document {{doc}}. 
@@ -22,12 +30,4 @@ content: >-
   [the result of the different main points extracted]
 
   </result>
-input_variables:
-  doc:
-    type: string
-    description: doc
-output_variables:
-  result:
-    type: string
-    description: the result of the different main points extracted
 model: gpt-4o-mini
