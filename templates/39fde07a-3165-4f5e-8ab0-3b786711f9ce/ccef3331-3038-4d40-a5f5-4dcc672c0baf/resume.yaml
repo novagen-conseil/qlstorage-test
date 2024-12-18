@@ -1,0 +1,21 @@
+name: resume
+version: 1.0.0
+description: resume
+author: Jimmy
+content: |-
+  Resume the following content : {{content}}
+
+  ### Always include the Output in Format in xml tags :
+
+  <result>
+  [result]
+  </result>
+input_variables:
+  content:
+    type: string
+    description: test
+output_variables:
+  result:
+    type: string
+    description: result
+model: gpt-4o-mini
