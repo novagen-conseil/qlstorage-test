@@ -13,14 +13,10 @@ steps:
     output: template_content
     tool: s3
     type: tool
-  - name: md
-    description: to md
-    type: template
-    templateUrl: >-
-      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/39fde07a-3165-4f5e-8ab0-3b786711f9ce/ccef3331-3038-4d40-a5f5-4dcc672c0baf/md.yaml
-    provider: openai
+  - description: to md
     input:
-      content: '{{content}}'
+      content: $template_content
+    name: md
     output:
       result: result
     promptContent: |-
@@ -31,3 +27,7 @@ steps:
       <result>
       [result]
       </result>
+    provider: openai
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/39fde07a-3165-4f5e-8ab0-3b786711f9ce/ccef3331-3038-4d40-a5f5-4dcc672c0baf/md.yaml
+    type: template
