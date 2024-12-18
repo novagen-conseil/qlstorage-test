@@ -1,0 +1,21 @@
+name: md
+version: 1.0.0
+description: to md
+author: Jimmy
+content: |-
+  Interprete the following content : {{content}} and give an output as .md.
+
+  ### Always include the Output in Format in xml tags :
+
+  <result>
+  [result]
+  </result>
+input_variables:
+  content:
+    type: string
+    description: string
+output_variables:
+  result:
+    type: string
+    description: result
+model: gpt-4o-mini
