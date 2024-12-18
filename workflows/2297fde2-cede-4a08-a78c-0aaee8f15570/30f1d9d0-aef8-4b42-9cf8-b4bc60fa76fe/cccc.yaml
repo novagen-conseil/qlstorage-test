@@ -1,0 +1,45 @@
+name: CCCC
+description: ''
+defaultProvider: openai
+organization_name: yatchi.leet@gmail.com
+author_name: Cmsi_dbt
+steps:
+  - name: S3 Load
+    description: Load files from S3
+    type: tool
+    tool: s3
+    input:
+      operation: load
+      bucket_name: quantalogic-bucket
+      key: '{{key}}'
+    output: template_content
+  - name: Extract main points
+    description: test mode
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/2297fde2-cede-4a08-a78c-0aaee8f15570/30f1d9d0-aef8-4b42-9cf8-b4bc60fa76fe/extract-main-points.yaml
+    provider: openai
+    input:
+      doc: $template_content
+    output:
+      result: result
+    promptContent: >-
+      Please summarize the key themes and significant points discussed in the
+      document {{doc}}. 
+
+
+      Focus on extracting insights related to the main arguments, conclusions,
+      and any essential data or examples that support these points. Organize
+      your response by section or topic, and provide a brief conclusion that
+      encapsulates the overall message of the document. Additionally, reflect on
+      the implications of these points in a broader context.
+
+
+      ### Always include the Output in Format in xml tags :
+
+
+      <result>
+
+      [the result of the different main points extracted]
+
+      </result>
