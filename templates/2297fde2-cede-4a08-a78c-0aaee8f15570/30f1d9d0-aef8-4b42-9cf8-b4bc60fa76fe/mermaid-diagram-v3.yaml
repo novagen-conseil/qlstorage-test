@@ -1,0 +1,54 @@
+name: Mermaid diagram v3
+version: 1.0.0
+description: tool that testes a mermaid diagram based on specs
+author: Cmsi_dbt
+content: >-
+  As a seasoned expert in creating Mermaid diagrams, 
+
+  please provide a valid diagram based on the following specifications (e.g.,
+  flowchart, sequence diagram): 
+
+
+  {{specs}} 
+
+
+  In your response, include:
+
+  1. A clear rendering of the Mermaid syntax code for the diagram.
+
+  the mermaild diagram generated formated like : 
+
+  ```mermaid
+
+  ....(the implementation)
+
+  ```
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <mermaid_diagram>
+
+  [the mermaild diagram generated formated like : 
+
+  ```mermaid
+
+  ....(the implementation)
+
+  ```]
+
+  </mermaid_diagram>
+input_variables:
+  specs:
+    type: string
+    description: ''
+output_variables:
+  mermaid_diagram:
+    type: string
+    description: |-
+      the mermaild diagram generated formated like : 
+      ```mermaid
+      ....(the implementation)
+      ```
+model: gpt-4o-mini
