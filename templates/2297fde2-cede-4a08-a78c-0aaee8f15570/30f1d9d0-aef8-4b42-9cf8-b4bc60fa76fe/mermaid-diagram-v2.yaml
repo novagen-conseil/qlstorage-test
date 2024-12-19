@@ -1,7 +1,19 @@
 name: Mermaid diagram v2
-version: 1.0.0
+version: '1'
 description: a simple tool for mermaid diagram test
 author: Cmsi_dbt
+input_variables:
+  specs:
+    type: string
+    description: ''
+output_variables:
+  mermaid_diagram:
+    type: string
+    description: |-
+      the mermaild diagram generated formated like : 
+      ```mermaid
+      ....(the implementation)
+      ```
 content: >-
   As a seasoned expert in creating Mermaid diagrams, 
 
@@ -32,23 +44,11 @@ content: >-
 
   [the mermaild diagram generated formated like : 
 
-  '''mermaid
+  ```mermaid
 
   ....(the implementation)
 
-  ''']
+  ```]
 
   </mermaid_diagram>
-input_variables:
-  specs:
-    type: string
-    description: ''
-output_variables:
-  mermaid_diagram:
-    type: string
-    description: |-
-      the mermaild diagram generated formated like : 
-      '''mermaid
-      ....(the implementation)
-      '''
 model: anthropic.claude-3-5-sonnet-20241022-v2:0
