@@ -4,25 +4,21 @@ defaultProvider: openai
 organization_name: yatchi.leet@gmail.com
 author_name: Cmsi_dbt
 steps:
-  - name: GitHub Downloader
-    description: Loads a GitHub repository
-    type: tool
-    tool: githubLoader
+  - description: Loads a GitHub repository
     input:
-      repositoryUrl: '{{input}}'
       authToken: '{{token}}'
       exclude: '**/node_modules/**, **/dist/**, **/*.test.js, **/*.spec.ts, **/*.md'
       include: '{{include}}'
+      repositoryUrl: '{{input}}'
+    name: GitHub Downloader
     output: repo_content
-  - name: Code overview analyzer
-    description: a simple tool to  overview code and  analyze
-    type: template
-    templateUrl: >-
-      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/2297fde2-cede-4a08-a78c-0aaee8f15570/30f1d9d0-aef8-4b42-9cf8-b4bc60fa76fe/code-overview-analyzer.yaml
-    provider: openai
+    tool: githubLoader
+    type: tool
+  - description: a simple tool to  overview code and  analyze
     input:
       code: $repo_content
       lang: '{{lang}}'
+    name: Code overview analyzer
     output:
       specs: specs
     promptContent: >-
@@ -62,16 +58,16 @@ steps:
       [the differents specs generated to improve my project]
 
       </specs>
-  - name: Jira template analyze
-    description: Jira template analyzer using context, description and implementation
-    type: template
-    templateUrl: >-
-      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/2297fde2-cede-4a08-a78c-0aaee8f15570/30f1d9d0-aef8-4b42-9cf8-b4bc60fa76fe/jira-template-analyze.yaml
     provider: openai
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/2297fde2-cede-4a08-a78c-0aaee8f15570/30f1d9d0-aef8-4b42-9cf8-b4bc60fa76fe/code-overview-analyzer.yaml
+    type: template
+  - description: Jira template analyzer using context, description and implementation
     input:
-      feature_name: $specs
+      feature_name: '{{feature_name}}'
+      project_details: $specs
       project_key: '{{project_key}}'
-      project_details: '{{project_details}}'
+    name: Jira template analyze
     output:
       featured_tickets: featured_tickets
     promptContent: >-
@@ -126,18 +122,22 @@ steps:
           },...
         ]
       </featured_tickets>
-  - name: Jira Tool with advanced features
-    description: EnhancedJira
-    type: tool
-    tool: EnhancedJira
+    provider: openai
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/2297fde2-cede-4a08-a78c-0aaee8f15570/30f1d9d0-aef8-4b42-9cf8-b4bc60fa76fe/jira-template-analyze.yaml
+    type: template
+  - description: EnhancedJira
     input:
-      operation: '{{createFromTemplate}}'
-      templateJson: $featured_tickets
-      project_key: '{{project_key}}'
+      email: '{{email}}'
       feature_name: '{{feature_name}}'
       host: '{{host}}'
-      email: '{{email}}'
+      operation: '{{createFromTemplate}}'
+      project_key: '{{project_key}}'
+      templateJson: $featured_tickets
       token: '{{token}}'
+    name: Jira Tool with advanced features
     output:
       message: message
       results: results
+    tool: EnhancedJira
+    type: tool
