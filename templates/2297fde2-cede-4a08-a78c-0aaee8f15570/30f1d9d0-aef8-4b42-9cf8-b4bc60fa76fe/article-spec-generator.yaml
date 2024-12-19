@@ -1,0 +1,59 @@
+name: Article spec generator
+version: 1.0.0
+description: A simple tool that generates a full article using some specs
+author: Cmsi_dbt
+content: >-
+  You are a highly skilled technical writer with expertise in generating
+  comprehensive and structured documentation. Based on the following
+  specifications (e.g., API documentation, software requirements, product
+  features): 
+
+
+  {{spec}},
+
+
+  please produce a detailed article that includes the following sections:
+
+
+  Introduction : Provide an overview of the specifications and their
+  significance.
+
+  Requirements : Detail the essential requirements derived from the
+  specifications.
+
+  Implementation Details : Offer insights into how the specifications can be
+  implemented or used.
+
+  Use Cases : Present several compelling use cases illustrating practical
+  applications of the specifications.
+
+  Conclusion : Summarize the key points and potential future considerations.
+
+  Ensure the documentation is clear, concise, and tailored to an audience
+  familiar with technical concepts but not necessarily experts in this specific
+  area.
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <result>
+
+  [the article generated, in markdwon,
+
+  a full detailled article that i can present to my team developer]
+
+  </result>
+input_variables:
+  spec:
+    type: string
+    description: the differents specs
+output_variables:
+  result:
+    type: string
+    description: |-
+      the article generated, in markdwon,
+      a full detailled article that i can present to my team developer
+model: anthropic.claude-3-5-sonnet-20241022-v2:0
+parameters:
+  max_tokens: 4000
