@@ -1,0 +1,18 @@
+name: Notes de réunion --> Compte-rendu en Markdown
+version: 1.0.0
+description: mieux structuré et mis en forme
+author: hubert STEFANI
+content: >-
+  j'ai consigné ces quelques notes de réunion qui a soulevé un ensemble de
+  questions. je voudrais que tu metes en forme et apporte de légère retouches de
+  formulation pour aboutir à un compte-rendu qui fasse apparaître les points
+  importants, les questions, les actions à entreprendre. utilise du markdown
+  pour mettre en forme ce contenu :
+
+
+  {{notes_reunion}}
+input_variables:
+  notes_reunion:
+    type: string
+    description: notes de réunion
+model: anthropic.claude-3-5-sonnet-20241022-v2:0
