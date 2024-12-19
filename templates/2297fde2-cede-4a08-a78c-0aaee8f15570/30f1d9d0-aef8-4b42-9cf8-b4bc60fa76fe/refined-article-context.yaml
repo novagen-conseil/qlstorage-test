@@ -1,0 +1,47 @@
+name: Refined article context
+version: 1.0.0
+description: a simple tool to refine a context into an article
+author: Cmsi_dbt
+content: >-
+  As a seasoned content creator and expert in crafting well-structured articles,
+  I want you to create a comprehensive article based on the following context:
+  {{context}}. 
+
+
+  Please follow these instructions to ensure high-quality output:
+
+  1. Provide a clear introduction that defines the scope of the article and its
+  significance.
+
+  2. Organize the body into at least three main sections, each with a heading,
+  covering:
+     - Key concepts and definitions relevant to the context.
+     - Current trends, implications, or findings associated with the topic.
+     - Real-world examples or case studies that illustrate the points made.
+  3. Include a conclusion that summarizes the key takeaways and reflects on the
+  future of the subject matter.
+
+
+  Throughout your writing, maintain a professional tone, utilize credible
+  sources where applicable, and ensure that your arguments are well-supported.
+  Aim for clarity and nuance in your explanations, encouraging readers to
+  explore the subject further.
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <refiened_article>
+
+  [the refined article about my context]
+
+  </refiened_article>
+input_variables:
+  context:
+    type: string
+    description: ''
+output_variables:
+  refiened_article:
+    type: string
+    description: the refined article about my context
+model: anthropic.claude-3-5-sonnet-20241022-v2:0
