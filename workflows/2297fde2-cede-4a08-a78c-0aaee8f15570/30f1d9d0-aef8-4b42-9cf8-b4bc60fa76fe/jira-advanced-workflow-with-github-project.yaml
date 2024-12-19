@@ -1,0 +1,143 @@
+name: Jira advanced workflow with github project
+description: an advanced jira workflow with github project (code2prompt strategie)
+defaultProvider: openai
+organization_name: yatchi.leet@gmail.com
+author_name: Cmsi_dbt
+steps:
+  - name: GitHub Downloader
+    description: Loads a GitHub repository
+    type: tool
+    tool: githubLoader
+    input:
+      repositoryUrl: '{{input}}'
+      authToken: '{{token}}'
+      exclude: '**/node_modules/**, **/dist/**, **/*.test.js, **/*.spec.ts, **/*.md'
+      include: '{{include}}'
+    output: repo_content
+  - name: Code overview analyzer
+    description: a simple tool to  overview code and  analyze
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/2297fde2-cede-4a08-a78c-0aaee8f15570/30f1d9d0-aef8-4b42-9cf8-b4bc60fa76fe/code-overview-analyzer.yaml
+    provider: openai
+    input:
+      code: $repo_content
+      lang: '{{lang}}'
+    output:
+      specs: specs
+    promptContent: >-
+      As a seasoned software engineer specializing in code review, please
+      analyze the following code snippet: 
+
+      {{code}}, 
+
+
+      written in the programming language: {{lang}}.
+
+
+      Your report should include:
+
+
+      1. A high-level overview of the code's functionality and design.
+
+      2. Identification of any technical debt and areas for optimization.
+
+      3. Recommendations for improvements, including best practices and coding
+      standards relevant to {{lang}}. Feel free to cite specific examples from
+      the code to illustrate your points.
+
+      4. Any additional considerations for scalability, maintainability, and
+      performance enhancements.
+
+      You may also include specific areas of focus you'd like me to address
+      based on the context of the code or project goals. Please ensure your
+      response is structured clearly to facilitate understanding.
+
+
+      ### Always include the Output in Format in xml tags :
+
+
+      <specs>
+
+      [the differents specs generated to improve my project]
+
+      </specs>
+  - name: Jira template analyze
+    description: Jira template analyzer using context, description and implementation
+    type: template
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/2297fde2-cede-4a08-a78c-0aaee8f15570/30f1d9d0-aef8-4b42-9cf8-b4bc60fa76fe/jira-template-analyze.yaml
+    provider: openai
+    input:
+      feature_name: $specs
+      project_key: '{{project_key}}'
+      project_details: '{{project_details}}'
+    output:
+      featured_tickets: featured_tickets
+    promptContent: >-
+      Project Feature Setup: {{feature_name}}
+
+
+      This workflow will create a structured set of Jira tickets for
+      implementing {{feature_name}}. 
+
+
+      The tickets will be organized under an epic and will cover different
+      aspects of the implementation.
+
+
+      Project Details:
+
+
+      Project Key: {{project_key}}
+
+      Feature Name: {{feature_name}}
+
+      Project details Implementation: {{project_details}} 
+
+
+      !! make sure to include the output feature_tickets variable in the output
+      section, use xml tag !!!
+
+
+
+      ### Always include the Output in Format in xml tags :
+
+
+      <featured_tickets>
+
+      [
+          {
+              "projectKey": {{project_key}},
+              "summary": "[Frontend] Implement {{feature_name}} UI Components",
+              "description": "Implement the frontend components for {{feature_name}}.\n\nRequirements:\n{{feature_requirements}}\n\nAPI Endpoints:\n{{api_endpoints}}",
+              "issuetype": Task,
+              "storyPoints": 5,
+              "labels": ["frontend", "ui"]
+            
+          },
+          {        "projectKey": {{project_key}},
+              "summary": "[Backend] Implement {{feature_name}} Services",
+              "description": "Implement the backend services for {{feature_name}}.\n\nTechnical Requirements:\n{{technical_requirements}}\n\nAPI Endpoints:\n{{api_endpoints}}",
+              "issuetype": Task,
+              "storyPoints": 5,
+              "labels": ["backend", "api"]
+            
+          },...
+        ]
+      </featured_tickets>
+  - name: Jira Tool with advanced features
+    description: EnhancedJira
+    type: tool
+    tool: EnhancedJira
+    input:
+      operation: '{{createFromTemplate}}'
+      templateJson: $featured_tickets
+      project_key: '{{project_key}}'
+      feature_name: '{{feature_name}}'
+      host: '{{host}}'
+      email: '{{email}}'
+      token: '{{token}}'
+    output:
+      message: message
+      results: results
