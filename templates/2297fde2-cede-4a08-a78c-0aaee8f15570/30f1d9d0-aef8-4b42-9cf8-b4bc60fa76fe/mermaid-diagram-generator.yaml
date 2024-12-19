@@ -1,7 +1,25 @@
 name: Mermaid diagram generator
-version: 1.0.0
+version: '1'
 description: tool that generates a mermaid diagram based on specs
 author: Cmsi_dbt
+input_variables:
+  specs:
+    type: string
+    description: the differents specs
+output_variables:
+  mermaid_diagram:
+    type: string
+    description: |-
+      ```mermaid
+      flowchart TD
+          A[Start] --> B{Is it sunny?}
+          B -- Yes --> C[Go outside]
+          B -- No --> D[Stay inside]
+          C --> E[Enjoy the sun]
+          D --> F[Read a book]
+          E --> G[End]
+          F --> G
+      ```
 content: >-
   As a seasoned expert in creating Mermaid diagrams, please provide a valid
   diagram based on the following specifications: {{specs}} (e.g., flowchart,
@@ -21,15 +39,17 @@ content: >-
 
   <mermaid_diagram>
 
-  [the valide code of the mermaid diagram generated]
+  [```mermaid
+
+  flowchart TD
+      A[Start] --> B{Is it sunny?}
+      B -- Yes --> C[Go outside]
+      B -- No --> D[Stay inside]
+      C --> E[Enjoy the sun]
+      D --> F[Read a book]
+      E --> G[End]
+      F --> G
+  ```]
 
   </mermaid_diagram>
-input_variables:
-  specs:
-    type: string
-    description: the differents specs
-output_variables:
-  mermaid_diagram:
-    type: string
-    description: the valide code of the mermaid diagram generated
 model: anthropic.claude-3-5-sonnet-20241022-v2:0
