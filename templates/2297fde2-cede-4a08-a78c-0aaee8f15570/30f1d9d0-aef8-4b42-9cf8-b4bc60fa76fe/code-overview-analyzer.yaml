@@ -1,0 +1,53 @@
+name: Code overview analyzer
+version: 1.0.0
+description: a simple tool to  overview code and  analyze
+author: Cmsi_dbt
+content: >-
+  As a seasoned software engineer specializing in code review, please analyze
+  the following code snippet: 
+
+  {{code}}, 
+
+
+  written in the programming language: {{lang}}.
+
+
+  Your report should include:
+
+
+  1. A high-level overview of the code's functionality and design.
+
+  2. Identification of any technical debt and areas for optimization.
+
+  3. Recommendations for improvements, including best practices and coding
+  standards relevant to {{lang}}. Feel free to cite specific examples from the
+  code to illustrate your points.
+
+  4. Any additional considerations for scalability, maintainability, and
+  performance enhancements.
+
+  You may also include specific areas of focus you'd like me to address based on
+  the context of the code or project goals. Please ensure your response is
+  structured clearly to facilitate understanding.
+
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <specs>
+
+  [the differents specs generated to improve my project]
+
+  </specs>
+input_variables:
+  code:
+    type: string
+    description: code project
+  lang:
+    type: string
+    description: project lang developpement
+output_variables:
+  specs:
+    type: string
+    description: the differents specs generated to improve my project
+model: anthropic.claude-3-5-sonnet-20241022-v2:0
