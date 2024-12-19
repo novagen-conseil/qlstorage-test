@@ -1,0 +1,25 @@
+name: Simple workflow using rag llamaindex v1
+description: a simple tool with worflow rag using llamaindex v0.1 ts
+defaultProvider: openai
+organization_name: yatchi.leet@gmail.com
+author_name: Cmsi_dbt
+steps:
+  - name: S3 Load To local
+    description: Load files from S3
+    type: tool
+    tool: s3ToLocal
+    input:
+      bucket_name: '{{bucket_name}}'
+      keys: '{{load_files}}'
+      separator: '{{separator}}'
+    output: template_content
+  - name: RAG on Documents v0.1
+    description: RAG on Documents v0.1 using llama-index TS
+    type: tool
+    tool: LlamaIndexRAGV1
+    input:
+      directory: $template_content
+      query: '{{query}}'
+      embedModel: '{{embedModel}}'
+      topK: '{{topK}}'
+    output: response
