@@ -1,0 +1,35 @@
+name: Mermaid diagram generator
+version: 1.0.0
+description: tool that generates a mermaid diagram based on specs
+author: Cmsi_dbt
+content: >-
+  As a seasoned expert in creating Mermaid diagrams, please provide a valid
+  diagram based on the following specifications: {{specs}} (e.g., flowchart,
+  sequence diagram). 
+
+      In your response, include:
+      1. A clear rendering of the Mermaid syntax code for the diagram.
+      2. An explanation of the key components of the diagram, emphasizing:
+          - The significant entities involved.
+          - The relationships and connections between these entities.
+          - Any specific attributes or notes that help clarify the connections.
+
+      If possible, provide suggestions for potential revisions based on best practices in diagram design. Ensure the explanation is clear enough for someone unfamiliar with the content to understand the structure and relationships depicted.
+
+  ### Always include the Output in Format in xml tags :
+
+
+  <mermaid_diagram>
+
+  [the valide code of the mermaid diagram generated]
+
+  </mermaid_diagram>
+input_variables:
+  specs:
+    type: string
+    description: the differents specs
+output_variables:
+  mermaid_diagram:
+    type: string
+    description: the valide code of the mermaid diagram generated
+model: anthropic.claude-3-5-sonnet-20241022-v2:0
