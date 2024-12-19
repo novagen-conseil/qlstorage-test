@@ -4,35 +4,29 @@ defaultProvider: openai
 organization_name: yatchi.leet@gmail.com
 author_name: Cmsi_dbt
 steps:
-  - name: S3 Load To local
-    description: Load files from S3
-    type: tool
-    tool: s3ToLocal
+  - description: Load files from S3
     input:
       bucket_name: '{{bucket_name}}'
       keys: '{{load_files}}'
       separator: '{{separator}}'
+    name: S3 Load To local
     output: template_content
-  - name: RAG on Documents v0.1
-    description: RAG on Documents v0.1 using llama-index TS
+    tool: s3ToLocal
     type: tool
-    tool: LlamaIndexRAGV1
+  - description: RAG on Documents v0.1 using llama-index TS
     input:
       directory: $template_content
-      query: '{{query}}'
       embedModel: '{{embedModel}}'
+      query: '{{query}}'
       topK: '{{topK}}'
-    output:
-      response: response
-      sources: sources
-  - name: refine article v0.1
-    description: a tool to refine given article
-    type: template
-    templateUrl: >-
-      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/2297fde2-cede-4a08-a78c-0aaee8f15570/30f1d9d0-aef8-4b42-9cf8-b4bc60fa76fe/refine-article-v0.1.yaml
-    provider: openai
+    name: RAG on Documents v0.1
+    output: response
+    tool: LlamaIndexRAGV1
+    type: tool
+  - description: a tool to refine given article
     input:
       context: $[object Object]
+    name: refine article v0.1
     output:
       fined_article: fined_article
     promptContent: >-
@@ -73,3 +67,7 @@ steps:
       [the article created in markdown]
 
       </fined_article>
+    provider: openai
+    templateUrl: >-
+      https://github.com/novagen-conseil/qlstorage-test/blob/main/templates/2297fde2-cede-4a08-a78c-0aaee8f15570/30f1d9d0-aef8-4b42-9cf8-b4bc60fa76fe/refine-article-v0.1.yaml
+    type: template
