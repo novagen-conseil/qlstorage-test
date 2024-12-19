@@ -1,0 +1,20 @@
+name: notes2CR optimisé
+version: 1.0.0
+description: notes 2 compte-rendu de réunion avec la fonction optimize de QL
+author: hubert STEFANI
+content: >-
+  Je t'invite à transformer les notes de la réunion ci-dessous en un
+  compte-rendu structuré, clair et professionnel. Voici les éléments que je
+  souhaite inclure : 
+      <ol>
+          <li><strong>Points Importants</strong> : Dresse une liste des points clés abordés.</li>
+          <li><strong>Questions Soulevées</strong> : Identifie et reformule toutes les questions pertinentes.</li>
+          <li><strong>Actions à Entreprendre</strong> : Détaille les actions requises et les responsables associés.</li>
+      </ol>
+      Utilise un ton formel, adapté à un compte-rendu professionnel. Pour la mise en forme, utilise du Markdown et assure-toi que chaque section soit bien distincte et facile à lire, en y ajoutant éventuellement des sous-sections si cela est nécessaire pour la clarté.
+      Voici les notes de réunion : {{notes_reunion}}
+input_variables:
+  notes_reunion:
+    type: string
+    description: notes de réunion
+model: gpt-4o-mini
