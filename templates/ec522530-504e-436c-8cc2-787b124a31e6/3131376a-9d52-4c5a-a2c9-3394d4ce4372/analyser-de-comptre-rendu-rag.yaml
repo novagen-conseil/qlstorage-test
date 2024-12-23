@@ -1,0 +1,6 @@
+name: Analyser de comptre rendu RAG
+version: 1.0.0
+description: analyse du compte -rendu selon les instructions
+author: hubert STEFANI
+content: "Utiliser exclusivement le contenu du fichier attaché pour répondre aux différents points ci-dessous de manière structurée en regroupant les idées et exemples dans chaune des rubriques :\n\n* Vision : est-ce que je vais y trouver des constats en lien avec ce que l’on perçoit vraiment  (ou bien ‘c’est une nouvelle mode sans effet majeur/  on attend la fin de la hype )\n* Adoption : plaçons des barricades ou adoptons là à 100% ou une nuance entre les deux ?\n* Usage : les usages (on en découvre toujours) il y en a bien dont je me dirai  : bon sang mais c’est bien sûr. Ou a contrario : la tête dans les étoiles on en oublie le pragmatisme.\n* Technologie : ecosystème FR/ EU /US / CN\t: lequel(s) choisir ? approche ‘on a perdu les batailles et la guerre’ ou bien un autre approche ?\n* Organisation :  les freins identifiés à ce jour et les moyens envisagés pour faire sauter les verrous  ?\n* Stratégie : par où commencer, progresser , généraliser ;est-ce que cela est bien identifié ?\n"
+model: gpt-4o-mini
